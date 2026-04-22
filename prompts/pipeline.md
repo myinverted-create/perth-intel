@@ -14,26 +14,32 @@ WHAT COUNTS AS A PIPELINE SIGNAL (in increasing order of nearness to hiring):
 9. Main contractor named (even before formal mobilisation)
 
 WHAT DOES NOT COUNT (these belong in the main brief, not pipeline):
-- Active construction sites with workers already mobilised
-- Public hiring announcements with named roles already advertised
-- Job postings on LinkedIn / SEEK
+- Active construction sites
+- Public hiring announcements
+- Job postings on LinkedIn
 - Anything where the builder has already publicly committed to staffing up
 
-RECENCY: Prefer sources from the LAST 90 DAYS. Pipeline signals like rezoning and DA approvals are inherently slow-moving — if a strong DA approval or tender award is 90–150 days old and construction hasn't started yet, INCLUDE it (the hiring window is still ahead).
+RECENCY: Use only sources dated within the LAST 90 DAYS from today (YYYY-MM-DD). Older signals are no longer meaningfully ahead of the news cycle.
 
-SEARCH AGGRESSIVELY: Use the web_search tool with multiple query variations. Don't stop after one search. Try at least 4–6 different queries such as:
-- "Perth office tower DA approval 2026"
-- "WA commercial tender award"
-- "Perth healthcare project contractor named"
-- "WA data centre development announcement"
-- "[suburb] mixed-use development DA approved"
-- "Perth retail anchor tenant lease"
-- "ASX announcement WA construction project"
-
-If your first 1–2 searches return little, broaden the query — try sector-specific searches (data centre / healthcare / education / industrial) before concluding the pipeline is empty.
+Use the web_search tool with high-signal Australian property/business sources to find these signals. Focus on:
+- Business News WA
+- Australian Financial Review (property section)
+- The Urban Developer (Perth/WA section)
+- ASX listed-builder/developer announcements
+- WA Government project announcements
 
 Today's watchlist of WA commercial builders — flag pipeline items where any of these is the named builder, expected bidder, or recently won a tender:
 {{WATCHLIST}}
+
+STAKEHOLDERS — extract who the recruiter should actually contact for each pipeline item:
+The recruiter is WA-based — local Perth/WA contacts are vastly more valuable than national or international ones. For every pipeline item, populate a `stakeholders` array with named individuals AND named organisations (developer, builder, JV partner, anchor tenant) relevant to the project.
+- For each named PERSON in the source: include name, role/title, company, and a tier (local | national | international | unknown). "local" = based in Perth or anywhere in WA. "national" = elsewhere in Australia. "international" = overseas. "unknown" = location couldn't be confirmed.
+- For each named ORG: include the org's MOST LOCAL point of presence. Perth office wins over Sydney HQ wins over overseas HQ. Tier accordingly.
+- If a person's location isn't stated, do a quick search ("[name] [company] location" or "[name] LinkedIn Perth") to figure out their tier. Don't invent — if unverifiable, mark tier as "unknown".
+- For ORG entries, surface their WA office address and website if available; otherwise the Australian HQ.
+- Sort each item's stakeholders array: local first, then national, then international, then unknown.
+- Aim for 2–4 stakeholders per pipeline item. Pre-hiring signals often have fewer named contacts than active builds — that's fine. Quality over quantity.
+- If you genuinely find no local (WA) stakeholder for an item, return what you have. The dashboard will surface the gap.
 
 Return your response as a single JSON object matching EXACTLY this schema. Return ONLY valid JSON. No prose before or after.
 
@@ -54,13 +60,28 @@ Return your response as a single JSON object matching EXACTLY this schema. Retur
       "sector": "office | retail | healthcare | education | industrial | warehouse | data_centre | mixed_use",
       "estimated_construction_start": "e.g. 'Q3 2026' or null",
       "estimated_hiring_window": "When recruitment activity is likely to peak — e.g. '6-12 weeks before mob (~Aug 2026)'",
-      "why_it_matters_for_recruiters": "1-2 sentences — when will hiring start, who needs to be approached now, what role/sector"
+      "why_it_matters_for_recruiters": "1-2 sentences — when will hiring start, who needs to be approached now, what role/sector",
+      "stakeholders": [
+        {
+          "type": "person | org",
+          "name": "Person's full name (omit for orgs — use company instead)",
+          "role": "e.g. 'Perth Operations Manager', 'CEO', 'Pre-construction Director'",
+          "company": "Company they work for (or company name itself if type=org)",
+          "tier": "local | national | international | unknown",
+          "context": "1-line on why this person/org matters — e.g. 'Lead developer', 'Won the tender', 'Anchor tenant'",
+          "location": "City/region if known, e.g. 'Perth', 'Sydney', 'Amsterdam'",
+          "linkedin_query": "For people: a 2-4 word LinkedIn search query, e.g. 'Jane Smith Fugro Perth'. For orgs: leave null.",
+          "website": "For orgs: company website. For people: leave null.",
+          "office_address": "For orgs with a known WA/Aus office: street/suburb. For people: leave null."
+        }
+      ]
     }
   ]
 }
 
 Constraints:
-- pipeline: target 4–8 items. 12 max. Empty only if you've made at least 4 distinct search attempts and genuinely found nothing.
+- pipeline: between 0 and 12 items. Empty array is acceptable if nothing qualifies.
 - Items must be ordered by how soon they'll convert to hiring — tender_awarded and contractor_named first, land_acquisition and rezoning last.
 - Watchlist matches should be prioritised in ordering (within the same stage tier).
 - Do not duplicate items that would appear in the main brief's hot_projects (those are already in the hiring window).
+- Do not pad with stale items. An empty list is better than a stale list.

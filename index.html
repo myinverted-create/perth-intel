@@ -73,6 +73,27 @@
     }
     .copy-btn:hover { color: #1A3E30; background: rgba(47,235,151,.3); }
     .copy-btn.copied { color: #1A3E30; background: #2FEB97; }
+    /* Stakeholder tier dots */
+    .tier-dot {
+      display: inline-block; width: .55rem; height: .55rem; border-radius: 9999px;
+      flex-shrink: 0; margin-right: .35rem; box-shadow: 0 0 0 2px rgba(255,255,255,.6);
+    }
+    .tier-local         { background: #2FEB97; box-shadow: 0 0 0 2px rgba(47,235,151,.25); }
+    .tier-national      { background: #f59e0b; }
+    .tier-international { background: #ef4444; }
+    .tier-unknown       { background: rgba(26,62,48,.3); }
+    .stakeholder-row {
+      padding: .5rem .65rem; border-radius: .375rem; background: rgba(26,62,48,.04);
+      border: 1px solid rgba(26,62,48,.06);
+    }
+    .stakeholder-row + .stakeholder-row { margin-top: .35rem; }
+    .stakeholder-row a { color: #1A3E30; }
+    .stakeholder-row a:hover { color: #2FEB97; text-decoration: underline; text-underline-offset: 2px; }
+    .no-local-hint {
+      font-size: .65rem; text-transform: uppercase; letter-spacing: .04em;
+      color: #b45309; background: #fef3c7; padding: .15rem .45rem; border-radius: .25rem;
+      display: inline-block;
+    }
   </style>
 </head>
 <body class="bg-cream text-forest min-h-screen">
@@ -489,6 +510,77 @@ function contactToggle(id) {
   return `<button data-contact-id="${escapeHtml(id)}" class="contact-btn tap text-xs px-3 py-2 rounded-md border font-medium ${on ? "bg-mint/30 border-mint text-forest" : "bg-white border-forest/20 text-forest hover:bg-mint/10 hover:border-mint"}">${on ? "✓ Contacted" : "Mark contacted"}</button>`;
 }
 
+/* ----------------- Stakeholders block ------------------------------------
+   Renders the "who to contact" panel for each item. People get a LinkedIn
+   search link auto-built from `linkedin_query`. Orgs get website + office
+   address links. Sorted local > national > international > unknown so the
+   recruiter sees Perth contacts first. */
+const TIER_ORDER = { local: 0, national: 1, international: 2, unknown: 3 };
+const TIER_LABEL = { local: "WA", national: "AUS", international: "INTL", unknown: "?" };
+function linkedinUrlFromQuery(q) {
+  if (!q) return null;
+  return "https://www.linkedin.com/search/results/people/?keywords=" + encodeURIComponent(q);
+}
+function stakeholderRow(s) {
+  const tier = (s.tier || "unknown").toLowerCase();
+  const tierClass = "tier-" + (TIER_ORDER.hasOwnProperty(tier) ? tier : "unknown");
+  const tierLbl = TIER_LABEL[tier] || "?";
+  const isPerson = (s.type || "person").toLowerCase() === "person";
+  // Header line: name (or company for orgs) + role + tier
+  const primary = isPerson ? (s.name || "Unnamed") : (s.company || s.name || "Unnamed org");
+  const secondary = isPerson
+    ? [s.role, s.company].filter(Boolean).join(" · ")
+    : [s.role, s.location].filter(Boolean).join(" · ");
+  // Action links
+  const links = [];
+  if (isPerson) {
+    const li = linkedinUrlFromQuery(s.linkedin_query || `${s.name || ""} ${s.company || ""} ${s.location || ""}`.trim());
+    if (li) links.push(`<a href="${escapeHtml(li)}" target="_blank" rel="noopener" class="text-xs underline-offset-2 hover:underline">LinkedIn ↗</a>`);
+  } else {
+    if (s.website) {
+      let host = s.website;
+      try { host = new URL(s.website.startsWith("http") ? s.website : "https://" + s.website).hostname.replace(/^www\./,""); } catch {}
+      const url = s.website.startsWith("http") ? s.website : "https://" + s.website;
+      links.push(`<a href="${escapeHtml(url)}" target="_blank" rel="noopener" class="text-xs underline-offset-2 hover:underline">${escapeHtml(host)} ↗</a>`);
+    }
+    if (s.office_address) {
+      const maps = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(s.office_address + " " + (s.location || ""));
+      links.push(`<a href="${escapeHtml(maps)}" target="_blank" rel="noopener" class="text-xs underline-offset-2 hover:underline" title="${escapeHtml(s.office_address)}">📍 ${escapeHtml(s.office_address)}</a>`);
+    }
+  }
+  return `<div class="stakeholder-row text-xs">
+    <div class="flex items-start gap-1.5">
+      <span class="tier-dot ${tierClass} mt-1.5" title="${escapeHtml(tier)}"></span>
+      <div class="flex-1 min-w-0">
+        <div class="flex items-baseline justify-between gap-2 flex-wrap">
+          <span class="font-semibold text-forest">${escapeHtml(primary)}</span>
+          <span class="text-[10px] uppercase font-bold tracking-wider text-forest/50">${tierLbl}</span>
+        </div>
+        ${secondary ? `<div class="text-forest/60">${escapeHtml(secondary)}</div>` : ""}
+        ${s.context ? `<div class="text-forest/55 italic mt-0.5">${escapeHtml(s.context)}</div>` : ""}
+        ${links.length ? `<div class="mt-1 flex flex-wrap gap-x-3 gap-y-0.5">${links.join("")}</div>` : ""}
+      </div>
+    </div>
+  </div>`;
+}
+function renderStakeholders(stakeholders) {
+  if (!Array.isArray(stakeholders) || !stakeholders.length) return "";
+  // Sort local-first
+  const sorted = [...stakeholders].sort((a, b) => {
+    const ta = TIER_ORDER[(a.tier || "unknown").toLowerCase()] ?? 3;
+    const tb = TIER_ORDER[(b.tier || "unknown").toLowerCase()] ?? 3;
+    return ta - tb;
+  });
+  const hasLocal = sorted.some(s => (s.tier || "").toLowerCase() === "local");
+  return `<div class="mt-4 border-t border-forest/10 pt-3">
+    <div class="flex items-center justify-between mb-2 gap-2">
+      <span class="text-xs uppercase tracking-wide text-forest/50 font-semibold">Stakeholders</span>
+      ${hasLocal ? "" : `<span class="no-local-hint" title="No Perth/WA-based contact found in source">⚠ no local contact</span>`}
+    </div>
+    <div>${sorted.map(stakeholderRow).join("")}</div>
+  </div>`;
+}
+
 function renderTop3(items) {
   const root = document.getElementById("top3-list");
   const filtBar = document.getElementById("top3-filters");
@@ -525,6 +617,7 @@ function renderTop3(items) {
         </div>
         <p class="text-sm text-forest">${escapeHtml(it.best_first_action || "")}</p>
       </div>
+      ${renderStakeholders(it.stakeholders)}
       ${sourceLinks(it.source_urls)}
       <div class="mt-4 flex justify-end">${contactToggle(id)}</div>
     </article>`;
@@ -581,6 +674,7 @@ function renderHotProjects(items) {
         ${p.sector ? `<span class="text-[10px] uppercase font-semibold tracking-wider px-2 py-0.5 rounded ${sectorCls}">${escapeHtml(p.sector.replace("_"," "))}</span>` : "<span></span>"}
         ${contactToggle(id)}
       </div>
+      ${renderStakeholders(p.stakeholders)}
       ${sourceLinks(p.source_urls)}
     </article>`;
   }).join("");
@@ -631,6 +725,7 @@ function renderHiringSignals(items) {
         </div>
         <p class="text-sm text-forest italic">"${escapeHtml(s.outreach_hook)}"</p>
       </div>` : ""}
+      ${renderStakeholders(s.stakeholders)}
       ${sourceLinks(s.source_urls)}
       <div class="mt-4 flex justify-end">${contactToggle(id)}</div>
     </article>`;
@@ -699,7 +794,8 @@ function renderPipeline(items) {
         </div>
         <p class="text-sm text-forest">${escapeHtml(p.why_it_matters_for_recruiters)}</p>
       </div>` : ""}
-      <div class="flex items-center justify-between gap-2 flex-wrap">
+      ${renderStakeholders(p.stakeholders)}
+      <div class="flex items-center justify-between gap-2 flex-wrap mt-4">
         ${p.source_url ? `<a href="${escapeHtml(p.source_url)}" target="_blank" rel="noopener" class="text-xs text-forest/70 hover:text-forest underline underline-offset-2">${escapeHtml(sourceHost)} ↗</a>` : "<span></span>"}
         ${contactToggle(id)}
       </div>

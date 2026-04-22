@@ -14,6 +14,16 @@ VOLUME TARGETS — aim for these so the dashboard is useful, but never invent:
 - hiring_signals: target 4–6 items.
 - watchlist_status: one entry per watchlist builder, always.
 
+STAKEHOLDERS — extract who the recruiter should actually contact:
+For every top_3_today, hot_projects, and hiring_signals item, populate a `stakeholders` array with named individuals AND named organisations relevant to the project. The recruiter is WA-based — local contacts are vastly more valuable than international ones.
+- For each named PERSON in the source: include name, role/title, company, and a tier (local | national | international | unknown). "local" = based in Perth or anywhere in WA. "national" = elsewhere in Australia. "international" = overseas. "unknown" = location couldn't be confirmed.
+- For each named ORG (developer, builder, joint-venture partner): include the org's MOST LOCAL point of presence. If the company has a Perth office, that's the entry. Otherwise the Australian HQ. Otherwise the international HQ. Tier accordingly.
+- If a person's location isn't stated in the source article, do a quick search ("[name] [company] location" or "[name] LinkedIn Perth") to figure out their tier. Don't invent — if unverifiable, mark tier as "unknown".
+- For ORG entries, search for their WA office address and website if not in the source.
+- Sort each item's stakeholders array: local first, then national, then international, then unknown.
+- Aim for 2–5 stakeholders per item. Quality over quantity — a recruiter wants the real day-to-day contacts, not every name dropped in a press release.
+- If you genuinely find no local (WA) stakeholder for an item, that's fine — return what you have. The dashboard will surface the gap.
+
 Use the web_search and x_search tools aggressively to ground every fact. Make multiple search calls if the first round is thin — try variations like "Perth commercial construction tender 2026", "WA contract award builder", "Perth office DA approval", "[builder name] hiring", "[builder name] project win". Be specific with names, projects, dollar values, and timelines. If you cannot find a fact, omit that field rather than invent.
 
 Today's watchlist of WA commercial builders to specifically investigate for hiring activity, project wins, and growth signals:
@@ -30,10 +40,24 @@ Return your response as a single JSON object matching EXACTLY this schema. Retur
       "headline": "Short punchy line — name + why it matters",
       "type": "project | company | event",
       "why_it_matters": "2-3 sentences on why this is a money opportunity for a commercial recruiter THIS WEEK.",
-      "best_first_action": "Specific action — e.g. 'LinkedIn message to John Smith, Construction Manager at Built — reference their Burswood data centre win' ",
+      "best_first_action": "Specific action — e.g. 'LinkedIn message to John Smith, Construction Manager at Built — reference their Burswood data centre win'",
       "urgency": "today | this_week | this_month",
       "signal_date": "YYYY-MM-DD — the publication date of the most recent source backing this item",
-      "source_urls": ["https://..."]
+      "source_urls": ["https://..."],
+      "stakeholders": [
+        {
+          "type": "person | org",
+          "name": "Person's full name (omit for orgs — use company instead)",
+          "role": "e.g. 'Perth Operations Manager', 'CEO', 'Pre-construction Director'",
+          "company": "Company they work for (or company name itself if type=org)",
+          "tier": "local | national | international | unknown",
+          "context": "1-line on why this person/org matters — e.g. 'Quoted on workforce ramp', 'Joint venture lead'",
+          "location": "City/region if known, e.g. 'Perth', 'Sydney', 'Amsterdam'",
+          "linkedin_query": "For people: a 2-4 word LinkedIn search query, e.g. 'Jane Smith Fugro Perth'. For orgs: leave null.",
+          "website": "For orgs: company website. For people: leave null.",
+          "office_address": "For orgs with a known WA/Aus office: street/suburb. For people: leave null."
+        }
+      ]
     }
   ],
   "hot_projects": [
@@ -48,7 +72,8 @@ Return your response as a single JSON object matching EXACTLY this schema. Retur
       "location": "Suburb / region",
       "sector": "office | retail | healthcare | education | industrial | warehouse | data_centre | mixed_use",
       "signal_date": "YYYY-MM-DD — the publication date of the most recent source backing this project",
-      "source_urls": ["https://..."]
+      "source_urls": ["https://..."],
+      "stakeholders": [ /* same schema as top_3_today.stakeholders */ ]
     }
   ],
   "hiring_signals": [
@@ -59,7 +84,8 @@ Return your response as a single JSON object matching EXACTLY this schema. Retur
       "outreach_hook": "One specific, concrete opening line or angle for a recruiter outreach.",
       "signal_strength": "strong | moderate | early",
       "signal_date": "YYYY-MM-DD — the publication date of the most recent source backing this signal",
-      "source_urls": ["https://..."]
+      "source_urls": ["https://..."],
+      "stakeholders": [ /* same schema as top_3_today.stakeholders */ ]
     }
   ],
   "watchlist_status": [
