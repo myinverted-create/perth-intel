@@ -1,129 +1,89 @@
 {
   "date": "2026-04-22",
-  "market_notes": "The Western Australian government is fast-tracking five priority industrial projects to boost development amid a national $318 billion construction pipeline driving momentum. Persistent labour shortages and rising costs are challenging the sector, with a focus on delivery certainty and sustainability. Commercial areas like industrial parks and data centres are seeing activity, while build-to-rent lags in WA.",
+  "market_notes": "The Western Australia commercial construction market is buzzing with developments in data centres, particularly AI infrastructure, as evidenced by recent government expectations and plans for a massive AI data centre in the Kimberley. This signals potential growth opportunities for recruiters in tech-related construction projects. No major macro disruptions noted, but focus on reliable energy for data centres is critical.",
   "top_3_today": [
     {
       "rank": 1,
-      "headline": "WA Government fast-tracks industrial projects",
-      "type": "event",
-      "why_it_matters": "This initiative declares five Priority Projects and WA's first State Development Area, accelerating industrial construction which could create immediate hiring needs for skilled workers in commercial sectors. Recruiters can target contractors involved for roles in project ramp-up. It's urgent as new powers enable quicker approvals.",
-      "best_first_action": "LinkedIn message to contacts at Georgiou Group referencing potential involvement in fast-tracked industrial projects",
-      "urgency": "this_week",
-      "signal_date": "2026-04-21",
-      "source_urls": [
-        "https://www.manmonthly.com.au/wa-govt-fast-tracks-industrial-projects"
-      ]
-    },
-    {
-      "rank": 2,
-      "headline": "Delivery certainty tops construction priorities in Australia",
-      "type": "event",
-      "why_it_matters": "Record project pipelines collide with labour shortages and rising costs, highlighting opportunities for recruiters to supply talent in commercial construction. This affects WA projects, creating demand for reliable staffing solutions this week.",
-      "best_first_action": "Email outreach to ADCO Constructions offering talent solutions for labour shortage pain points",
+      "headline": "Plans for country's biggest AI data centre in Kimberley",
+      "type": "project",
+      "why_it_matters": "This multi-billion-dollar project could drive significant hiring in commercial construction for data centres, creating opportunities for recruiters to place skilled workers in a high-growth sector. With plans just emerging, early outreach to potential contractors could secure recruitment mandates this week.",
+      "best_first_action": "Reach out to contacts at DevelopmentWA or relevant developers via LinkedIn, referencing the Kimberley AI data centre plans for recruitment partnership discussions.",
       "urgency": "this_week",
       "signal_date": "2026-04-20",
       "source_urls": [
-        "https://www.insideconstruction.com.au/news/latest-news/delivery-certainty-tops-construction-priorities-in-australia"
-      ]
-    },
-    {
-      "rank": 3,
-      "headline": "Development complete at sold-out Jandakot business park",
-      "type": "project",
-      "why_it_matters": "Completion of this industrial business park signals potential for follow-on projects or expansions, opening recruitment opportunities for maintenance and new builds in the area. Recruiters can approach involved firms for talent needs post-completion.",
-      "best_first_action": "Contact developer via LinkedIn referencing Jandakot completion and offering workforce support for future phases",
-      "urgency": "this_month",
-      "signal_date": "2026-04-16",
-      "source_urls": [
-        "https://www.perthnow.com.au/news/development-complete-at-sold-out-jandakot-business-park-c-22115840"
+        "https://www.abc.net.au/news/2026-04-20/plans-emerge-gigawatt-scale-ai-data-centre-kimberley/106567332"
       ]
     }
   ],
   "hot_projects": [
     {
-      "name": "Vasse West Primary School",
-      "description": "Construction of a new primary school in Vasse, with tenders released for building works.",
-      "developer": "Department of Education",
+      "name": "Kimberley AI Data Centre",
+      "description": "A multi-billion-dollar project to establish a large-scale AI training data centre in Western Australia's north.",
+      "developer": null,
       "main_contractor": "tender",
-      "approximate_value_aud": "$300,000 – $3,220,000",
+      "approximate_value_aud": "multi-billion",
       "stage": "tender",
       "expected_peak_workforce_timing": null,
-      "location": "Vasse",
-      "sector": "education",
-      "signal_date": "2026-03-13",
+      "location": "Kimberley",
+      "sector": "data_centre",
+      "signal_date": "2026-04-20",
       "source_urls": [
-        "https://govmarket.com.au/tender/construction-of-vasse-west-primary-school-department-of-education-2028-"
-      ]
-    },
-    {
-      "name": "Westside Collaboration Space – Harry Perkins Institute",
-      "description": "Fit-out project at QEII Medical Centre for collaboration space in healthcare research.",
-      "developer": "Harry Perkins Institute",
-      "main_contractor": null,
-      "approximate_value_aud": null,
-      "stage": "tender",
-      "expected_peak_workforce_timing": null,
-      "location": "Nedlands",
-      "sector": "healthcare",
-      "signal_date": "2026-04-15",
-      "source_urls": [
-        "https://www.tenderhub.com.au/opportunities/TH-UQPqrx/westside-collaboration-space-harry-perkins"
+        "https://www.abc.net.au/news/2026-04-20/plans-emerge-gigawatt-scale-ai-data-centre-kimberley/106567332"
       ]
     }
   ],
   "hiring_signals": [
     {
-      "company": "Multiplex",
-      "why_hot": "Multiplex is actively hiring a Social Impact Coordinator for construction projects, indicating ongoing activity and need for specialized support roles. This follows a recent joint venture with Perkins Builders for large-scale complex construction in WA.",
+      "company": "Georgiou Group",
+      "why_hot": "Georgiou is actively seeking an Experienced Excavator Operator for Perth Metro based projects, with multiple job listings indicating ongoing hiring needs in infrastructure and construction roles.",
       "likely_pain_points": [
-        "Social Impact Coordinator",
-        "Project Managers",
-        "Site Supervisors"
+        "Excavator Operator",
+        "Infrastructure Team Members"
       ],
-      "outreach_hook": "Saw your opening for Social Impact Coordinator – with your recent JV with Perkins, are you looking for more talent in WA projects?",
-      "signal_strength": "moderate",
-      "signal_date": "2026-04-14",
+      "outreach_hook": "I noticed your recent posting for an Excavator Operator on SEEK – as a specialist in WA commercial construction recruitment, I have pre-vetted candidates ready to deploy.",
+      "signal_strength": "strong",
+      "signal_date": "2026-04-01",
       "source_urls": [
-        "https://multiplex.springboard.com.au/jobtools/jncustomsearch.viewFullSingle?in_jnCounter=226466396&in_organid=18939"
+        "https://www.seek.com.au/Georgiou-jobs/in-Western-Australia-WA"
       ]
     },
     {
-      "company": "Built",
-      "why_hot": "Built Construction Group is seeking a Construction Supervisor for an exciting commercial construction project in Wattleup, showing active on-site hiring needs.",
+      "company": "Multiplex",
+      "why_hot": "Multiplex has 21 open job opportunities listed, spanning administration, commercial, and design roles, suggesting active expansion or project ramp-up in their operations.",
       "likely_pain_points": [
-        "Construction Supervisor",
-        "Site Manager",
-        "Project Coordinator"
+        "Commercial Roles",
+        "Design Positions",
+        "HSEQ Specialists"
       ],
-      "outreach_hook": "Noticed your ad for Construction Supervisor in Wattleup – let's discuss how I can help fill similar roles quickly.",
+      "outreach_hook": "With 21 roles open on your careers page, including in commercial and design, let's discuss how my network can fill these gaps quickly for your WA projects.",
       "signal_strength": "strong",
-      "signal_date": "2026-04-17",
+      "signal_date": "2026-04-15",
       "source_urls": [
-        "https://www.seek.com.au/Built-Construction-Group-jobs/in-Wattleup-WA-6166/full-time"
+        "https://www.multiplex.global/careers/job-opportunities"
       ]
     }
   ],
   "watchlist_status": [
     {
       "builder": "Multiplex",
-      "status": "warm",
-      "note": "Hiring for Social Impact Coordinator and recent JV with Perkins Builders.",
-      "last_signal_date": "2026-04-14",
-      "open_roles_seen": 1
+      "status": "hot",
+      "note": "Actively hiring with 21 open roles across various functions.",
+      "last_signal_date": "2026-04-15",
+      "open_roles_seen": 21
     },
     {
       "builder": "Built",
-      "status": "hot",
-      "note": "Actively hiring Construction Supervisor for commercial project.",
-      "last_signal_date": "2026-04-17",
-      "open_roles_seen": 1
-    },
-    {
-      "builder": "Georgiou Group",
       "status": "no_signal",
       "note": "no fresh signal in last 30 days",
       "last_signal_date": null,
       "open_roles_seen": 0
+    },
+    {
+      "builder": "Georgiou Group",
+      "status": "hot",
+      "note": "Recent job postings for operators and infrastructure roles on Perth projects.",
+      "last_signal_date": "2026-04-01",
+      "open_roles_seen": 10
     },
     {
       "builder": "BGC Construction",
@@ -155,7 +115,7 @@
     },
     {
       "builder": "Broad Construction",
-      "status": "quiet",
+      "status": "no_signal",
       "note": "no fresh signal in last 30 days",
       "last_signal_date": null,
       "open_roles_seen": 0
@@ -169,9 +129,9 @@
     },
     {
       "builder": "Perkins Builders",
-      "status": "warm",
-      "note": "Formed JV with Multiplex for large-scale construction.",
-      "last_signal_date": "2026-03-26",
+      "status": "no_signal",
+      "note": "no fresh signal in last 30 days",
+      "last_signal_date": null,
       "open_roles_seen": 0
     },
     {
@@ -249,57 +209,48 @@
   "_grok_search_mode": "agent_tools_sdk",
   "_grok_grounded": true,
   "_grok_citations": [
-    "https://www.defenceconnect.com.au/land/17804-defence-precinct-to-be-established-at-henderson-new-contract-supports",
-    "https://www.perthnow.com.au/news/development-complete-at-sold-out-jandakot-business-park-c-22115840",
-    "https://www.australiantenders.com.au/tenders/category/brick-paving-laying/western-australia",
-    "https://www.acciona.com.au/updates/news/western-sydney-airport-works-named-finalist-for-2026-australian-construction-achievement-award",
-    "https://www.mineralresources.com.au/about-us/leadership/mark-wilson",
-    "https://www.cpbcon.com.au/our-projects/2019/casuarina-prison-expansion-project",
-    "https://www.westpaciq.com.au/economics/2026/02/australian-construction-work-Q4-2025",
-    "https://towncentrecommercial.com.au/pages/real-estate/research",
-    "https://www.glassdoor.com.au/Job/adelaide-project-management-jobs-SRCH_IL.0,8_IC2218494_KO9,27.htm",
-    "https://www.waconference.com.au/conference-agenda.html",
-    "https://www.wa.gov.au/government/media-statements/Cook%20Labor%20Government/Construction-of-new-Albany-flyover-to-begin-this-month-20260202",
-    "https://govmarket.com.au/tender/construction-of-vasse-west-primary-school-department-of-education-2028-",
-    "https://www.coates.com.au/news/latest-news/equipment/construction-forecast-2026",
-    "https://www.allens.com.au/insights-news/insights/2026/04/successfully-navigating-renewable-energy-approvals-in-western-australia",
-    "https://www.wa.gov.au/service/business-support/industry-development/contracts-and-tenders",
-    "https://www.news.com.au/finance/economy/australian-economy/never-seen-anything-like-it-tens-of-thousands-of-homes-at-risk-as-building-costs-soar/news-story/3ac251a09d1d4658a1b8e890fbe697ce",
-    "https://www.perkinsbuilders.com.au/category/news-2",
-    "https://www.wa.gov.au/government/media-statements/Cook%20Labor%20Government/Major-marine-upgrades-at-Fremantle-and-Woodman-Point-20260318",
-    "https://multiplex.springboard.com.au/jobtools/jncustomsearch.viewFullSingle?in_jnCounter=226466396&in_organid=18939",
-    "https://www.dayjob.com.au/australia-construction-industry-trends",
-    "https://www.eciexec.com.au/australias-318-billion-pipeline-driving-construction-momentum",
-    "https://www.mainroads.wa.gov.au/projects-initiatives/all-projects/metropolitan/kwinana-freeway-upgrade",
-    "https://govmarket.com.au/tender/dolphin-upgrade-fabrication-supply-and-installation-rg-tanna-coal-terminal-gladstone",
-    "https://thewest.com.au/business/commercial-property/pioneering-wa-struggles-to-keep-build-to-rent-pace-c-22171640",
-    "https://www.mainroads.wa.gov.au/projects-initiatives/all-projects/regional/marble-bar-road-upgrade",
-    "https://www.allens.com.au/insights-news/insights/2026/03/part-2-unlocking-energy-investment-at-scale-contracts-infrastructure-and-market-confidence",
-    "https://www.nsw.gov.au/departments-and-agencies/wnswlhd/news/latest-news/main-works-contractor-appointed-for-construction-of-dubbo-residential-rehabilitation-centre",
-    "https://woodcentral.com.au/one-million-homes-not-enough-tradies-australia-forced-to-embrace-prefab",
-    "https://developmentwa.com.au/projects/residential/White",
-    "https://www.titanrecruitment.com.au/blog/2026/02/western-australia-on-the-move-transport-infrastructure-jobs-2026-highlights",
-    "https://www.duratec.com.au/industries/fuel",
-    "https://www.insideconstruction.com.au/news/latest-news/delivery-certainty-tops-construction-priorities-in-australia",
-    "https://roadsonline.com.au/contract-awarded-for-second-port-stage",
-    "https://westport.wa.gov.au/info-hub/news/legislation-introduced-to-parliament-to-establish-westport-authority",
-    "https://roadsonline.com.au/wa-major-projects-conference-2026-strengthening-western-australias-infrastructure-sector",
-    "https://hia.com.au/our-industry/housing/projects/2026/02/riverside-refinement?srsltid=AfmBOorCiDyLF8pQbnn5BQZP0c_OfEE9Vc7GUHsGYqQBq1m4UVwA5hMW",
-    "https://www.seek.com.au/Built-Construction-Group-jobs/in-Wattleup-WA-6166/full-time",
-    "https://www.insideconstruction.com.au/construction-projects/updates",
-    "https://www.tenderhub.com.au/opportunities/TH-UQPqrx/westside-collaboration-space-harry-perkins",
-    "https://www.manmonthly.com.au/wa-govt-fast-tracks-industrial-projects",
-    "https://www.ledge.com.au/news/water-corporation-capital-works-program-2026",
-    "https://tenders.wa.gov.au/",
-    "https://www.dewr.gov.au/building-womens-careers-program/industry-construction",
-    "https://www.adnews.com.au/news/wa-construction-training-fund-launches-agency-tender",
-    "https://www.parliament.wa.gov.au/hansard/daily/lh/2026-02-25/5",
-    "https://www.buildaustralia.com.au/news_article/global-tensions-worsen-australias-housing-crisis",
-    "https://www.seek.com.au/multiplex-constructions-jobs/in-Melbourne-VIC-3000"
+    "https://uptimeinstitute.com/about-ui/news-media",
+    "https://www.buildingfortomorrow.wa.gov.au/projects",
+    "https://bidenwhitehouse.archives.gov/wp-content/uploads/2021/06/100-day-supply-chain-review-report.pdf?utm_campaign=20210610_Global_Manufacturing_Economic_Update_June_Members&utm_medium=email%E2%80%8B&utm_source=sfmc%E2%80%8B",
+    "https://www.linkedin.com/pulse/australias-construction-activity-holds-firm-data-centres-rader-mozic",
+    "https://au.indeed.com/q-georgiou-group-l-perth-wa-jobs.html",
+    "https://au.indeed.com/q-construction-l-western-australia-jobs.html",
+    "https://www.zoetis.com/_assets/pdf/corporate/zoetis-2024-annual-report.pdf",
+    "https://business.gov.au/grants-and-programs/major-project-status/current-major-projects",
+    "https://bidenwhitehouse.archives.gov/wp-content/uploads/2024/03/ERP-2024.pdf",
+    "https://portfoliomanager.energystar.gov/pm/dataCollectionWorksheet",
+    "https://www.wa.gov.au/service/government-financial-management/procurement/pipeline-of-works",
+    "https://www.facebook.com/IndustryGovAu/posts/the-australian-government-has-set-new-expectations-for-building-data-centres-and/1258152403086080",
+    "https://www3.weforum.org/docs/WEF_Annual_Report_2023_2024.pdf",
+    "https://www.acciona.com/content/dam/acciona-global/documentos/cnmv/2025/sustainability-report-2024-acciona.pdf",
+    "https://theconversation.com/australia-has-set-new-expectations-for-ai-data-centres-they-should-serve-the-public-278988",
+    "https://www.new.constructionadvisor.com.au/category/allnews/project-announcements",
+    "https://www.reuters.com/sustainability/land-use-biodiversity/australia-data-centre-boom-is-built-vague-water-plans-2025-09-15",
+    "https://developmentwa.com.au/projects",
+    "https://www.ecfr.gov/current/title-15/subtitle-B/chapter-VII/subchapter-C/part-740",
+    "https://www.gensler.com/projects/all",
+    "https://au.indeed.com/q-regional-construction-l-western-australia-jobs.html",
+    "https://www.seek.com.au/commercial-construction-jobs/in-Bellevue-WA-6056",
+    "https://www.hotel-development.marriott.com/resourcefiles/fdd-document/2023-mhr-fdd-3-31-2023.pdf",
+    "https://www.seek.com.au/commercial-builder-jobs/in-Bellevue-WA-6056/full-time",
+    "https://www.facebook.com/ABC730/videos/the-massive-ai-data-centres-moving-into-the-suburbs-730/971709998852966",
+    "https://www.congress.gov/committee-report/119th-congress/house-report/231/1",
+    "https://www.glassdoor.com.au/Job/perth-georgiou-jobs-SRCH_IL.0,5_IC2255727_KO6,14.htm",
+    "https://cciwa.com/business-pulse/data-centres-could-be-was-next-gold-rush-cciwa-report-finds?srsltid=AfmBOorI1bDN3zKuXS16ERNGbdiEP0GBlrZgj_0dWrDZsuyTZNxrGZ8M",
+    "https://sifyinfinitspaces.com/wp-content/uploads/2025/10/Project-Green-Industry-report_1Lsigned.pdf",
+    "https://www.datacenterdynamics.com/en/news/australias-cdc-plans-200mw-data-center-campus-outside-perth",
+    "https://www.drmartensplc.com/application/files/3617/1817/8736/Dr._Martens_plc_Annual_Report_2024.pdf",
+    "https://www.multiplex.global/careers/job-opportunities",
+    "https://www.seek.com.au/Georgiou-jobs/in-Western-Australia-WA",
+    "https://www.careerone.com.au/construction-professional-jobs/in-western-australia-wa",
+    "https://www.georgiou.com.au/careers",
+    "https://registry.opendata.aws/",
+    "https://www.abc.net.au/news/2026-04-20/plans-emerge-gigawatt-scale-ai-data-centre-kimberley/106567332",
+    "https://www.gatesnotes.com/work/accelerate-energy-innovation/reader/three-tough-truths-about-climate"
   ],
   "_grok_tool_usage": {
     "daily_brief": {},
     "pipeline": {}
   },
-  "generated_at": "2026-04-22T15:58:30.162154+08:00"
+  "generated_at": "2026-04-22T16:09:21.918240+08:00"
 }
