@@ -58,15 +58,8 @@ AWST = timezone(timedelta(hours=8))
 PIPELINE_DOMAINS = [
     "businessnews.com.au",          # WA business news, often first-print on local deals
     "theurbandeveloper.com",        # Australia-wide property dev news with WA section
-    "afr.com",                      # AFR commercial property
-    "asx.com.au",                   # ASX listed-builder/developer announcements
-    "wa.gov.au",                    # WA Government project announcements (planning, JTSI)
-    "commercialrealestate.com.au",  # Commercial leasing + development pipeline
-    "propertycouncil.com.au",       # Industry body, picks up tender awards & policy moves
-    "architectureanddesign.com.au", # Project pipeline coverage with named contractors
-    "nationaltribune.com.au",       # Government & council announcements aggregator
-    "thewest.com.au",               # WA's main daily — council DA decisions, tenders
-    "watoday.com.au",               # WA daily — local development news
+    "afr.com",                      # AFR commercial property coverage
+    "wa.gov.au",                    # WA Government project announcements
     "sourceable.net",               # Built-environment news, often early on tender awards
 ]
 
