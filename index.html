@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>WA Commercial Construction Recruitment Intel</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231A3E30'/%3E%3Ctext x='32' y='44' font-family='system-ui' font-size='36' font-weight='800' fill='%232FEB97' text-anchor='middle'%3EWA%3C/text%3E%3C/svg%3E" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream:   "#F0F0E2",
+            forest:  "#1A3E30",
+            mint:    "#2FEB97",
+            forest2: "#0f2a20", // a darker forest for nav contrast
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    .stage-pill { display:inline-flex; align-items:center; padding:.125rem .5rem; border-radius:9999px; font-size:.7rem; font-weight:600; text-transform:uppercase; letter-spacing:.04em; white-space:nowrap; }
+    .stage-tender      { background:#fef3c7; color:#92400e; }
+    .stage-da          { background:#e0e7ff; color:#3730a3; }
+    .stage-early       { background:#d1fae5; color:#1A3E30; }
+    .stage-rampup      { background:#fee2e2; color:#991b1b; }
+    .signal-strong     { background:#2FEB97; }
+    .signal-moderate   { background:#eab308; }
+    .signal-early      { background:#94a3b8; }
+    .contacted         { opacity:.55; }
+    .contacted .contacted-strike { text-decoration: line-through; }
+    details > summary { list-style: none; cursor:pointer; }
+    details > summary::-webkit-details-marker { display:none; }
+    /* Touch-friendly tap targets on mobile */
+    .tap { min-height:44px; }
+    /* Hide scrollbars on horizontal nav */
+    .no-scrollbar::-webkit-scrollbar { display:none; }
+    .no-scrollbar { scrollbar-width:none; }
+  </style>
+</head>
+<body class="bg-cream text-forest min-h-screen">
+
+<header class="bg-forest text-cream border-b border-forest2">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+    <div class="min-w-0">
+      <h1 class="text-lg sm:text-xl md:text-2xl font-bold tracking-tight leading-tight">
+        WA Commercial Construction <span class="text-mint">Recruitment Intel</span>
+      </h1>
+      <p class="text-cream/70 text-xs sm:text-sm mt-1">Daily lead-gen brief · Auto-refreshed weekday mornings 6am AWST</p>
+    </div>
+    <div class="flex flex-wrap items-center gap-2 text-xs sm:text-sm">
+      <span id="grounding-badge" class="hidden px-2.5 py-1.5 rounded-md font-medium"></span>
+      <span id="freshness-badge" class="px-2.5 py-1.5 rounded-md bg-forest2 text-cream/80 font-medium">Loading…</span>
+      <a id="repo-link" href="#" target="_blank" rel="noopener" class="text-cream/60 hover:text-mint underline-offset-2 hover:underline">Repo</a>
+    </div>
+  </div>
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 flex gap-1 overflow-x-auto no-scrollbar">
+    <button data-tab="today"      class="tab-btn tap px-4 py-3 text-sm font-medium border-b-2 border-mint text-cream whitespace-nowrap">Today's Brief</button>
+    <button data-tab="watchlist"  class="tab-btn tap px-4 py-3 text-sm font-medium border-b-2 border-transparent text-cream/60 hover:text-cream whitespace-nowrap">Watchlist</button>
+    <button data-tab="archive"    class="tab-btn tap px-4 py-3 text-sm font-medium border-b-2 border-transparent text-cream/60 hover:text-cream whitespace-nowrap">Archive</button>
+  </nav>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+
+  <!-- Empty / loading state -->
+  <div id="empty-state" class="hidden bg-white border border-forest/15 rounded-xl p-8 sm:p-10 text-center">
+    <h2 class="text-lg font-semibold text-forest">No brief yet</h2>
+    <p class="text-forest/60 mt-2 max-w-xl mx-auto text-sm sm:text-base" id="empty-state-msg">
+      The dashboard hasn't run yet. Trigger the GitHub Action manually from the Actions tab,
+      or wait for the next scheduled run (weekday mornings, 6am AWST).
+    </p>
+  </div>
+
+  <!-- ============================== TODAY TAB ============================== -->
+  <section data-panel="today" class="space-y-8 sm:space-y-10">
+
+    <!-- Ungrounded warning banner — shown when Grok fell back to training data -->
+    <div id="ungrounded-warning" class="hidden border-l-4 border-red-500 bg-red-50 px-4 sm:px-5 py-3 sm:py-4 rounded-r-lg">
+      <div class="text-xs font-semibold uppercase tracking-wide text-red-700 mb-1">⚠ Live web search unavailable for this brief</div>
+      <p class="text-sm text-forest/80 leading-relaxed">
+        Grok could not reach its live search backend (xAI may have changed the API again). Today's
+        brief was generated from the model's training data only — treat names, dates and dollar
+        figures as <strong>unverified</strong>. Check the Actions log and update
+        <code class="bg-white px-1 rounded">scripts/fetch_brief.py</code> if needed.
+      </p>
+    </div>
+
+    <!-- Market notes ribbon -->
+    <div id="market-notes" class="hidden border-l-4 border-mint bg-mint/15 px-4 sm:px-5 py-3 sm:py-4 rounded-r-lg">
+      <div class="text-xs font-semibold uppercase tracking-wide text-forest mb-1">WA Commercial Market Notes — <span id="market-date"></span></div>
+      <p id="market-notes-body" class="text-sm text-forest/85 leading-relaxed"></p>
+    </div>
+
+    <!-- Sources Grok consulted -->
+    <details id="sources-block" class="hidden bg-white border border-forest/15 rounded-xl px-4 sm:px-5 py-3">
+      <summary class="text-sm font-semibold text-forest cursor-pointer flex items-center justify-between gap-2">
+        <span>Sources Grok consulted today (<span id="sources-count">0</span>)</span>
+        <span class="text-mint text-xs">▾</span>
+      </summary>
+      <ul id="sources-list" class="mt-3 space-y-1.5 text-xs text-forest/70 max-h-64 overflow-y-auto"></ul>
+    </details>
+
+    <!-- Top 3 -->
+    <section>
+      <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-4">
+        <h2 class="text-base sm:text-lg font-semibold text-forest">Top 3 Money Opportunities Today</h2>
+        <span class="text-xs text-forest/50">Ranked by Grok · Action-first</span>
+      </div>
+      <div id="top3-list" class="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4"></div>
+    </section>
+
+    <!-- Hot Projects -->
+    <section>
+      <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 mb-4">
+        <h2 class="text-base sm:text-lg font-semibold text-forest">Hot Projects</h2>
+        <div id="hot-projects-filters" class="flex flex-wrap gap-1.5 text-xs"></div>
+      </div>
+      <div id="hot-projects-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4"></div>
+    </section>
+
+    <!-- Hiring Signals -->
+    <section>
+      <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-4">
+        <h2 class="text-base sm:text-lg font-semibold text-forest">Company Hiring Signals</h2>
+        <span class="text-xs text-forest/50">Last 30 days</span>
+      </div>
+      <div id="hiring-signals-list" class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4"></div>
+    </section>
+  </section>
+
+  <!-- ============================== WATCHLIST TAB ============================== -->
+  <section data-panel="watchlist" class="hidden">
+    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-4">
+      <h2 class="text-base sm:text-lg font-semibold text-forest">Watchlist Status</h2>
+      <span class="text-xs text-forest/50">Tracked WA commercial builders · Edit list in <code class="bg-forest/5 px-1 rounded">data/watchlist.json</code></span>
+    </div>
+    <div id="watchlist-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"></div>
+  </section>
+
+  <!-- ============================== ARCHIVE TAB ============================== -->
+  <section data-panel="archive" class="hidden">
+    <div class="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-4 md:gap-6">
+      <aside class="bg-white border border-forest/15 rounded-xl p-3 max-h-[40vh] md:max-h-[70vh] overflow-y-auto">
+        <h3 class="text-xs uppercase tracking-wide text-forest/50 font-semibold mb-2 px-2">Date</h3>
+        <ul id="archive-dates" class="space-y-1"></ul>
+      </aside>
+      <div id="archive-content" class="space-y-6"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="border-t border-forest/15 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-5 sm:py-6 text-xs text-forest/60 flex flex-col md:flex-row md:justify-between gap-2">
+    <span>Private dashboard · Search engines blocked · "Mark contacted" state stored locally in your browser</span>
+    <span>Built on GitHub Pages · Powered by xAI Grok live search</span>
+  </div>
+</footer>
+
+<script>
+/* ===========================================================================
+   WA COMMERCIAL CONSTRUCTION RECRUITMENT INTEL — dashboard logic
+   Static, vanilla JS. Reads data/*.json at load time, renders cards.
+   =========================================================================== */
+
+const STATE = {
+  brief: null,
+  history: [],
+  archiveBrief: null,
+  sectorFilter: null,
+};
+
+const SECTOR_COLORS = {
+  office:      "bg-blue-100 text-blue-800",
+  retail:      "bg-pink-100 text-pink-800",
+  healthcare:  "bg-emerald-100 text-emerald-800",
+  education:   "bg-amber-100 text-amber-800",
+  industrial:  "bg-orange-100 text-orange-800",
+  warehouse:   "bg-orange-100 text-orange-800",
+  data_centre: "bg-violet-100 text-violet-800",
+  mixed_use:   "bg-cyan-100 text-cyan-800",
+};
+
+const STAGE_CLASS = {
+  "tender":            "stage-pill stage-tender",
+  "DA approval":       "stage-pill stage-da",
+  "early construction":"stage-pill stage-early",
+  "ramp-up":           "stage-pill stage-rampup",
+};
+
+/* ----------------- localStorage helpers (per-viewer) ---------------------- */
+const CONTACTED_KEY = "wari_contacted_v1";
+function getContacted() {
+  try { return new Set(JSON.parse(localStorage.getItem(CONTACTED_KEY) || "[]")); }
+  catch { return new Set(); }
+}
+function toggleContacted(id) {
+  const s = getContacted();
+  if (s.has(id)) s.delete(id); else s.add(id);
+  localStorage.setItem(CONTACTED_KEY, JSON.stringify([...s]));
+}
+
+/* ----------------- Repo link ---------------------------------------------- */
+function detectRepoUrl() {
+  // Best-effort: GitHub Pages URLs look like https://USER.github.io/REPO/
+  try {
+    const host = location.hostname;
+    if (host.endsWith("github.io")) {
+      const user = host.split(".")[0];
+      const seg = location.pathname.split("/").filter(Boolean)[0];
+      if (user && seg) return `https://github.com/${user}/${seg}`;
+    }
+  } catch {}
+  return null;
+}
+
+/* ----------------- Grounding badge + sources ----------------------------- */
+function groundingBadge(brief) {
+  const el = document.getElementById("grounding-badge");
+  const warn = document.getElementById("ungrounded-warning");
+  if (!brief) { el.classList.add("hidden"); warn.classList.add("hidden"); return; }
+
+  const mode = brief._grok_search_mode;            // present only on fixed-script runs
+  const grounded = brief._grok_grounded;           // true | false | undefined
+
+  el.classList.remove("hidden");
+  if (grounded === true) {
+    el.textContent = `🌐 Live · ${mode || "on"}`;
+    el.className = "px-2.5 py-1.5 rounded-md font-medium bg-mint text-forest";
+    warn.classList.add("hidden");
+  } else if (grounded === false) {
+    el.textContent = "⚠ No live search";
+    el.className = "px-2.5 py-1.5 rounded-md font-medium bg-red-600 text-white";
+    warn.classList.remove("hidden");
+  } else {
+    // Field missing entirely — pre-fix run or seed data. Stay neutral but flag.
+    el.textContent = "? Grounding unknown";
+    el.className = "px-2.5 py-1.5 rounded-md font-medium bg-amber-500 text-white";
+    warn.classList.add("hidden");
+  }
+}
+
+function renderSources(brief) {
+  const block = document.getElementById("sources-block");
+  const list  = document.getElementById("sources-list");
+  const count = document.getElementById("sources-count");
+  const cites = (brief && brief._grok_citations) || [];
+  if (!cites.length) { block.classList.add("hidden"); return; }
+  block.classList.remove("hidden");
+  count.textContent = cites.length;
+  list.innerHTML = cites.map(c => {
+    // Citations may be plain URL strings or { url, title } objects.
+    const url   = typeof c === "string" ? c : (c.url || c.uri || "");
+    const title = typeof c === "string" ? null : (c.title || c.snippet || null);
+    if (!url) return "";
+    let host = "";
+    try { host = new URL(url).hostname.replace(/^www\./, ""); } catch { host = url; }
+    return `<li>
+      <a href="${escapeHtml(url)}" target="_blank" rel="noopener" class="text-forest hover:text-mint underline underline-offset-2 break-all">${escapeHtml(title || host)}</a>
+      ${title ? `<span class="text-forest/40"> · ${escapeHtml(host)}</span>` : ""}
+    </li>`;
+  }).join("");
+}
+
+/* ----------------- Freshness badge ---------------------------------------- */
+function freshnessBadge(dateStr) {
+  const el = document.getElementById("freshness-badge");
+  if (!dateStr) { el.textContent = "No data yet"; el.className = "px-2.5 py-1.5 rounded-md bg-red-700 text-white font-medium"; return; }
+  const d = new Date(dateStr);
+  const ageHrs = (Date.now() - d.getTime()) / 36e5;
+  let label, cls;
+  if (ageHrs < 30)        { label = `Fresh · ${d.toLocaleString("en-AU",{dateStyle:"medium",timeStyle:"short"})}`; cls = "bg-forest text-cream"; }
+  else if (ageHrs < 96)   { label = `${Math.round(ageHrs/24)}d old · ${d.toLocaleDateString("en-AU")}`;           cls = "bg-amber-500 text-white"; }
+  else                    { label = `Stale · ${d.toLocaleDateString("en-AU")}`;                                    cls = "bg-red-600 text-white";   }
+  el.textContent = label;
+  el.className = "px-2.5 py-1.5 rounded-md font-medium " + cls;
+}
+
+/* ----------------- Renderers --------------------------------------------- */
+function escapeHtml(s) {
+  return (s ?? "").toString()
+    .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+}
+
+function sourceLinks(urls) {
+  if (!urls || !urls.length) return "";
+  return `<div class="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs">${
+    urls.slice(0,4).map((u,i) => {
+      let host = "";
+      try { host = new URL(u).hostname.replace(/^www\./, ""); } catch { host = `source ${i+1}`; }
+      return `<a href="${escapeHtml(u)}" target="_blank" rel="noopener" class="text-forest/70 hover:text-forest underline underline-offset-2">${escapeHtml(host)} ↗</a>`;
+    }).join("")
+  }</div>`;
+}
+
+function urgencyChip(u) {
+  if (!u) return "";
+  const map = { today: "bg-red-100 text-red-800", this_week: "bg-orange-100 text-orange-800", this_month: "bg-forest/10 text-forest" };
+  return `<span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded ${map[u] || "bg-forest/10 text-forest"}">${escapeHtml(u.replace("_"," "))}</span>`;
+}
+
+function contactToggle(id) {
+  const c = getContacted();
+  const on = c.has(id);
+  return `<button data-contact-id="${escapeHtml(id)}" class="contact-btn tap text-xs px-3 py-2 rounded-md border font-medium ${on ? "bg-mint/30 border-mint text-forest" : "bg-white border-forest/20 text-forest hover:bg-mint/10 hover:border-mint"}">${on ? "✓ Contacted" : "Mark contacted"}</button>`;
+}
+
+function renderTop3(items) {
+  const root = document.getElementById("top3-list");
+  if (!items || !items.length) { root.innerHTML = `<div class="text-forest/40 text-sm col-span-full">No top picks today.</div>`; return; }
+  root.innerHTML = items.map((it,i) => {
+    const id = `top-${i}-${(it.headline||"").slice(0,40)}`;
+    const contacted = getContacted().has(id);
+    return `
+    <article class="bg-white border-2 border-mint rounded-xl p-4 sm:p-5 shadow-sm hover:shadow-md transition ${contacted ? "contacted" : ""}">
+      <div class="flex items-start justify-between mb-3 gap-2">
+        <span class="bg-mint text-forest font-bold rounded-full w-8 h-8 flex items-center justify-center text-base shrink-0">${it.rank ?? i+1}</span>
+        ${urgencyChip(it.urgency)}
+      </div>
+      <h3 class="font-semibold text-forest leading-snug mb-2 contacted-strike">${escapeHtml(it.headline || "")}</h3>
+      <p class="text-sm text-forest/70 mb-3 contacted-strike">${escapeHtml(it.why_it_matters || "")}</p>
+      <div class="border-t border-forest/10 pt-3 mt-3">
+        <div class="text-xs uppercase tracking-wide text-forest/50 font-semibold mb-1">Best first action</div>
+        <p class="text-sm text-forest">${escapeHtml(it.best_first_action || "")}</p>
+      </div>
+      ${sourceLinks(it.source_urls)}
+      <div class="mt-4 flex justify-end">${contactToggle(id)}</div>
+    </article>`;
+  }).join("");
+}
+
+function renderHotProjects(items) {
+  const root = document.getElementById("hot-projects-list");
+  const filtBar = document.getElementById("hot-projects-filters");
+  if (!items || !items.length) { root.innerHTML = `<div class="text-forest/40 text-sm col-span-full">No hot projects today.</div>`; filtBar.innerHTML=""; return; }
+
+  // Sector filter chips
+  const sectors = [...new Set(items.map(p => p.sector).filter(Boolean))].sort();
+  filtBar.innerHTML = ["all", ...sectors].map(s => {
+    const active = (s === "all" && !STATE.sectorFilter) || s === STATE.sectorFilter;
+    return `<button data-sector="${s}" class="sector-chip tap px-3 py-1.5 rounded-full border text-xs ${active ? "bg-forest text-cream border-forest" : "bg-white text-forest/70 border-forest/20 hover:bg-mint/10 hover:border-mint"}">${s.replace("_"," ")}</button>`;
+  }).join("");
+
+  const filtered = STATE.sectorFilter ? items.filter(p => p.sector === STATE.sectorFilter) : items;
+  root.innerHTML = filtered.map((p,i) => {
+    const id = `proj-${(p.name||"").slice(0,60)}`;
+    const contacted = getContacted().has(id);
+    const stageCls = STAGE_CLASS[p.stage] || "stage-pill bg-forest/10 text-forest";
+    const sectorCls = SECTOR_COLORS[p.sector] || "bg-forest/10 text-forest";
+    return `
+    <article class="bg-white border border-forest/15 rounded-xl p-4 sm:p-5 hover:border-mint hover:shadow-sm transition ${contacted ? "contacted" : ""}">
+      <div class="flex items-start justify-between gap-2 mb-2">
+        <h3 class="font-semibold text-forest leading-snug contacted-strike text-sm sm:text-base">${escapeHtml(p.name || "Unnamed project")}</h3>
+        <span class="${stageCls}">${escapeHtml(p.stage || "")}</span>
+      </div>
+      <p class="text-sm text-forest/70 mb-3 contacted-strike">${escapeHtml(p.description || "")}</p>
+      <dl class="text-xs space-y-1.5 text-forest">
+        ${p.main_contractor ? `<div class="flex gap-2"><dt class="text-forest/50 w-20 sm:w-24 shrink-0">Builder</dt><dd class="font-medium">${escapeHtml(p.main_contractor)}</dd></div>`:""}
+        ${p.developer ? `<div class="flex gap-2"><dt class="text-forest/50 w-20 sm:w-24 shrink-0">Developer</dt><dd>${escapeHtml(p.developer)}</dd></div>`:""}
+        ${p.approximate_value_aud ? `<div class="flex gap-2"><dt class="text-forest/50 w-20 sm:w-24 shrink-0">Value</dt><dd class="font-medium">${escapeHtml(p.approximate_value_aud)}</dd></div>`:""}
+        ${p.location ? `<div class="flex gap-2"><dt class="text-forest/50 w-20 sm:w-24 shrink-0">Location</dt><dd>${escapeHtml(p.location)}</dd></div>`:""}
+        ${p.expected_peak_workforce_timing ? `<div class="flex gap-2"><dt class="text-forest/50 w-20 sm:w-24 shrink-0">Peak crew</dt><dd>${escapeHtml(p.expected_peak_workforce_timing)}</dd></div>`:""}
+      </dl>
+      <div class="flex items-center justify-between gap-2 mt-4 flex-wrap">
+        ${p.sector ? `<span class="text-[10px] uppercase font-semibold tracking-wider px-2 py-0.5 rounded ${sectorCls}">${escapeHtml(p.sector.replace("_"," "))}</span>` : "<span></span>"}
+        ${contactToggle(id)}
+      </div>
+      ${sourceLinks(p.source_urls)}
+    </article>`;
+  }).join("");
+}
+
+function renderHiringSignals(items) {
+  const root = document.getElementById("hiring-signals-list");
+  if (!items || !items.length) { root.innerHTML = `<div class="text-forest/40 text-sm col-span-full">No hiring signals detected.</div>`; return; }
+  root.innerHTML = items.map((s,i) => {
+    const id = `sig-${(s.company||"").slice(0,60)}`;
+    const contacted = getContacted().has(id);
+    const dotClass = "signal-" + (s.signal_strength || "early");
+    return `
+    <article class="bg-white border border-forest/15 rounded-xl p-4 sm:p-5 ${contacted ? "contacted" : ""}">
+      <div class="flex items-start justify-between gap-2 mb-2">
+        <h3 class="font-semibold text-forest contacted-strike text-sm sm:text-base">${escapeHtml(s.company || "")}</h3>
+        <span class="flex items-center gap-1.5 text-xs text-forest/60 shrink-0"><span class="w-2 h-2 rounded-full ${dotClass}"></span>${escapeHtml((s.signal_strength||"early"))}</span>
+      </div>
+      <p class="text-sm text-forest/70 mb-3 contacted-strike">${escapeHtml(s.why_hot || "")}</p>
+      ${(s.likely_pain_points && s.likely_pain_points.length) ? `
+      <div class="mb-3">
+        <div class="text-xs uppercase tracking-wide text-forest/50 font-semibold mb-1">Roles I can fill</div>
+        <div class="flex flex-wrap gap-1.5">${s.likely_pain_points.map(r => `<span class="text-xs bg-forest/10 text-forest px-2 py-0.5 rounded">${escapeHtml(r)}</span>`).join("")}</div>
+      </div>` : ""}
+      ${s.outreach_hook ? `
+      <div class="bg-mint/15 border-l-4 border-mint p-3 rounded-r">
+        <div class="text-xs uppercase tracking-wide text-forest font-semibold mb-1">Outreach hook</div>
+        <p class="text-sm text-forest italic">"${escapeHtml(s.outreach_hook)}"</p>
+      </div>` : ""}
+      ${sourceLinks(s.source_urls)}
+      <div class="mt-4 flex justify-end">${contactToggle(id)}</div>
+    </article>`;
+  }).join("");
+}
+
+function renderWatchlist(items) {
+  const root = document.getElementById("watchlist-grid");
+  if (!items || !items.length) {
+    root.innerHTML = `<div class="text-forest/40 text-sm col-span-full">Watchlist not yet populated. Will fill on first run.</div>`;
+    return;
+  }
+  const order = { hot: 0, warm: 1, quiet: 2, no_signal: 3 };
+  const sorted = [...items].sort((a,b) => (order[a.status] ?? 4) - (order[b.status] ?? 4));
+  const dot = { hot: "bg-red-500", warm: "bg-amber-500", quiet: "bg-forest/30", no_signal: "bg-forest/15" };
+  root.innerHTML = sorted.map(b => `
+    <div class="bg-white border border-forest/15 rounded-lg p-4">
+      <div class="flex items-center gap-2 mb-1 flex-wrap">
+        <span class="w-2.5 h-2.5 rounded-full ${dot[b.status] || "bg-forest/30"}"></span>
+        <h3 class="font-semibold text-forest text-sm">${escapeHtml(b.builder)}</h3>
+        ${b.open_roles_seen ? `<span class="ml-auto text-xs bg-mint/30 text-forest px-2 py-0.5 rounded font-medium">${b.open_roles_seen} role${b.open_roles_seen>1?"s":""}</span>` : ""}
+      </div>
+      <p class="text-xs text-forest/70 leading-relaxed">${escapeHtml(b.note || "")}</p>
+    </div>
+  `).join("");
+}
+
+function renderArchiveList(dates) {
+  const root = document.getElementById("archive-dates");
+  if (!dates || !dates.length) { root.innerHTML = `<li class="text-xs text-forest/50 px-2">No archived briefs yet.</li>`; return; }
+  root.innerHTML = dates.map((d,i) => `
+    <li><button data-archive-date="${d}" class="archive-date-btn tap w-full text-left px-3 py-2 rounded text-sm ${i===0 ? "bg-forest text-cream" : "text-forest hover:bg-mint/15"}">${d}</button></li>
+  `).join("");
+}
+
+function renderArchiveContent(brief) {
+  const root = document.getElementById("archive-content");
+  if (!brief) { root.innerHTML = `<div class="text-forest/40 text-sm">Pick a date.</div>`; return; }
+  root.innerHTML = `
+    <div class="bg-white border border-forest/15 rounded-xl p-4 sm:p-5">
+      <h2 class="font-semibold text-forest mb-2">Brief — ${escapeHtml(brief.date || "")}</h2>
+      ${brief.market_notes ? `<p class="text-sm text-forest/70 mb-4">${escapeHtml(brief.market_notes)}</p>` : ""}
+
+      <h3 class="text-xs uppercase tracking-wide text-forest/50 font-semibold mt-4 mb-2">Top 3</h3>
+      <ol class="list-decimal list-inside space-y-2 text-sm">
+        ${(brief.top_3_today||[]).map(t => `<li><span class="font-medium text-forest">${escapeHtml(t.headline||"")}</span><div class="text-forest/70 ml-5">${escapeHtml(t.why_it_matters||"")}</div></li>`).join("")}
+      </ol>
+
+      <h3 class="text-xs uppercase tracking-wide text-forest/50 font-semibold mt-6 mb-2">Hot Projects</h3>
+      <ul class="space-y-2 text-sm">
+        ${(brief.hot_projects||[]).map(p => `<li><span class="font-medium text-forest">${escapeHtml(p.name||"")}</span> <span class="text-forest/60">— ${escapeHtml(p.main_contractor||"")} · ${escapeHtml(p.approximate_value_aud||"")} · ${escapeHtml(p.stage||"")}</span></li>`).join("")}
+      </ul>
+
+      <h3 class="text-xs uppercase tracking-wide text-forest/50 font-semibold mt-6 mb-2">Hiring Signals</h3>
+      <ul class="space-y-2 text-sm">
+        ${(brief.hiring_signals||[]).map(s => `<li><span class="font-medium text-forest">${escapeHtml(s.company||"")}</span> — <span class="text-forest/70">${escapeHtml(s.why_hot||"")}</span></li>`).join("")}
+      </ul>
+    </div>
+  `;
+}
+
+/* ----------------- Tabs --------------------------------------------------- */
+function showTab(name) {
+  document.querySelectorAll(".tab-btn").forEach(b => {
+    const active = b.dataset.tab === name;
+    b.classList.toggle("border-mint", active);
+    b.classList.toggle("text-cream", active);
+    b.classList.toggle("border-transparent", !active);
+    b.classList.toggle("text-cream/60", !active);
+  });
+  document.querySelectorAll("[data-panel]").forEach(p => {
+    p.classList.toggle("hidden", p.dataset.panel !== name);
+  });
+  if (name === "archive") {
+    if (STATE.history.length && !STATE.archiveBrief) loadArchiveDate(STATE.history[0]);
+  }
+}
+
+/* ----------------- Data loading ------------------------------------------ */
+async function loadJSON(path) {
+  const r = await fetch(path + "?_=" + Date.now());
+  if (!r.ok) throw new Error(`Failed ${path}`);
+  return r.json();
+}
+
+async function loadArchiveDate(date) {
+  try {
+    STATE.archiveBrief = await loadJSON(`data/history/${date}.json`);
+    renderArchiveContent(STATE.archiveBrief);
+    document.querySelectorAll(".archive-date-btn").forEach(b => {
+      const on = b.dataset.archiveDate === date;
+      b.classList.toggle("bg-forest", on);
+      b.classList.toggle("text-cream", on);
+      b.classList.toggle("text-forest", !on);
+      b.classList.toggle("hover:bg-mint/15", !on);
+    });
+  } catch (e) {
+    document.getElementById("archive-content").innerHTML = `<div class="text-red-600 text-sm">Couldn't load brief for ${date}.</div>`;
+  }
+}
+
+async function init() {
+  // Repo link auto-detect
+  const repo = detectRepoUrl();
+  if (repo) document.getElementById("repo-link").href = repo;
+
+  // Latest brief
+  let brief;
+  try { brief = await loadJSON("data/latest.json"); }
+  catch { brief = null; }
+
+  // History index
+  let history;
+  try { history = await loadJSON("data/history-index.json"); }
+  catch { history = { dates: [] }; }
+
+  STATE.brief = brief;
+  STATE.history = history.dates || [];
+
+  const empty = document.getElementById("empty-state");
+  const hasContent = brief && (
+    (brief.top_3_today && brief.top_3_today.length) ||
+    (brief.hot_projects && brief.hot_projects.length) ||
+    (brief.hiring_signals && brief.hiring_signals.length)
+  );
+
+  if (!hasContent) {
+    empty.classList.remove("hidden");
+    document.querySelector("[data-panel='today']").classList.add("hidden");
+    freshnessBadge(null);
+  } else {
+    freshnessBadge(brief.generated_at);
+    groundingBadge(brief);
+    renderSources(brief);
+    if (brief.market_notes) {
+      document.getElementById("market-notes").classList.remove("hidden");
+      document.getElementById("market-date").textContent = brief.date || "";
+      document.getElementById("market-notes-body").textContent = brief.market_notes;
+    }
+    renderTop3(brief.top_3_today);
+    renderHotProjects(brief.hot_projects);
+    renderHiringSignals(brief.hiring_signals);
+  }
+
+  renderWatchlist(brief && brief.watchlist_status);
+  renderArchiveList(STATE.history);
+}
+
+/* ----------------- Event delegation -------------------------------------- */
+document.addEventListener("click", (e) => {
+  const tab = e.target.closest(".tab-btn");
+  if (tab) { showTab(tab.dataset.tab); return; }
+
+  const cb = e.target.closest(".contact-btn");
+  if (cb) {
+    toggleContacted(cb.dataset.contactId);
+    // Re-render the parent card section (cheap full re-render)
+    if (STATE.brief) {
+      renderTop3(STATE.brief.top_3_today);
+      renderHotProjects(STATE.brief.hot_projects);
+      renderHiringSignals(STATE.brief.hiring_signals);
+    }
+    return;
+  }
+
+  const sc = e.target.closest(".sector-chip");
+  if (sc) {
+    STATE.sectorFilter = sc.dataset.sector === "all" ? null : sc.dataset.sector;
+    if (STATE.brief) renderHotProjects(STATE.brief.hot_projects);
+    return;
+  }
+
+  const ad = e.target.closest(".archive-date-btn");
+  if (ad) { loadArchiveDate(ad.dataset.archiveDate); return; }
+});
+
+init();
+</script>
+</body>
+</html>

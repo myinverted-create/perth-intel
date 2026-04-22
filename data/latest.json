@@ -1,0 +1,35 @@
+{
+  "date": "2026-04-22",
+  "generated_at": "2026-04-22T06:00:00+08:00",
+  "market_notes": "WA commercial construction market is firm with healthcare and data centre activity leading. Skilled labour shortage continues to push contractors to compete on PM and Site Manager roles. Watch the Westport development pipeline for late-2026 tender drops.",
+  "top_3_today": [
+    {"rank":1,"headline":"Built wins $180M Murdoch Health Campus expansion","type":"project","why_it_matters":"Big healthcare build with 200+ workforce ramp from Q3 2026. They've already opened 3 PM/SM postings in 14 days.","best_first_action":"Reach out to Built's WA Operations Manager Sarah Tully on LinkedIn — reference Murdoch win and your healthcare PM bench.","urgency":"this_week","source_urls":["https://example.com/built-murdoch","https://example.com/wa-health"]},
+    {"rank":2,"headline":"Doric ramping up Joondalup mixed-use","type":"company","why_it_matters":"Recent $90M contract award + 4 fresh roles in the last 10 days. Site Foreman + Estimator visible.","best_first_action":"Email Doric's Pre-construction Manager with two pre-vetted Estimators.","urgency":"this_week","source_urls":["https://example.com/doric"]},
+    {"rank":3,"headline":"DA approval — 8-storey Subiaco office (Hesperia)","type":"project","why_it_matters":"Tender invites expected May–June. Builders bidding will need quick PM bench.","best_first_action":"Cold call top 5 likely tenderers (Multiplex, Built, ADCO, Georgiou, Doric) and offer pre-bid PM CVs.","urgency":"this_month","source_urls":["https://example.com/subiaco"]}
+  ],
+  "hot_projects": [
+    {"name":"Murdoch Health Campus expansion","description":"7-storey clinical building + carpark, 30,000sqm.","developer":"WA Health","main_contractor":"Built","approximate_value_aud":"$180M","stage":"early construction","expected_peak_workforce_timing":"Q3 2026","location":"Murdoch","sector":"healthcare","source_urls":["https://example.com/p1"]},
+    {"name":"Joondalup City Centre Mixed-Use","description":"Retail podium + 12 floors office above.","developer":"Joondalup Properties","main_contractor":"Doric Group","approximate_value_aud":"$90M","stage":"ramp-up","expected_peak_workforce_timing":"Q2 2026","location":"Joondalup","sector":"mixed_use","source_urls":["https://example.com/p2"]},
+    {"name":"Hesperia Subiaco Office","description":"8-storey A-grade office tower.","developer":"Hesperia","main_contractor":"tender","approximate_value_aud":"$120M","stage":"DA approval","expected_peak_workforce_timing":"Q4 2026","location":"Subiaco","sector":"office","source_urls":["https://example.com/p3"]},
+    {"name":"NextDC P3 Hyperscale","description":"50MW data centre stage 2.","developer":"NextDC","main_contractor":"FDC Construction","approximate_value_aud":"$250M","stage":"early construction","expected_peak_workforce_timing":"Q2 2026","location":"Malaga","sector":"data_centre","source_urls":["https://example.com/p4"]},
+    {"name":"Bentley TAFE redevelopment","description":"New trades training facility.","developer":"DTWD","main_contractor":"PACT Construction","approximate_value_aud":"$65M","stage":"tender","expected_peak_workforce_timing":"Q1 2027","location":"Bentley","sector":"education","source_urls":["https://example.com/p5"]},
+    {"name":"DFO Perth Airport extension","description":"Retail outlet expansion 8,000sqm.","developer":"Vicinity","main_contractor":"BGC Construction","approximate_value_aud":"$45M","stage":"ramp-up","expected_peak_workforce_timing":"Q3 2026","location":"Perth Airport","sector":"retail","source_urls":["https://example.com/p6"]}
+  ],
+  "hiring_signals": [
+    {"company":"Built","why_hot":"Just won Murdoch ($180M). 3 PM/SM job posts in 14 days. Talking to recruiters about a Senior Estimator search.","likely_pain_points":["Senior Project Manager","Site Manager","Senior Estimator"],"outreach_hook":"Hi Sarah — saw the Murdoch win. I've placed 4 healthcare PMs in WA in the last 18 months — happy to share a bench overview.","signal_strength":"strong","source_urls":["https://example.com/built"]},
+    {"company":"Doric Group","why_hot":"Joondalup ramp-up + 4 fresh roles. Foreman role open 21 days = warm.","likely_pain_points":["Foreman","Estimator","Contracts Administrator"],"outreach_hook":"Noticed your Foreman ad has been live a few weeks — got 2 Foremen with mixed-use experience available next month.","signal_strength":"strong","source_urls":["https://example.com/doric2"]},
+    {"company":"FDC Construction","why_hot":"NextDC P3 data centre. National firm growing WA office.","likely_pain_points":["Project Director","Senior PM","HSE Manager"],"outreach_hook":"WA data centre work is heating up — keen to share who's available with hyperscale build experience.","signal_strength":"moderate","source_urls":["https://example.com/fdc"]},
+    {"company":"PACT Construction","why_hot":"Tendering Bentley TAFE. Posted Estimator role last week.","likely_pain_points":["Estimator","Quantity Surveyor"],"outreach_hook":"Saw the Estimator post — I have an QS/Estimator with TAFE/education experience available.","signal_strength":"moderate","source_urls":["https://example.com/pact"]},
+    {"company":"BGC Construction","why_hot":"DFO ramp-up + general retail pipeline.","likely_pain_points":["Site Manager","Foreman"],"outreach_hook":"Quick check-in on your retail pipeline — happy to share Site Managers with recent fitout experience.","signal_strength":"early","source_urls":["https://example.com/bgc"]}
+  ],
+  "watchlist_status": [
+    {"builder":"Multiplex","status":"warm","note":"Tendering Subiaco office, finalising Burswood interior fitout.","open_roles_seen":2},
+    {"builder":"Built","status":"hot","note":"Murdoch win + 3 fresh roles in 14 days.","open_roles_seen":3},
+    {"builder":"Doric Group","status":"hot","note":"Joondalup ramp + 4 active roles.","open_roles_seen":4},
+    {"builder":"BGC Construction","status":"warm","note":"DFO Perth Airport ramp-up.","open_roles_seen":1},
+    {"builder":"PACT Construction","status":"warm","note":"Bentley TAFE tender, Estimator role open.","open_roles_seen":1},
+    {"builder":"Georgiou Group","status":"quiet","note":"No fresh signal in last 30 days.","open_roles_seen":0},
+    {"builder":"EMCO Building","status":"quiet","note":"No fresh signal in last 30 days.","open_roles_seen":0},
+    {"builder":"Broad Construction","status":"no_signal","note":"no fresh signal in last 30 days","open_roles_seen":0}
+  ]
+}
