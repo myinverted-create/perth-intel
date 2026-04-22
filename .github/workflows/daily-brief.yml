@@ -1,17 +1,20 @@
 name: Daily WA Commercial Construction Brief
 
+# Runs Mon-Fri at 6:00 AM AWST (UTC+8) — that's 22:00 UTC the previous day.
+# Cron day-of-week: 0=Sun, 1=Mon ... 6=Sat. Sun-Thu UTC = Mon-Fri AWST mornings.
 on:
   schedule:
     - cron: "0 22 * * 0-4"
-  workflow_dispatch: {}
+  workflow_dispatch: {}   # lets you run it manually from the Actions tab
 
 permissions:
-  contents: write
+  contents: write   # required so the action can commit data/ updates back to the repo
 
 jobs:
   build-brief:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -22,14 +25,12 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install xai-sdk
 
       - name: Fetch Grok brief
         env:
           XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
           XAI_MODEL: ${{ vars.XAI_MODEL || 'grok-4-latest' }}
-          XAI_SEARCH_PARAMETERS_JSON: ${{ vars.XAI_SEARCH_PARAMETERS_JSON }}
-          XAI_TOOLS_JSON: ${{ vars.XAI_TOOLS_JSON }}
         run: python scripts/fetch_brief.py
 
       - name: Commit updated data
