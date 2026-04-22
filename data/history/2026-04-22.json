@@ -1,14 +1,14 @@
 {
   "date": "2026-04-22",
-  "market_notes": "WA commercial construction is at record activity levels in April 2026, bolstered by significant government spending on healthcare infrastructure, including a $1.5 billion hospital expansion. Emerging projects like a multi-billion-dollar AI data centre in the Kimberley highlight growth in data centres, while office and mixed-use developments in Perth CBD signal strong demand. Recruiters should note hiring pushes amid labor shortages in skilled roles.",
+  "market_notes": "The WA commercial construction market is buzzing with data centre developments, highlighted by a proposed gigawatt-scale AI data centre in the Kimberley region, signaling strong growth in digital infrastructure. Strong job flows are expected in 2026, driven by industrial and data centre projects, though broader construction faces moderate recovery amid rising costs. Mixed-use developments are gaining traction in urban areas, offering opportunities in office and retail sectors.",
   "top_3_today": [
     {
       "rank": 1,
-      "headline": "Plans for Australia's largest AI data centre unveiled in WA Kimberley",
+      "headline": "Gigawatt-scale AI data centre planned for Kimberley WA",
       "type": "project",
-      "why_it_matters": "This multi-billion-dollar project could drive massive hiring for construction and tech roles as it moves from planning to tender, offering recruiters opportunities to place specialists in data centre builds this week. With potential for rapid mobilization, it's a prime chance to connect with developers and contractors early.",
-      "best_first_action": "LinkedIn message to project leads at the developer, referencing the ABC news article on the gigawatt-scale AI data centre plans.",
-      "urgency": "this_week",
+      "why_it_matters": "This multi-billion dollar project represents a major opportunity for recruiters to supply skilled workers for data centre construction, with potential for hundreds of jobs in a remote area. It could drive demand for project managers, engineers, and trades as planning advances. Recruiters can position themselves early for upcoming tenders and hiring ramps.",
+      "best_first_action": "Reach out to potential developers via LinkedIn, referencing the ABC news on Kimberley AI data centre plans",
+      "urgency": "this_month",
       "signal_date": "2026-04-20",
       "source_urls": [
         "https://www.abc.net.au/news/2026-04-20/plans-emerge-gigawatt-scale-ai-data-centre-kimberley/106567332"
@@ -16,78 +16,77 @@
       "stakeholders": [
         {
           "type": "org",
-          "name": "",
-          "role": "",
-          "company": "ABC News (reporting outlet)",
-          "tier": "national",
-          "context": "Source of project announcement, potential for media contacts on updates.",
-          "location": "Sydney",
+          "name": null,
+          "role": null,
+          "company": "Unknown Developer",
+          "tier": "unknown",
+          "context": "Proposed developer of the AI data centre project",
+          "location": "Kimberley, WA",
           "linkedin_query": null,
-          "website": "https://www.abc.net.au",
-          "office_address": "700 Harris St, Ultimo NSW 2007"
+          "website": null,
+          "office_address": null
         }
       ]
     },
     {
       "rank": 2,
-      "headline": "WA Government commits $1.5B to hospital expansions",
+      "headline": "Tesla Megapack battery facility underway in Muchea WA",
       "type": "project",
-      "why_it_matters": "This major healthcare investment will require extensive construction workforce ramp-up, creating immediate opportunities for recruiters to supply site managers and estimators to builders bidding on contracts. The spend addresses capacity needs, likely accelerating tenders this month.",
-      "best_first_action": "Email outreach to WA Health Department contacts, highlighting recruitment support for hospital build projects.",
+      "why_it_matters": "The $250M industrial project is starting site work, likely requiring immediate hiring for construction roles in energy infrastructure. This creates short-term recruitment opportunities for site managers and laborers in the Perth region. It's a timely signal for recruiters to connect with Neoen for workforce needs.",
+      "best_first_action": "LinkedIn message to Neoen project leads, mentioning the recent site work start on Muchea Battery",
       "urgency": "this_week",
-      "signal_date": "2026-04-12",
+      "signal_date": "2026-04-08",
       "source_urls": [
-        "https://www.abc.net.au/news/2026-04-13/wa-government-budget-1-5-billion-hospital-spend/106559164"
+        "https://x.com/SawyerMerritt/status/2042025925097767218"
       ],
       "stakeholders": [
         {
           "type": "org",
-          "name": "",
-          "role": "",
-          "company": "WA Government Health Department",
-          "tier": "local",
-          "context": "Funding and overseeing the hospital expansions.",
-          "location": "Perth",
+          "name": null,
+          "role": null,
+          "company": "Neoen",
+          "tier": "national",
+          "context": "Developer of the Muchea Battery project",
+          "location": "Sydney",
           "linkedin_query": null,
-          "website": "https://www.health.wa.gov.au",
-          "office_address": "189 Royal St, East Perth WA 6004"
+          "website": "https://www.neoen.com",
+          "office_address": "Level 21, 1 O'Connell Street, Sydney NSW"
+        },
+        {
+          "type": "org",
+          "name": null,
+          "role": null,
+          "company": "Tesla",
+          "tier": "international",
+          "context": "Supplier of Megapack technology",
+          "location": "Austin, TX",
+          "linkedin_query": null,
+          "website": "https://www.tesla.com",
+          "office_address": null
         }
       ]
     },
     {
       "rank": 3,
-      "headline": "Richardson Centre in South Perth surpasses 65% sold",
-      "type": "project",
-      "why_it_matters": "Strong sales in this commercial development indicate market confidence, potentially leading to accelerated construction and hiring for fit-outs, allowing recruiters to target owner-occupiers and builders this week for staffing needs.",
-      "best_first_action": "Call to Sterling Property contacts, offering recruitment for their South Perth commercial project ramp-up.",
+      "headline": "Strong job flows forecast for WA construction in data centres",
+      "type": "event",
+      "why_it_matters": "Industry forecasts indicate robust hiring in commercial sectors like data centres, providing recruiters with leads on upcoming roles in project management and engineering. This macro signal suggests preparing talent pools for anticipated demand spikes this year. It's an opportunity to engage builders early on talent strategies.",
+      "best_first_action": "Email outreach to watchlist builders referencing the strong 2026 job flow forecast in data centres",
       "urgency": "this_month",
-      "signal_date": "2026-04-16",
+      "signal_date": "2026-04-01",
       "source_urls": [
-        "https://sterlingproperty.au/south-perths-richardson-centre-surpasses-65-sold-as-owner-occupier-demand-surges"
+        "https://vocal.media/trader/australia-commercial-property-market-2026-office-evolution-retail-recovery-and-industrial-expansion"
       ],
-      "stakeholders": [
-        {
-          "type": "org",
-          "name": "",
-          "role": "",
-          "company": "Sterling Property",
-          "tier": "local",
-          "context": "Developer of the Richardson Centre commercial project.",
-          "location": "Perth",
-          "linkedin_query": null,
-          "website": "https://sterlingproperty.au",
-          "office_address": "Level 1, 100 Havelock St, West Perth WA 6005"
-        }
-      ]
+      "stakeholders": []
     }
   ],
   "hot_projects": [
     {
       "name": "Kimberley AI Data Centre",
-      "description": "Plans for a gigawatt-scale AI training data centre in Western Australia's Kimberley region, potentially the largest in the country.",
+      "description": "Proposed gigawatt-scale AI training data centre in Western Australia's north, potentially the country's largest.",
       "developer": null,
       "main_contractor": "tender",
-      "approximate_value_aud": "$ multi-billion",
+      "approximate_value_aud": null,
       "stage": "DA approval",
       "expected_peak_workforce_timing": null,
       "location": "Kimberley",
@@ -96,124 +95,176 @@
       "source_urls": [
         "https://www.abc.net.au/news/2026-04-20/plans-emerge-gigawatt-scale-ai-data-centre-kimberley/106567332"
       ],
-      "stakeholders": []
-    },
-    {
-      "name": "Elizabeth Quay Lot 4",
-      "description": "53-storey tower with 70,000sqm office space, short-stay units, restaurants, gym, and child-care centre.",
-      "developer": null,
-      "main_contractor": null,
-      "approximate_value_aud": "$400M",
-      "stage": "early construction",
-      "expected_peak_workforce_timing": null,
-      "location": "Elizabeth Quay, Perth",
-      "sector": "mixed_use",
-      "signal_date": "2026-04-22",
-      "source_urls": [
-        "https://perth.wa.gov.au/building-and-planning/future-perth/major-projects"
-      ],
-      "stakeholders": []
-    },
-    {
-      "name": "King Square Tower",
-      "description": "27-storey commercial tower with 64,000sqm office space, co-working, and wellness facilities.",
-      "developer": null,
-      "main_contractor": null,
-      "approximate_value_aud": "$180M",
-      "stage": "tender",
-      "expected_peak_workforce_timing": null,
-      "location": "Perth City Link",
-      "sector": "office",
-      "signal_date": "2026-04-22",
-      "source_urls": [
-        "https://perth.wa.gov.au/building-and-planning/future-perth/major-projects"
-      ],
-      "stakeholders": []
-    },
-    {
-      "name": "Perth Airport City",
-      "description": "Multi-billion-dollar plan to transform Perth Airport into a diversified property and commercial hub.",
-      "developer": "Perth Airport",
-      "main_contractor": null,
-      "approximate_value_aud": "$5B",
-      "stage": "DA approval",
-      "expected_peak_workforce_timing": "Q3 2026",
-      "location": "Perth Airport",
-      "sector": "mixed_use",
-      "signal_date": "2025-10-07",
-      "source_urls": [
-        "https://www.perthnow.com.au/news/business/property/huge-multi-billion-dollar-plans-to-create-city-at-perth-airport-unveiled-c-20270209"
-      ],
       "stakeholders": [
         {
           "type": "org",
-          "name": "",
-          "role": "",
-          "company": "Perth Airport",
-          "tier": "local",
-          "context": "Developer of the airport city project.",
-          "location": "Perth",
+          "name": null,
+          "role": null,
+          "company": "Unknown Developer",
+          "tier": "unknown",
+          "context": "Lead proposer for the project",
+          "location": "Kimberley, WA",
           "linkedin_query": null,
-          "website": "https://www.perthairport.com.au",
-          "office_address": "2 George Wiencke Dr, Perth Airport WA 6105"
-        }
-      ]
-    },
-    {
-      "name": "WA Hospital Expansions",
-      "description": "Three new hospital projects as part of the biggest hospital build in WA history.",
-      "developer": "WA Government",
-      "main_contractor": "tender",
-      "approximate_value_aud": "$1.5B",
-      "stage": "ramp-up",
-      "expected_peak_workforce_timing": null,
-      "location": "Various in WA",
-      "sector": "healthcare",
-      "signal_date": "2025-11-05",
-      "source_urls": [
-        "https://www.facebook.com/RogerCookMLA/posts/today-we-announced-the-biggest-hospital-build-in-was-historyit-includes-three-ne/1371191097931744"
-      ],
-      "stakeholders": [
-        {
-          "type": "person",
-          "name": "Roger Cook",
-          "role": "Premier",
-          "company": "WA Government",
-          "tier": "local",
-          "context": "Announced the hospital build projects.",
-          "location": "Perth",
-          "linkedin_query": "Roger Cook WA Premier",
           "website": null,
           "office_address": null
         }
       ]
     },
     {
-      "name": "Richardson Centre",
-      "description": "Landmark commercial development at 1 Richardson Street, South Perth, with strong owner-occupier demand.",
-      "developer": "Sterling Property",
+      "name": "Maddington Data Centre Campus",
+      "description": "200MW data centre campus development in Maddington, outside Perth, with AI-ready facilities.",
+      "developer": "CDC Data Centres",
       "main_contractor": null,
-      "approximate_value_aud": null,
+      "approximate_value_aud": "$415M",
       "stage": "early construction",
-      "expected_peak_workforce_timing": null,
-      "location": "South Perth",
-      "sector": "office",
-      "signal_date": "2026-04-16",
+      "expected_peak_workforce_timing": "Q3 2026",
+      "location": "Maddington, Perth",
+      "sector": "data_centre",
+      "signal_date": "2025-09-17",
       "source_urls": [
-        "https://sterlingproperty.au/south-perths-richardson-centre-surpasses-65-sold-as-owner-occupier-demand-surges"
+        "https://www.projectory.com.au/article/415m-data-centre-development-approved-in-wa-to-support-digital-infrastructure-and-advanced-tech-capabilities",
+        "https://www.datacenterdynamics.com/en/news/australias-cdc-plans-200mw-data-center-campus-outside-perth"
       ],
       "stakeholders": [
         {
           "type": "org",
-          "name": "",
-          "role": "",
-          "company": "Sterling Property",
+          "name": null,
+          "role": null,
+          "company": "CDC Data Centres",
+          "tier": "national",
+          "context": "Developer and operator",
+          "location": "Canberra",
+          "linkedin_query": null,
+          "website": "https://www.cdcdata.com.au",
+          "office_address": "Perth office unknown"
+        }
+      ]
+    },
+    {
+      "name": "P1 Perth Data Centre Stage Two",
+      "description": "Expansion of NEXTDC's P1 data centre in Perth, including largest satellite antenna array in WA.",
+      "developer": "NEXTDC",
+      "main_contractor": "Multiplex",
+      "approximate_value_aud": "$110M",
+      "stage": "ramp-up",
+      "expected_peak_workforce_timing": null,
+      "location": "Perth",
+      "sector": "data_centre",
+      "signal_date": "2025-11-21",
+      "source_urls": [
+        "https://www.insideconstruction.com.au/news/latest-news/multiplex-tops-out-stage-two-of-110-million-p1-perth-data-centre"
+      ],
+      "stakeholders": [
+        {
+          "type": "org",
+          "name": null,
+          "role": null,
+          "company": "NEXTDC",
+          "tier": "national",
+          "context": "Developer",
+          "location": "Brisbane",
+          "linkedin_query": null,
+          "website": "https://www.nextdc.com",
+          "office_address": "Perth office: Malaga, WA"
+        },
+        {
+          "type": "org",
+          "name": null,
+          "role": null,
+          "company": "Multiplex",
           "tier": "local",
-          "context": "Developer driving sales and construction.",
+          "context": "Main contractor",
           "location": "Perth",
           "linkedin_query": null,
-          "website": "https://sterlingproperty.au",
-          "office_address": "Level 1, 100 Havelock St, West Perth WA 6005"
+          "website": "https://www.multiplex.global",
+          "office_address": "Level 3, 100 St Georges Terrace, Perth WA"
+        }
+      ]
+    },
+    {
+      "name": "Muchea Battery Storage Facility",
+      "description": "Tesla Megapack battery energy storage project to support renewables in WA.",
+      "developer": "Neoen",
+      "main_contractor": null,
+      "approximate_value_aud": "$250M",
+      "stage": "early construction",
+      "expected_peak_workforce_timing": "Q2 2026",
+      "location": "Muchea, WA",
+      "sector": "industrial",
+      "signal_date": "2026-04-08",
+      "source_urls": [
+        "https://x.com/SawyerMerritt/status/2042025925097767218"
+      ],
+      "stakeholders": [
+        {
+          "type": "org",
+          "name": null,
+          "role": null,
+          "company": "Neoen",
+          "tier": "national",
+          "context": "Developer",
+          "location": "Sydney",
+          "linkedin_query": null,
+          "website": "https://www.neoen.com",
+          "office_address": null
+        }
+      ]
+    },
+    {
+      "name": "East Perth Primary School",
+      "description": "New primary school development in East Perth.",
+      "developer": "WA Government",
+      "main_contractor": "CPB Contractors",
+      "approximate_value_aud": null,
+      "stage": "tender",
+      "expected_peak_workforce_timing": null,
+      "location": "East Perth",
+      "sector": "education",
+      "signal_date": "2025-10-03",
+      "source_urls": [
+        "https://www.insideconstruction.com.au/news/latest-news/cpb-contractors-awarded-east-perth-primary-school-project"
+      ],
+      "stakeholders": [
+        {
+          "type": "org",
+          "name": null,
+          "role": null,
+          "company": "CPB Contractors",
+          "tier": "national",
+          "context": "Appointed for early contractor involvement",
+          "location": "Sydney",
+          "linkedin_query": null,
+          "website": "https://www.cpbcon.com.au",
+          "office_address": "Perth office: West Perth WA"
+        }
+      ]
+    },
+    {
+      "name": "Rockingham Senior High School Redevelopment",
+      "description": "Redevelopment of Rockingham Senior High School.",
+      "developer": "WA Government",
+      "main_contractor": "EMCO Building",
+      "approximate_value_aud": "$43M",
+      "stage": "early construction",
+      "expected_peak_workforce_timing": null,
+      "location": "Rockingham",
+      "sector": "education",
+      "signal_date": "2025-08-27",
+      "source_urls": [
+        "https://www.businessnews.com.au/article/EMCO-wins-43m-Rockingham-Senior-High-School-contract"
+      ],
+      "stakeholders": [
+        {
+          "type": "org",
+          "name": null,
+          "role": null,
+          "company": "EMCO Building",
+          "tier": "local",
+          "context": "Awarded contractor",
+          "location": "Perth",
+          "linkedin_query": null,
+          "website": "https://www.emcobuilding.com.au",
+          "office_address": "Osborne Park, WA"
         }
       ]
     }
@@ -221,126 +272,139 @@
   "hiring_signals": [
     {
       "company": "Multiplex",
-      "why_hot": "Multiplex has launched its Graduate & Cadet Program for 2026/2027 in WA, indicating expansion and need for new talent in commercial construction. Recent job postings for roles like Contracts Administrators and Project Coordinators suggest active recruitment for ongoing projects.",
+      "why_hot": "Multiplex is involved in ongoing data centre projects in WA, with recent topping out of P1 Perth, suggesting continued need for construction staff. Forecasts indicate strong sector growth, likely driving recruitment for skilled roles.",
       "likely_pain_points": [
-        "Contracts Manager",
-        "Project Coordinator",
-        "Graduate Engineer"
+        "Project Manager",
+        "Site Engineer",
+        "Estimator"
       ],
-      "outreach_hook": "Congrats on the 2026 Graduate Program launch – we have top WA talent ready for your commercial builds.",
-      "signal_strength": "strong",
-      "signal_date": "2026-02-16",
+      "outreach_hook": "Congrats on the P1 Perth milestone – do you need support filling site roles for the ramp-up?",
+      "signal_strength": "moderate",
+      "signal_date": "2025-11-21",
       "source_urls": [
-        "https://www.atlamgroup.com/job/multiplex-graduate-cadet-program-2026-2027-wa"
+        "https://www.insideconstruction.com.au/news/latest-news/multiplex-tops-out-stage-two-of-110-million-p1-perth-data-centre"
       ],
       "stakeholders": [
         {
           "type": "org",
-          "name": "",
-          "role": "",
+          "name": null,
+          "role": null,
           "company": "Multiplex",
           "tier": "local",
-          "context": "Hiring for graduate and cadet roles in WA.",
+          "context": "Main builder on data centre projects",
           "location": "Perth",
           "linkedin_query": null,
           "website": "https://www.multiplex.global",
-          "office_address": "Level 3, 100 Mount St, North Sydney NSW 2060 (national HQ, WA presence)"
+          "office_address": "Level 3, 100 St Georges Terrace, Perth WA"
         }
       ]
     },
     {
-      "company": "Built",
-      "why_hot": "Built has commenced construction on major projects in Perth, including student accommodation in City Link, driving need for site managers and estimators as they ramp up.",
+      "company": "EMCO Building",
+      "why_hot": "EMCO secured the $43M Rockingham school contract, indicating project mobilization and potential hiring for site teams. Education sector activity in WA remains active.",
       "likely_pain_points": [
         "Site Manager",
+        "Foreman",
+        "Trades"
+      ],
+      "outreach_hook": "With the Rockingham win, are you looking to bolster your team with experienced site managers?",
+      "signal_strength": "moderate",
+      "signal_date": "2025-08-27",
+      "source_urls": [
+        "https://www.businessnews.com.au/article/EMCO-wins-43m-Rockingham-Senior-High-School-contract"
+      ],
+      "stakeholders": [
+        {
+          "type": "org",
+          "name": null,
+          "role": null,
+          "company": "EMCO Building",
+          "tier": "local",
+          "context": "Contract awardee",
+          "location": "Perth",
+          "linkedin_query": null,
+          "website": "https://www.emcobuilding.com.au",
+          "office_address": "Osborne Park, WA"
+        }
+      ]
+    },
+    {
+      "company": "CPB Contractors",
+      "why_hot": "Appointed for East Perth school project, early involvement phase likely requires pre-construction staffing. Broader forecasts point to hiring in education builds.",
+      "likely_pain_points": [
         "Estimator",
         "Project Engineer"
       ],
-      "outreach_hook": "Saw your Lot 19 project start – let's discuss filling your site team gaps with Perth locals.",
-      "signal_strength": "moderate",
-      "signal_date": "2026-02-12",
+      "outreach_hook": "Excited about your East Perth school appointment – let's discuss talent for the ECI phase.",
+      "signal_strength": "early",
+      "signal_date": "2025-10-03",
       "source_urls": [
-        "https://www.built.com.au/news/built-commences-construction-on-was-largest-premium-purpose-built-student-accommodation"
+        "https://www.insideconstruction.com.au/news/latest-news/cpb-contractors-awarded-east-perth-primary-school-project"
       ],
       "stakeholders": [
         {
           "type": "org",
-          "name": "",
-          "role": "",
-          "company": "Built",
+          "name": null,
+          "role": null,
+          "company": "CPB Contractors",
           "tier": "national",
-          "context": "Main contractor on Perth projects.",
+          "context": "Early contractor",
           "location": "Sydney",
           "linkedin_query": null,
-          "website": "https://www.built.com.au",
-          "office_address": "Level 15, 333 Ann St, Brisbane QLD 4000 (national)"
+          "website": "https://www.cpbcon.com.au",
+          "office_address": "West Perth, WA"
         }
       ]
     },
     {
-      "company": "Georgiou Group",
-      "why_hot": "Georgiou won contracts worth 190 million euros in healthcare sector in Perth, likely requiring additional workforce for construction ramp-up in 2026.",
+      "company": "Neoen",
+      "why_hot": "Site work starting on Muchea battery project, a $250M industrial build, will require construction workforce ramp-up soon.",
       "likely_pain_points": [
-        "Senior Project Manager",
-        "Site Engineer"
+        "Construction Manager",
+        "Safety Officer"
       ],
-      "outreach_hook": "Impressive healthcare win – we can help source WA-based talent for your Perth projects.",
+      "outreach_hook": "Site work on Muchea is underway – how can I help with your hiring needs?",
       "signal_strength": "strong",
-      "signal_date": "2025-11-18",
+      "signal_date": "2026-04-08",
       "source_urls": [
-        "https://newsroom.strabag.com/en/press-releases/group/2025-11/australian-strabag-subsidiary-georgiou-wins-contracts-in-the-mobility-and-healthcare-sector-worth-190-million-euros"
+        "https://x.com/SawyerMerritt/status/2042025925097767218"
       ],
       "stakeholders": [
         {
           "type": "org",
-          "name": "",
-          "role": "",
-          "company": "Georgiou Group",
-          "tier": "local",
-          "context": "Awarded healthcare construction contracts.",
-          "location": "Perth",
+          "name": null,
+          "role": null,
+          "company": "Neoen",
+          "tier": "national",
+          "context": "Project developer",
+          "location": "Sydney",
           "linkedin_query": null,
-          "website": "https://www.georgiou.com.au",
-          "office_address": "53 Kewdale Rd, Welshpool WA 6106"
+          "website": "https://www.neoen.com",
+          "office_address": null
         }
       ]
-    },
-    {
-      "company": "Lendlease Building (WA)",
-      "why_hot": "General job postings for building roles in Perth indicate ongoing commercial projects needing estimators and supervisors.",
-      "likely_pain_points": [
-        "Estimator",
-        "Senior Supervisor"
-      ],
-      "outreach_hook": "Noticed your WA vacancies – our network has experienced commercial construction pros ready to join.",
-      "signal_strength": "early",
-      "signal_date": "2026-04-01",
-      "source_urls": [
-        "https://www.adzuna.com.au/perth/building-construction"
-      ],
-      "stakeholders": []
     }
   ],
   "watchlist_status": [
     {
       "builder": "Multiplex",
-      "status": "hot",
-      "note": "Launching 2026/2027 Graduate Program in WA, signaling strong hiring activity.",
-      "last_signal_date": "2026-02-16",
-      "open_roles_seen": 3
+      "status": "warm",
+      "note": "Ongoing involvement in P1 Perth data centre, but no fresh signals in last 45 days.",
+      "last_signal_date": "2025-11-21",
+      "open_roles_seen": 0
     },
     {
       "builder": "Built",
-      "status": "warm",
-      "note": "Commenced construction on Perth City Link project, likely needing additional staff.",
-      "last_signal_date": "2026-02-12",
-      "open_roles_seen": 1
+      "status": "no_signal",
+      "note": "No fresh signal in last 45 days.",
+      "last_signal_date": null,
+      "open_roles_seen": 0
     },
     {
       "builder": "Georgiou Group",
-      "status": "warm",
-      "note": "Secured healthcare contracts in Perth, with construction expected in 2026.",
-      "last_signal_date": "2025-11-18",
+      "status": "no_signal",
+      "note": "No fresh signal in last 45 days.",
+      "last_signal_date": null,
       "open_roles_seen": 0
     },
     {
@@ -359,9 +423,9 @@
     },
     {
       "builder": "EMCO Building",
-      "status": "no_signal",
-      "note": "No fresh signal in last 45 days.",
-      "last_signal_date": null,
+      "status": "quiet",
+      "note": "Rockingham school project ongoing, but signal is over 45 days old.",
+      "last_signal_date": "2025-08-27",
       "open_roles_seen": 0
     },
     {
@@ -422,10 +486,10 @@
     },
     {
       "builder": "Lendlease Building (WA)",
-      "status": "quiet",
-      "note": "General job postings but no specific project wins in last 45 days.",
-      "last_signal_date": "2026-04-01",
-      "open_roles_seen": 1
+      "status": "no_signal",
+      "note": "No fresh signal in last 45 days.",
+      "last_signal_date": null,
+      "open_roles_seen": 0
     },
     {
       "builder": "John Holland (WA building)",
@@ -467,97 +531,114 @@
   "_grok_search_mode": "agent_tools_sdk",
   "_grok_grounded": true,
   "_grok_citations": [
-    "https://www.georgiou.com.au/highlights/georgiou-group-secures-contract-for-ocean-reef-marina-development",
-    "https://www.glassdoor.com.au/Jobs/Multiplex-Jobs-E37700.htm",
-    "https://www.seek.com.au/commercial-builder-jobs/in-All-Perth-WA",
-    "https://www.insideconstruction.com.au/news/latest-news/construction-in-2026-market-outlook-from-coates",
-    "https://www.moore-australia.com.au/news/construction-landscape-2026-risks-opportunities",
-    "https://au.indeed.com/q-commercial-carpenter-l-perth-wa-jobs.html",
-    "https://www.propertycouncil.com.au/event/free-and-exclusive-member-briefing-fuel-costs-development-and-construction-webinar",
-    "https://x.com/i/status/2045006409746841614",
-    "https://www.instagram.com/reel/DW069e7FccJ",
-    "https://au.talent.com/view?id=55c28a38868f",
-    "https://www.linkedin.com/pulse/top-office-design-trends-perth-2026-axiom-workplaces-id8xc",
-    "https://www.facebook.com/RogerCookMLA/posts/today-we-announced-the-biggest-hospital-build-in-was-historyit-includes-three-ne/1371191097931744",
-    "https://www.multiplex.global/careers/job-opportunities",
-    "https://x.com/i/status/2045117629753426356",
-    "https://www.glassdoor.com.au/Job/perth-construction-jobs-SRCH_IL.0,5_IC2255727_KO6,18.htm",
-    "https://x.com/i/status/2043697951936282840",
-    "https://www.seek.com.au/building-jobs/in-Western-Australia-WA",
-    "https://realestateasia.com/commercial-retail/news/seven-major-retail-projects-slated-delivery-in-perth-q4-2026",
+    "https://x.com/i/status/2043057726478053789",
+    "https://www.businessnews.com.au/article/EMCO-wins-43m-Rockingham-Senior-High-School-contract",
     "https://melbourne-insider.au/wa-construction-materials-infrastructure",
-    "https://www.ledge.com.au/news/forecast-wa-civil-construction-market",
-    "https://www.instagram.com/p/DFrdqThSS7b",
-    "https://www.mainroads.wa.gov.au/projects-initiatives/all-projects/metropolitan/tonkin-highway-extension-and-thomas-road-upgrade",
-    "https://www.agcwa.com/build-washington-awards-home",
-    "https://www.youtube.com/watch?v=PIophKbp2fc",
-    "https://www.atlamgroup.com/job/multiplex-graduate-cadet-program-2026-2027-wa",
-    "https://www.adzuna.com.au/perth/building-construction",
-    "https://www.destinationperth.com.au/articles/post/whats-new-and-coming-to-perth-in-2026",
+    "https://business.gov.au/grants-and-programs/major-project-status/current-major-projects",
+    "https://www.raywhitecommercial.com/research/australias-construction-activity-holds-firm-as-infrastructure-and-data-centres-reshape-the-skyline",
+    "https://www.projectory.com.au/article/415m-data-centre-development-approved-in-wa-to-support-digital-infrastructure-and-advanced-tech-capabilities",
+    "https://www.melton.vic.gov.au/files/assets/public/services/building-planning-amp-transport/strategic-planning/studies-strategies-guidelines/toolern-urban-design-framework/toolern-final-reports/appendix-4-economic-report-final-reduced.pdf",
+    "https://x.com/i/status/2045234400561181052",
+    "https://www.australiantenders.com.au/wa-tenders",
+    "https://www.mundaring.wa.gov.au/news/brooking-road-extension-project-and-falls-road-bridge-replacement/10558",
+    "https://www.coherentmarketinsights.com/market-insight/data-center-construction-market-4872",
+    "https://x.com/i/status/2044729511070126201",
+    "https://www.bcicentral.com/top-20-construction-projects-in-australia",
     "https://x.com/i/status/2043924796614820151",
-    "https://www.abcmetrowashington.org/Events/Excellence-in-Construction-Awards",
-    "https://www.djc.com/news/co/12175437.html?cgi=yes",
-    "https://www.perthnow.com.au/news/business/property/huge-multi-billion-dollar-plans-to-create-city-at-perth-airport-unveiled-c-20270209",
-    "https://ministers.dewr.gov.au/gorman/launch-big-sister-advanced-mentoring-wa-project",
-    "https://southperth.wa.gov.au/about-us/news-and-publications/news-and-public-notices/news-detail/2026/04/16/weekly-approved-works-20---26-april-2026",
-    "https://newsroom.strabag.com/en/press-releases/group/2025-11/australian-strabag-subsidiary-georgiou-wins-contracts-in-the-mobility-and-healthcare-sector-worth-190-million-euros",
-    "https://www.instagram.com/p/DU6w8e8k4Pg",
-    "https://x.com/i/status/2046410592756670715",
-    "https://www.perthnow.com.au/wa/perth/perth-surf-park-construction-begins-on-120m-project-chris-hemsworth-promised-as-first-waves-opening-day-star-c-22086500",
-    "https://bremertonwa.gov/1421/2026-Sewer-Rehabilitation",
-    "https://architectureau.com/organisations/georgiou-group",
-    "https://www.abcva.org/eic-awards-nvmw",
-    "https://www.instagram.com/reel/DUzqAaggdfV",
-    "https://x.com/i/status/2044601692398690694",
-    "https://sterlingproperty.au/south-perths-richardson-centre-surpasses-65-sold-as-owner-occupier-demand-surges",
-    "https://au.jora.com/Commercial-Builder-jobs-in-Perth-WA",
-    "https://www.constructors.com.au/australias-most-outstanding-construction-projects-named-as-2026-acaa-finalists",
-    "https://www.facebook.com/GeorgiouGroup",
-    "https://www.built.com.au/news/built-commences-construction-on-was-largest-premium-purpose-built-student-accommodation",
-    "https://www.instagram.com/p/DXYeMQtDiOZ",
-    "https://news.wsu.edu/news/2026/02/20/students-take-top-award-at-construction-management-competition",
-    "https://www.techforce.com.au/construction-jobs",
-    "https://www.rawlinsonswa.com.au/insights",
-    "https://au.linkedin.com/jobs/multiplex-jobs",
-    "https://architectureau.com/articles/new-10-year-plan-for-perth-city-unveiled",
-    "https://www.careerone.com.au/jobs-in-construction/in-perth-wa",
-    "https://www.seek.com.au/Multiplex-jobs/in-All-Perth-WA",
-    "https://www.tradeforge.com.au/jobs/construction/wa",
+    "https://itbrief.com.au/story/multiplex-starts-construction-on-nextdc-s-s4-sydney",
+    "https://www.tenders.wa.gov.au/watenders/index.do",
+    "https://perth.wa.gov.au/",
+    "https://www.news.com.au/finance/economy/australian-economy/never-seen-anything-like-it-tens-of-thousands-of-homes-at-risk-as-building-costs-soar/news-story/3ac251a09d1d4658a1b8e890fbe697ce",
+    "https://www.businessnews.com.au/Company/Pyramid-Group-Australia",
+    "https://johnholland.com.au/",
+    "https://www.savills.co.uk/blog/article/385273/commercial-property/why-repurposing-industrial-warehouses-as-edge-data-centres-can-be-beneficial-for-all-involved.aspx",
+    "https://www.btrnews.au/three-builders-chosen-for-perth-btr-delivery",
+    "https://www.moore-australia.com.au/news/construction-landscape-2026-risks-opportunities",
+    "https://www.worldconstructionnetwork.com/marketdata/five-largest-office-building-construction-projects-australia-2",
+    "https://x.com/i/status/2042025925097767218",
+    "https://x.com/i/status/2044835998358557055",
+    "https://vocal.media/trader/australia-commercial-property-market-2026-office-evolution-retail-recovery-and-industrial-expansion",
+    "https://discoveryalert.com.au/resource-investment-western-australia-economic-impact-2026",
+    "https://www.ledge.com.au/news/forecast-wa-civil-construction-market",
     "https://www.abc.net.au/news/2026-04-20/plans-emerge-gigawatt-scale-ai-data-centre-kimberley/106567332",
-    "https://au.prosple.com/graduate-employers/multiplex-australia",
-    "https://patiofactory.com.au/commercial",
-    "https://www.commerce.wa.gov/pwb",
-    "https://dc-gc.org/2026-contractor-awards",
-    "https://developmentwa.com.au/projects/residential/pier-st/overview",
-    "https://perth.wa.gov.au/building-and-planning/future-perth/major-projects",
-    "https://homegroup.com.au/articles/building-your-first-home-in-perth-best-growth-suburbs-in-2026",
-    "https://www.multiplex.global/careers",
-    "https://x.com/i/status/2044976948640948730",
-    "https://medicalresearch.health.wa.gov.au/News-and-events/Events/2026/03/27/Industry-4-The-Rise-of-Advanced-Manufacturing",
-    "https://www.facebook.com/WASymphonyOrchestra/posts/an-exciting-milestone-for-perth-concert-hall-the-wa-government-has-awarded-the-m/1869135377075492",
-    "https://www.facebook.com/GeorgiouGroup/videos/a-new-chapter-begins-georgiou-strabag-as-we-approach-the-end-of-the-year-were-re/642922832177403",
-    "https://www.georgiou.com.au/projects",
-    "https://x.com/i/status/2044079091499086242",
-    "https://www.eqs-news.com/news/corporate/siemens-awarded-major-supply-agreement-on-lionheart-project/105aece4-41a1-49b2-9793-557959524079_en",
-    "https://www.miragenews.com/construction-begins-on-high-wycombe-station-1658790",
-    "https://thewest.com.au/business/commercial-property/pioneering-wa-struggles-to-keep-build-to-rent-pace-c-22171640",
-    "https://midwestprecastcontractor.com/australia-construction-industry-news-today",
+    "https://www.researchandmarkets.com/?srsltid=AfmBOopN26z0ckuVHj6AbYrfQigd7LdDNIHM0UqpPqkhbTfJ9GiZLP9K",
+    "https://www.cpbcon.com.au/",
+    "https://madrigal.com.au/",
+    "https://www.multiplex.global/news",
+    "https://x.com/i/status/2045443962857803970",
+    "https://www.multiplex.global/news/work-commences-on-nextdcs-350mw-western-sydney-data-centre",
+    "https://www.facebook.com/malaymaildotcom/posts/construction-sector-set-for-strong-job-flows-in-2026-driven-by-infrastructure-an/1320293306801687",
+    "https://x.com/i/status/2046553437186199625",
     "https://x.com/i/status/2043966405473673676",
-    "https://www.georgiou.com.au/",
-    "https://x.com/i/status/2043278264869814574",
-    "https://www.abc.net.au/news/2026-04-13/wa-government-budget-1-5-billion-hospital-spend/106559164",
-    "https://au.linkedin.com/jobs/builder-jobs-northbridge-wa",
-    "https://www.insideconstruction.com.au/news/latest-news/strabag-completes-acquisition-of-georgiou-group",
-    "https://www.buildingfortomorrow.wa.gov.au/projects",
-    "https://au.indeed.com/q-multiplex-jobs.html",
-    "https://www.georgiou.com.au/project/the-village-inglewood",
-    "https://www.openpr.com/news/4475517/perth-structural-drafting-trends-show-growing-shift-toward-bim",
-    "https://www.instagram.com/p/DTRbOYKFEoJ",
-    "https://www.instagram.com/p/DTZRFbSDGaY"
+    "https://www.australiantenders.com.au/tenders/region/western-australia",
+    "https://www.wanneroo.wa.gov.au/news/20033/news_and_media",
+    "https://builtink.com/iran-war-australia-industrial-market-2026",
+    "https://www.spglobal.com/en",
+    "https://www.insideconstruction.com.au/news/latest-news/multiplex-tops-out-stage-two-of-110-million-p1-perth-data-centre",
+    "https://www.mainroads.wa.gov.au/projects-initiatives/all-projects/metropolitan/causeway-path",
+    "https://www.imarcgroup.com/australia-construction-market",
+    "https://www.constructors.com.au/australias-most-outstanding-construction-projects-named-as-2026-acaa-finalists",
+    "https://www.insideconstruction.com.au/news/latest-news/contract-awarded-for-perth-airport-enabling-and-airfield-works",
+    "https://www.iesve.com/services/projects",
+    "https://www.datacenterdynamics.com/en/news/australias-cdc-plans-200mw-data-center-campus-outside-perth",
+    "https://x.com/i/status/2044104454241169542",
+    "https://www.buildaustralia.com.au/projects/multiplex-tops-out-sage-2-of-nextdcs-new-110m-perth-data-centre",
+    "https://www.bdo.com/",
+    "https://www.apimagazine.com.au/news/article/perth-property-boom-to-power-through-2026-before-sharp-slowdown-looms",
+    "https://www.insideconstruction.com.au/news/latest-news/cpb-contractors-awarded-east-perth-primary-school-project",
+    "https://www.goodman.com/",
+    "https://www.brookings.edu/articles/the-future-of-data-centers",
+    "https://www.facebook.com/RogerCookMLA/posts/were-investing-a-further-15-billion-in-building-redeveloping-and-maintaining-hea/1495164902201029",
+    "https://medicalresearch.health.wa.gov.au/News-and-events/Events/2026/03/27/Industry-4-The-Rise-of-Advanced-Manufacturing",
+    "https://www.ledge.com.au/news/kee-groups-involvement-wa-infrastructure-projects",
+    "https://buildcorp.com.au/",
+    "https://www.insideconstruction.com.au/news/latest-news/construction-in-2026-market-outlook-from-coates",
+    "https://www.abc.net.au/news/2015-09-25/perth-firm-civmec-bids-to-build-new-submarine-fleet/6805510",
+    "https://www.ria.wa.gov.au/projects-and-developments/business-and-development-opportunities/development-applications",
+    "https://www.wanneroo.wa.gov.au/info/20017/planning_and_building/345/submitting_a_development_application",
+    "https://company-announcements.afr.com/asx/srl/d03f5891-3d12-11f1-a82c-cad0a84b142a.pdf",
+    "https://company-announcements.afr.com/asx/aru/0e7dd5b6-2d47-11f1-b505-92a012874946.pdf",
+    "https://www.businessnews.com.au/Company/Duratec",
+    "https://company-announcements.afr.com/asx/snd/03986c98-7d5d-11f0-a14a-aaf2b0bbb5d6.pdf",
+    "https://www.businessnews.com.au/article/Defence-awards-73bn-in-property-contracts",
+    "https://company-announcements.afr.com/asx/amn/a8fd5f46-3d06-11f1-a82c-cad0a84b142a.pdf",
+    "https://www.businessnews.com.au/Company/NRW-Holdings",
+    "https://www.theurbandeveloper.com/articles/inside-projects-shaping-perth-symposium",
+    "https://company-announcements.afr.com/asx/gl1/4db60883-3dda-11f1-a82c-cad0a84b142a.pdf",
+    "https://company-announcements.afr.com/asx/bru/4381ce41-3df5-11f1-a82c-cad0a84b142a.pdf",
+    "https://www.businessnews.com.au/article/SRG-scores-650m-worth-of-contracts",
+    "https://www.mosmanpark.wa.gov.au/build/building-or-renovating/do-i-need-approval",
+    "https://www.theurbandeveloper.com/articles/perth-city-link-sirona-pbsa-student-accommodation-developmentwa-social-housing-towers",
+    "https://www.theurbandeveloper.com/articles/devwest-twins-plot-northbridge-perth-office",
+    "https://company-announcements.afr.com/asx/occ/32e075e0-3c44-11f1-a516-66b9b66caad8.pdf",
+    "https://www.businessnews.com.au/article/Austal-awarded-4b-defence-contract",
+    "https://www.theurbandeveloper.com/articles/perth-airport-city-vision-takes-shape-in-masterplan",
+    "https://company-announcements.afr.com/asx/bci/357e2eb4-1103-11f1-ad9a-2e14b29d7b39.pdf",
+    "https://www.theurbandeveloper.com/articles/apil-group-plans-for-perth-precinct-win-state-approval",
+    "https://www.murray.wa.gov.au/plan-and-build/planning-applications/development-applications.aspx",
+    "https://www.victoriapark.wa.gov.au/develop-and-build/planning/enquires-advice-and-faqs/what-happens-to-my-application.aspx",
+    "https://www.businessnews.com.au/article/NBN-Co-awards-3bn-in-network-upgrade-contracts",
+    "https://www.businessnews.com.au/article/Indigenous-contractor-awarded-45m-works",
+    "https://company-announcements.afr.com/asx/amn/62255812-3dd0-11f1-a516-66b9b66caad8.pdf",
+    "https://www.businessnews.com.au/Category/Contracts?page=1",
+    "https://www.vincent.wa.gov.au/plan-build/plan/apply.aspx",
+    "https://company-announcements.afr.com/asx/nes/6c0be9bc-36be-11f1-8d80-e6304d42e359.pdf",
+    "https://company-announcements.afr.com/asx/arx/699fba31-d2e3-11eb-b908-9ef936e04b40.pdf",
+    "https://www.gosnells.wa.gov.au/Building_and_development/Planning_the_City/Development_Applications",
+    "https://www.theurbandeveloper.com/articles/rinehart-reveals-details-west-perth-office-plans",
+    "https://events.theurbandeveloper.com/perth-developer-symposium/program",
+    "https://www.theurbandeveloper.com/articles/saracen-drops-gym-childcare-from-ocean-reef-shops-perth-wa",
+    "https://imagine.vincent.wa.gov.au/development-applications",
+    "https://www.theurbandeveloper.com/articles/perth-enex-redevelopment-solar-facade-south32-headquarters",
+    "https://company-announcements.afr.com/asx/lsa/bb661a05-3d09-11f1-a82c-cad0a84b142a.pdf",
+    "https://www.planning.wa.gov.au/significant-development-pathway/significant-development-applications",
+    "https://www.theurbandeveloper.com/articles/lfr-drives-wa-retail-shift-perth-symposium",
+    "https://www.cockburn.wa.gov.au/Building-Planning-and-Roads/Applications-and-Permits/Planning-application",
+    "https://company-announcements.afr.com/asx/aar/78eec218-3c3e-11f1-a82c-cad0a84b142a.pdf"
   ],
   "_grok_tool_usage": {
     "daily_brief": {},
     "pipeline": {}
   },
-  "generated_at": "2026-04-22T17:12:59.325206+08:00"
+  "generated_at": "2026-04-22T18:51:21.046736+08:00"
 }
