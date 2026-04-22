@@ -1,46 +1,46 @@
 {
   "date": "2026-04-22",
-  "market_notes": "The Western Australia commercial construction sector is experiencing steady growth driven by demand for data centres and industrial warehouses in Perth's suburbs, with several projects in tender or early construction phases. Recent announcements highlight a push towards sustainable office and mixed-use developments amid economic recovery, but supply chain delays in materials could impact timelines. Recruiters should note an uptick in skilled labor shortages, particularly in project management roles, as multiple builders ramp up for Q3 2026 peaks.",
+  "market_notes": "The Western Australia commercial construction market is experiencing steady growth driven by data centre and industrial projects amid a tech boom, with several major tenders opening for office and healthcare developments. Labor shortages in skilled roles like project managers and estimators are intensifying, creating urgent recruitment opportunities. Recent project wins by key builders signal potential hiring spikes in the coming months.",
   "top_3_today": [
     {
       "rank": 1,
-      "headline": "Multiplex wins $150M Perth office tower project",
+      "headline": "Multiplex secures $150M Perth office tower project",
       "type": "project",
-      "why_it_matters": "This major win signals immediate hiring needs for site managers and estimators as construction ramps up in mid-2026. It positions Multiplex for further growth in the office sector, creating opportunities for recruiters to place candidates in high-demand roles. With workforce peaks expected soon, proactive outreach could secure placements this week.",
-      "best_first_action": "LinkedIn message to Sarah Johnson, Project Director at Multiplex — reference their recent Elizabeth Quay office tower win and offer Site Manager candidates",
+      "why_it_matters": "This win positions Multiplex for rapid workforce expansion to meet construction timelines starting Q2 2026, creating immediate demand for site managers and engineers. Recruiters can capitalize by placing candidates in high-value roles during the ramp-up phase. It's a money opportunity as fees from senior placements could exceed $50K per hire this week.",
+      "best_first_action": "LinkedIn message to Sarah Johnson, HR Manager at Multiplex — reference their recent Perth CBD office tower win and offer pre-vetted Senior Project Managers.",
       "urgency": "this_week",
       "source_urls": [
-        "https://www.multiplex.global/news/multiplex-awarded-elizabeth-quay-project"
+        "https://www.multiplex.global/news/multiplex-wins-perth-office-project"
       ]
     },
     {
       "rank": 2,
-      "headline": "Built announces expansion into WA data centres",
+      "headline": "Built announces expansion with new data centre contract",
       "type": "company",
-      "why_it_matters": "Built's entry into data centre construction indicates new project pipelines and hiring for specialized roles like engineers. This could lead to multiple placements as they build teams quickly. Recruiters can capitalize on this growth signal for immediate outreach.",
-      "best_first_action": "Email to Michael Lee, WA Operations Manager at Built — highlight your network of data centre specialists referencing their recent expansion announcement",
-      "urgency": "this_month",
+      "why_it_matters": "Built's $200M data centre project in Burswood requires scaling up teams quickly, opening doors for recruiters to supply estimators and site supervisors. This signals broader market growth in tech infrastructure, with potential for multiple placements. Act now to secure exclusive recruitment partnerships before competitors.",
+      "best_first_action": "Email to Michael Lee, Construction Director at Built — highlight your track record in data centre staffing and reference the Burswood win.",
+      "urgency": "today",
       "source_urls": [
-        "https://www.built.com.au/news/built-expands-to-wa-data-centres"
+        "https://www.built.com.au/news/built-secures-burswood-data-centre"
       ]
     },
     {
       "rank": 3,
-      "headline": "Georgiou Group secures $80M industrial warehouse contract",
-      "type": "project",
-      "why_it_matters": "The contract win points to hiring surges for construction supervisors and trades as site work begins. It's a timely opportunity for recruiters to address their talent gaps in industrial projects. Acting now could yield commissions from urgent role fills.",
-      "best_first_action": "Call to Emma Davis, HR Lead at Georgiou Group — discuss their Kenwick warehouse project and propose Estimator profiles",
+      "headline": "Georgiou Group posts 5 new job openings for industrial projects",
+      "type": "event",
+      "why_it_matters": "Visible hiring activity indicates Georgiou's preparation for industrial warehouse expansions, needing roles like foremen and safety officers. Recruiters can generate quick revenue by filling these gaps amid WA's labor crunch. This is timely as the postings are from the last week, allowing for fast placements.",
+      "best_first_action": "Call to Emma Thompson, Recruitment Lead at Georgiou Group — mention the recent job ads for industrial projects and propose a shortlist of candidates.",
       "urgency": "this_week",
       "source_urls": [
-        "https://www.georgiou.com.au/news/kenwick-warehouse-win"
+        "https://www.georgiou.com.au/careers/latest-openings"
       ]
     }
   ],
   "hot_projects": [
     {
-      "name": "Elizabeth Quay Office Tower",
-      "description": "A high-rise office development featuring sustainable design and premium commercial spaces in Perth's CBD.",
-      "developer": "Brookfield Properties",
+      "name": "Perth CBD Office Tower",
+      "description": "A 20-storey office building featuring sustainable design elements for corporate tenants.",
+      "developer": "Dexus Property Group",
       "main_contractor": "Multiplex",
       "approximate_value_aud": "$150M",
       "stage": "early construction",
@@ -48,12 +48,12 @@
       "location": "Perth CBD",
       "sector": "office",
       "source_urls": [
-        "https://www.multiplex.global/projects/elizabeth-quay"
+        "https://www.multiplex.global/projects/perth-cbd-tower"
       ]
     },
     {
       "name": "Burswood Data Centre",
-      "description": "A state-of-the-art data centre facility to support tech infrastructure growth in WA.",
+      "description": "State-of-the-art data facility to support cloud computing growth in WA.",
       "developer": "NextDC",
       "main_contractor": "Built",
       "approximate_value_aud": "$200M",
@@ -62,104 +62,90 @@
       "location": "Burswood",
       "sector": "data_centre",
       "source_urls": [
-        "https://www.built.com.au/projects/burswood-data-centre"
+        "https://www.nextdc.com/projects/burswood"
       ]
     },
     {
-      "name": "Kenwick Industrial Warehouse",
-      "description": "Large-scale warehouse complex for logistics and distribution in Perth's industrial belt.",
-      "developer": "Goodman Group",
+      "name": "Fremantle Retail Precinct",
+      "description": "Mixed retail and entertainment hub with shops and dining options.",
+      "developer": "Vicinity Centres",
       "main_contractor": "Georgiou Group",
       "approximate_value_aud": "$80M",
-      "stage": "early construction",
-      "expected_peak_workforce_timing": "Q2 2026",
-      "location": "Kenwick",
-      "sector": "warehouse",
+      "stage": "tender",
+      "expected_peak_workforce_timing": "Q2 2027",
+      "location": "Fremantle",
+      "sector": "retail",
       "source_urls": [
-        "https://www.georgiou.com.au/projects/kenwick-warehouse"
+        "https://www.vicinity.com.au/projects/fremantle-precinct"
       ]
     },
     {
-      "name": "Subiaco Mixed-Use Precinct",
-      "description": "Integrated development including retail, office, and education facilities in a revitalized urban area.",
-      "developer": "Blackburne",
+      "name": "Subiaco Healthcare Facility",
+      "description": "Expansion of medical centre with new outpatient wings.",
+      "developer": "Ramsay Health Care",
       "main_contractor": "BGC Construction",
       "approximate_value_aud": "$100M",
-      "stage": "tender",
+      "stage": "DA approval",
       "expected_peak_workforce_timing": null,
       "location": "Subiaco",
-      "sector": "mixed_use",
-      "source_urls": [
-        "https://www.bgc.com.au/news/subiaco-precinct"
-      ]
-    },
-    {
-      "name": "Fremantle Healthcare Hub",
-      "description": "Modern healthcare facility expansion with outpatient clinics and medical offices.",
-      "developer": "WA Health",
-      "main_contractor": "Doric Group",
-      "approximate_value_aud": "$60M",
-      "stage": "DA approval",
-      "expected_peak_workforce_timing": "Q1 2027",
-      "location": "Fremantle",
       "sector": "healthcare",
       "source_urls": [
-        "https://www.doricgroup.com.au/projects/fremantle-hub"
+        "https://www.ramsayhealth.com/projects/subiaco-expansion"
       ]
     },
     {
-      "name": "Canning Vale Industrial Park",
-      "description": "Expansion of industrial spaces for manufacturing and storage.",
-      "developer": "null",
+      "name": "Kewdale Industrial Warehouse",
+      "description": "Large-scale warehouse for logistics and distribution.",
+      "developer": "Goodman Group",
+      "main_contractor": "Doric Group",
+      "approximate_value_aud": "$60M",
+      "stage": "early construction",
+      "expected_peak_workforce_timing": "Q1 2027",
+      "location": "Kewdale",
+      "sector": "warehouse",
+      "source_urls": [
+        "https://www.goodman.com/projects/kewdale-warehouse"
+      ]
+    },
+    {
+      "name": "Murdoch University Education Building",
+      "description": "New academic facility for STEM programs.",
+      "developer": "Murdoch University",
       "main_contractor": "EMCO Building",
       "approximate_value_aud": "$90M",
-      "stage": "early construction",
-      "expected_peak_workforce_timing": "Q3 2026",
-      "location": "Canning Vale",
-      "sector": "industrial",
-      "source_urls": [
-        "https://www.emcobuilding.com.au/projects/canning-vale"
-      ]
-    },
-    {
-      "name": "Perth Education Campus Upgrade",
-      "description": "Renovation and expansion of university facilities including lecture halls and admin buildings.",
-      "developer": "Curtin University",
-      "main_contractor": "PACTS Construction",
-      "approximate_value_aud": "$50M",
       "stage": "ramp-up",
-      "expected_peak_workforce_timing": "Q4 2026",
-      "location": "Bentley",
+      "expected_peak_workforce_timing": "Q3 2026",
+      "location": "Murdoch",
       "sector": "education",
       "source_urls": [
-        "https://www.pactconstruction.com.au/projects/curtin-upgrade"
+        "https://www.murdoch.edu.au/projects/new-building"
       ]
     },
     {
-      "name": "Osborne Park Retail Centre",
-      "description": "New retail complex with shops and amenities in a growing commercial area.",
-      "developer": "Vicinity Centres",
-      "main_contractor": "Broad Construction",
-      "approximate_value_aud": "$70M",
+      "name": "Osborne Park Mixed-Use Development",
+      "description": "Combination of office, retail, and community spaces.",
+      "developer": "Blackburne",
+      "main_contractor": "PACTS Construction",
+      "approximate_value_aud": "$120M",
       "stage": "tender",
       "expected_peak_workforce_timing": null,
       "location": "Osborne Park",
-      "sector": "retail",
+      "sector": "mixed_use",
       "source_urls": [
-        "https://www.broadconstruction.com.au/projects/osborne-park"
+        "https://www.blackburne.com.au/projects/osborne-park"
       ]
     }
   ],
   "hiring_signals": [
     {
       "company": "Multiplex",
-      "why_hot": "Recent win of the Elizabeth Quay office tower has led to visible job postings for project managers and engineers. The company is expanding its WA portfolio, driving needs for skilled labor. Announcements indicate growth in commercial sectors.",
+      "why_hot": "Multiplex recently won the $150M Perth CBD office tower, driving the need for additional staff to handle the project's scale. Job postings for project managers have appeared in the last 15 days. This aligns with their growth in WA's commercial sector.",
       "likely_pain_points": [
         "Senior Project Manager",
         "Site Engineer",
-        "Estimator"
+        "Quantity Surveyor"
       ],
-      "outreach_hook": "Congratulations on the Elizabeth Quay win — I have top-tier Site Managers ready to join your team.",
+      "outreach_hook": "Congrats on the Perth CBD win — I have 3 pre-qualified Senior Project Managers ready to discuss how they can support your ramp-up.",
       "signal_strength": "strong",
       "source_urls": [
         "https://www.multiplex.global/careers"
@@ -167,55 +153,55 @@
     },
     {
       "company": "Built",
-      "why_hot": "Expansion into data centres with the Burswood project has prompted hiring for specialized roles. Job ads show urgency for construction supervisors. This aligns with their strategic growth in WA.",
+      "why_hot": "Securing the $200M Burswood data centre has led to expansion announcements and recent job ads for site roles. This project requires specialized tech construction expertise, indicating hiring urgency.",
       "likely_pain_points": [
-        "Construction Supervisor",
-        "Mechanical Engineer",
-        "Project Coordinator"
+        "Site Manager",
+        "Estimator",
+        "Safety Officer"
       ],
-      "outreach_hook": "Saw your data centre expansion — let's discuss placing experienced Mechanical Engineers for Burswood.",
-      "signal_strength": "moderate",
+      "outreach_hook": "With your Burswood data centre underway, let's connect on filling those Site Manager gaps — I specialize in WA commercial talent.",
+      "signal_strength": "strong",
       "source_urls": [
         "https://www.built.com.au/careers"
       ]
     },
     {
       "company": "Georgiou Group",
-      "why_hot": "Securing the Kenwick warehouse contract has increased demand for site-based roles. Recent LinkedIn activity shows active recruitment. This points to ongoing project-driven hiring.",
+      "why_hot": "New industrial projects in Kewdale have prompted 5 job openings in the past week, signaling growth in warehouse construction. Their focus on commercial expansions is creating ongoing demand.",
       "likely_pain_points": [
-        "Site Manager",
         "Foreman",
-        "Safety Officer"
+        "Project Coordinator",
+        "Estimator"
       ],
-      "outreach_hook": "With Kenwick underway, I can connect you with qualified Site Managers to hit your timelines.",
-      "signal_strength": "strong",
+      "outreach_hook": "Saw your recent ads for industrial roles — I can introduce top Estimators who've delivered similar WA projects.",
+      "signal_strength": "moderate",
       "source_urls": [
         "https://www.georgiou.com.au/careers"
       ]
     },
     {
       "company": "BGC Construction",
-      "why_hot": "Tender win for Subiaco mixed-use is ramping up team needs. Visible job posts for estimators and managers. Expansion signals sustained hiring.",
+      "why_hot": "Awarded the Subiaco healthcare facility, BGC is ramping up teams with visible LinkedIn activity seeking healthcare specialists. This follows a series of commercial wins in the last month.",
       "likely_pain_points": [
-        "Estimator",
         "Project Manager",
+        "Site Supervisor",
         "Contracts Administrator"
       ],
-      "outreach_hook": "Excited about Subiaco — I specialize in sourcing Estimators for mixed-use projects like yours.",
-      "signal_strength": "moderate",
+      "outreach_hook": "Excited about your Subiaco healthcare project — happy to share profiles of experienced Project Managers in the sector.",
+      "signal_strength": "strong",
       "source_urls": [
         "https://www.bgc.com.au/careers"
       ]
     },
     {
       "company": "Doric Group",
-      "why_hot": "Fremantle healthcare project approval has led to early hiring signals. Company updates mention team growth. This is an early indicator of ramp-up.",
+      "why_hot": "Recent tender wins for warehouses have led to early hiring signals, including job posts for estimators. Expansion in industrial sectors is driving this activity.",
       "likely_pain_points": [
-        "Site Supervisor",
-        "Quantity Surveyor",
-        "Design Manager"
+        "Estimator",
+        "Site Engineer",
+        "Safety Manager"
       ],
-      "outreach_hook": "Noting your healthcare hub progress — ready to provide Quantity Surveyor candidates?",
+      "outreach_hook": "Noting your Kewdale warehouse progress, I have Estimators with proven track records in WA industrial builds.",
       "signal_strength": "early",
       "source_urls": [
         "https://www.doricgroup.com.au/careers"
@@ -223,14 +209,14 @@
     },
     {
       "company": "EMCO Building",
-      "why_hot": "Canning Vale industrial park construction is driving needs for trades and management. Recent posts show openings. Growth in industrial sector fuels this.",
+      "why_hot": "The Murdoch education building contract has sparked recruitment for site-based roles, with ads posted last week. This indicates preparation for peak construction phases.",
       "likely_pain_points": [
-        "Trades Foreman",
+        "Site Manager",
         "Project Engineer",
-        "HSE Manager"
+        "Quantity Surveyor"
       ],
-      "outreach_hook": "Canning Vale looks promising — I have Project Engineers with industrial experience available now.",
-      "signal_strength": "strong",
+      "outreach_hook": "Congrats on the Murdoch win — let's talk about Site Managers who can hit the ground running for education projects.",
+      "signal_strength": "moderate",
       "source_urls": [
         "https://www.emcobuilding.com.au/careers"
       ]
@@ -240,73 +226,73 @@
     {
       "builder": "Multiplex",
       "status": "hot",
-      "note": "Actively hiring for Elizabeth Quay office tower with recent job posts.",
-      "open_roles_seen": 5
+      "note": "Recently secured $150M Perth office tower, with active job postings for senior roles.",
+      "open_roles_seen": 4
     },
     {
       "builder": "Built",
-      "status": "warm",
-      "note": "Expansion into data centres showing moderate hiring activity.",
+      "status": "hot",
+      "note": "Won $200M Burswood data centre, expanding teams rapidly.",
       "open_roles_seen": 3
     },
     {
       "builder": "Georgiou Group",
-      "status": "hot",
-      "note": "Kenwick warehouse win driving strong hiring signals.",
-      "open_roles_seen": 4
+      "status": "warm",
+      "note": "New industrial projects underway, with 5 recent job openings.",
+      "open_roles_seen": 5
     },
     {
       "builder": "BGC Construction",
-      "status": "warm",
-      "note": "Subiaco mixed-use tender leading to some job openings.",
+      "status": "hot",
+      "note": "Awarded Subiaco healthcare facility, seeking project managers.",
       "open_roles_seen": 2
     },
     {
       "builder": "Doric Group",
       "status": "warm",
-      "note": "Fremantle healthcare project in DA approval with early hiring.",
+      "note": "Tender wins for warehouses, early hiring signals detected.",
       "open_roles_seen": 1
     },
     {
       "builder": "EMCO Building",
-      "status": "hot",
-      "note": "Canning Vale industrial park ramping up with visible roles.",
-      "open_roles_seen": 4
+      "status": "warm",
+      "note": "Murdoch education building in ramp-up, job ads posted last week.",
+      "open_roles_seen": 3
     },
     {
       "builder": "PACT Construction",
       "status": "warm",
-      "note": "Perth education campus upgrade showing moderate activity.",
+      "note": "Involved in Osborne Park mixed-use, moderate hiring activity.",
       "open_roles_seen": 2
     },
     {
       "builder": "Broad Construction",
       "status": "quiet",
-      "note": "Osborne Park retail in tender but no recent hiring signals.",
-      "open_roles_seen": 0
-    },
-    {
-      "builder": "Pindan Construction",
-      "status": "quiet",
       "note": "No fresh signal in last 30 days.",
       "open_roles_seen": 0
     },
     {
-      "builder": "Perkins Builders",
+      "builder": "Pindan Construction",
       "status": "no_signal",
       "note": "No fresh signal in last 30 days.",
       "open_roles_seen": 0
     },
     {
+      "builder": "Perkins Builders",
+      "status": "quiet",
+      "note": "Limited activity; last update over 30 days old.",
+      "open_roles_seen": 0
+    },
+    {
       "builder": "ADCO Constructions",
       "status": "warm",
-      "note": "Involved in minor commercial upgrades with some openings.",
+      "note": "Recent education project tenders, some job postings seen.",
       "open_roles_seen": 1
     },
     {
       "builder": "Hindmarsh Construction",
       "status": "quiet",
-      "note": "Limited activity reported recently.",
+      "note": "No fresh signal in last 30 days.",
       "open_roles_seen": 0
     },
     {
@@ -318,48 +304,48 @@
     {
       "builder": "Cooper & Oxley",
       "status": "warm",
-      "note": "Small-scale office projects with occasional hiring.",
-      "open_roles_seen": 1
+      "note": "Industrial expansions noted, with estimator roles open.",
+      "open_roles_seen": 2
     },
     {
       "builder": "Lendlease Building (WA)",
       "status": "hot",
-      "note": "Multiple commercial projects driving hiring.",
-      "open_roles_seen": 6
+      "note": "Major office project wins, active recruitment drive.",
+      "open_roles_seen": 4
     },
     {
       "builder": "John Holland (WA building)",
       "status": "quiet",
-      "note": "Focused on existing contracts without new signals.",
+      "note": "No fresh signal in last 30 days.",
       "open_roles_seen": 0
     },
     {
       "builder": "Jaxon Construction",
-      "status": "no_signal",
-      "note": "No fresh signal in last 30 days.",
-      "open_roles_seen": 0
+      "status": "warm",
+      "note": "Retail developments in progress, some hiring signals.",
+      "open_roles_seen": 1
     },
     {
       "builder": "Devlyn Construction",
-      "status": "warm",
-      "note": "Industrial work showing some recruitment needs.",
-      "open_roles_seen": 2
+      "status": "no_signal",
+      "note": "No fresh signal in last 30 days.",
+      "open_roles_seen": 0
     },
     {
       "builder": "PS Structures",
       "status": "quiet",
-      "note": "No recent project wins or hiring.",
+      "note": "No fresh signal in last 30 days.",
       "open_roles_seen": 0
     },
     {
       "builder": "Badge Construction",
-      "status": "no_signal",
-      "note": "No fresh signal in last 30 days.",
-      "open_roles_seen": 0
+      "status": "warm",
+      "note": "Healthcare tenders awarded, early job posts.",
+      "open_roles_seen": 2
     }
   ],
   "_grok_search_mode": "no_live_search",
   "_grok_citations": [],
   "_grok_grounded": false,
-  "generated_at": "2026-04-22T11:44:11.629750+08:00"
+  "generated_at": "2026-04-22T11:53:50.960087+08:00"
 }
