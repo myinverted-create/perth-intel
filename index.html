@@ -60,6 +60,7 @@
   </div>
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 flex gap-1 overflow-x-auto no-scrollbar">
     <button data-tab="today"      class="tab-btn tap px-4 py-3 text-sm font-medium border-b-2 border-mint text-cream whitespace-nowrap">Today's Brief</button>
+    <button data-tab="pipeline"   class="tab-btn tap px-4 py-3 text-sm font-medium border-b-2 border-transparent text-cream/60 hover:text-cream whitespace-nowrap">Pipeline <span id="pipeline-tab-count" class="hidden ml-1 text-[10px] bg-mint text-forest font-bold px-1.5 py-0.5 rounded-full"></span></button>
     <button data-tab="watchlist"  class="tab-btn tap px-4 py-3 text-sm font-medium border-b-2 border-transparent text-cream/60 hover:text-cream whitespace-nowrap">Watchlist</button>
     <button data-tab="archive"    class="tab-btn tap px-4 py-3 text-sm font-medium border-b-2 border-transparent text-cream/60 hover:text-cream whitespace-nowrap">Archive</button>
   </nav>
@@ -131,6 +132,23 @@
       </div>
       <div id="hiring-signals-list" class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4"></div>
     </section>
+  </section>
+
+  <!-- ============================== PIPELINE TAB ============================== -->
+  <section data-panel="pipeline" class="hidden space-y-5">
+    <div class="border-l-4 border-mint bg-mint/15 px-4 sm:px-5 py-3 sm:py-4 rounded-r-lg">
+      <div class="text-xs font-semibold uppercase tracking-wide text-forest mb-1">Pre-hiring pipeline · 90-day lead</div>
+      <p class="text-sm text-forest/85 leading-relaxed">
+        Projects that are real but haven't hit the visible hiring stage yet — DA approvals,
+        ASX announcements, anchor leases, tender awards. Sorted by how soon they convert to
+        recruitment activity. The earlier you reach the named contractor, the bigger the head start.
+      </p>
+    </div>
+    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-4">
+      <h2 class="text-base sm:text-lg font-semibold text-forest">Pipeline Signals</h2>
+      <span class="text-xs text-forest/50">Curated WA property/business sources · Last 90 days</span>
+    </div>
+    <div id="pipeline-list" class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4"></div>
   </section>
 
   <!-- ============================== WATCHLIST TAB ============================== -->
@@ -305,6 +323,36 @@ function urgencyChip(u) {
   return `<span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded ${map[u] || "bg-forest/10 text-forest"}">${escapeHtml(u.replace("_"," "))}</span>`;
 }
 
+/* Signal-date badge — shows how fresh the underlying source is.
+   Green ≤7d, Mint ≤30d, Amber ≤90d, Red older. */
+function signalDateBadge(dateStr) {
+  if (!dateStr) return "";
+  const d = new Date(dateStr);
+  if (isNaN(d.getTime())) return "";
+  const ageDays = Math.floor((Date.now() - d.getTime()) / 86400000);
+  let label, cls;
+  if (ageDays <= 1)        { label = "today";          cls = "bg-mint text-forest"; }
+  else if (ageDays <= 7)   { label = `${ageDays}d ago`; cls = "bg-mint text-forest"; }
+  else if (ageDays <= 30)  { label = `${ageDays}d ago`; cls = "bg-mint/30 text-forest"; }
+  else if (ageDays <= 90)  { label = `${ageDays}d ago`; cls = "bg-amber-100 text-amber-800"; }
+  else                     { label = `${ageDays}d ago`; cls = "bg-red-100 text-red-800"; }
+  return `<span class="text-[10px] uppercase font-semibold tracking-wider px-2 py-0.5 rounded ${cls}" title="Source dated ${escapeHtml(dateStr)}">${escapeHtml(label)}</span>`;
+}
+
+/* Pipeline-stage colour map — the closer to "tender_awarded" the warmer. */
+const PIPELINE_STAGE_CLASS = {
+  land_acquisition:  "bg-slate-100 text-slate-700",
+  rezoning:          "bg-slate-100 text-slate-700",
+  anchor_tenant:     "bg-blue-100 text-blue-800",
+  asx_announcement:  "bg-violet-100 text-violet-800",
+  DA_lodged:         "bg-indigo-100 text-indigo-800",
+  DA_approved:       "bg-indigo-200 text-indigo-900",
+  tender:            "bg-amber-100 text-amber-800",
+  tender_awarded:    "bg-orange-100 text-orange-900",
+  financing_secured: "bg-emerald-100 text-emerald-800",
+  contractor_named:  "bg-mint text-forest",
+};
+
 function contactToggle(id) {
   const c = getContacted();
   const on = c.has(id);
@@ -321,7 +369,10 @@ function renderTop3(items) {
     <article class="bg-white border-2 border-mint rounded-xl p-4 sm:p-5 shadow-sm hover:shadow-md transition ${contacted ? "contacted" : ""}">
       <div class="flex items-start justify-between mb-3 gap-2">
         <span class="bg-mint text-forest font-bold rounded-full w-8 h-8 flex items-center justify-center text-base shrink-0">${it.rank ?? i+1}</span>
-        ${urgencyChip(it.urgency)}
+        <div class="flex items-center gap-1.5 flex-wrap justify-end">
+          ${signalDateBadge(it.signal_date)}
+          ${urgencyChip(it.urgency)}
+        </div>
       </div>
       <h3 class="font-semibold text-forest leading-snug mb-2 contacted-strike">${escapeHtml(it.headline || "")}</h3>
       <p class="text-sm text-forest/70 mb-3 contacted-strike">${escapeHtml(it.why_it_matters || "")}</p>
@@ -359,6 +410,7 @@ function renderHotProjects(items) {
         <h3 class="font-semibold text-forest leading-snug contacted-strike text-sm sm:text-base">${escapeHtml(p.name || "Unnamed project")}</h3>
         <span class="${stageCls}">${escapeHtml(p.stage || "")}</span>
       </div>
+      <div class="mb-2">${signalDateBadge(p.signal_date)}</div>
       <p class="text-sm text-forest/70 mb-3 contacted-strike">${escapeHtml(p.description || "")}</p>
       <dl class="text-xs space-y-1.5 text-forest">
         ${p.main_contractor ? `<div class="flex gap-2"><dt class="text-forest/50 w-20 sm:w-24 shrink-0">Builder</dt><dd class="font-medium">${escapeHtml(p.main_contractor)}</dd></div>`:""}
@@ -389,6 +441,7 @@ function renderHiringSignals(items) {
         <h3 class="font-semibold text-forest contacted-strike text-sm sm:text-base">${escapeHtml(s.company || "")}</h3>
         <span class="flex items-center gap-1.5 text-xs text-forest/60 shrink-0"><span class="w-2 h-2 rounded-full ${dotClass}"></span>${escapeHtml((s.signal_strength||"early"))}</span>
       </div>
+      <div class="mb-2">${signalDateBadge(s.signal_date)}</div>
       <p class="text-sm text-forest/70 mb-3 contacted-strike">${escapeHtml(s.why_hot || "")}</p>
       ${(s.likely_pain_points && s.likely_pain_points.length) ? `
       <div class="mb-3">
@@ -402,6 +455,61 @@ function renderHiringSignals(items) {
       </div>` : ""}
       ${sourceLinks(s.source_urls)}
       <div class="mt-4 flex justify-end">${contactToggle(id)}</div>
+    </article>`;
+  }).join("");
+}
+
+function renderPipeline(items) {
+  const root = document.getElementById("pipeline-list");
+  const tabCount = document.getElementById("pipeline-tab-count");
+  if (!items || !items.length) {
+    root.innerHTML = `<div class="text-forest/40 text-sm col-span-full">No fresh pipeline signals in the last 90 days.</div>`;
+    tabCount.classList.add("hidden");
+    return;
+  }
+  tabCount.textContent = items.length;
+  tabCount.classList.remove("hidden");
+
+  root.innerHTML = items.map((p,i) => {
+    const id = `pipe-${(p.project_name||"").slice(0,60)}-${i}`;
+    const contacted = getContacted().has(id);
+    const stageCls = PIPELINE_STAGE_CLASS[p.stage] || "bg-forest/10 text-forest";
+    const sectorCls = SECTOR_COLORS[p.sector] || "bg-forest/10 text-forest";
+    const watchlistFlag = p.watchlist_match
+      ? `<span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-mint text-forest" title="Builder is on your watchlist">★ ${escapeHtml(p.watchlist_match)}</span>`
+      : "";
+    const sourceHost = (() => {
+      try { return new URL(p.source_url).hostname.replace(/^www\./,""); } catch { return p.source_url || ""; }
+    })();
+
+    return `
+    <article class="bg-white border border-forest/15 rounded-xl p-4 sm:p-5 hover:border-mint hover:shadow-sm transition ${contacted ? "contacted" : ""}">
+      <div class="flex items-start justify-between gap-2 mb-2 flex-wrap">
+        <h3 class="font-semibold text-forest leading-snug contacted-strike text-sm sm:text-base flex-1 min-w-0">${escapeHtml(p.project_name || "Unnamed")}</h3>
+        <span class="stage-pill ${stageCls}">${escapeHtml((p.signal_type || p.stage || "").replace(/_/g," "))}</span>
+      </div>
+      <div class="flex items-center gap-1.5 flex-wrap mb-3">
+        ${signalDateBadge(p.signal_date)}
+        ${watchlistFlag}
+        ${p.sector ? `<span class="text-[10px] uppercase font-semibold tracking-wider px-2 py-0.5 rounded ${sectorCls}">${escapeHtml(p.sector.replace("_"," "))}</span>` : ""}
+      </div>
+      <dl class="text-xs space-y-1.5 text-forest mb-3">
+        ${p.developer ? `<div class="flex gap-2"><dt class="text-forest/50 w-28 shrink-0">Developer</dt><dd>${escapeHtml(p.developer)}</dd></div>`:""}
+        ${p.likely_main_contractor ? `<div class="flex gap-2"><dt class="text-forest/50 w-28 shrink-0">Likely builder</dt><dd class="font-medium">${escapeHtml(p.likely_main_contractor)}</dd></div>`:""}
+        ${p.approximate_value_aud ? `<div class="flex gap-2"><dt class="text-forest/50 w-28 shrink-0">Value</dt><dd class="font-medium">${escapeHtml(p.approximate_value_aud)}</dd></div>`:""}
+        ${p.location ? `<div class="flex gap-2"><dt class="text-forest/50 w-28 shrink-0">Location</dt><dd>${escapeHtml(p.location)}</dd></div>`:""}
+        ${p.estimated_construction_start ? `<div class="flex gap-2"><dt class="text-forest/50 w-28 shrink-0">Const. start</dt><dd>${escapeHtml(p.estimated_construction_start)}</dd></div>`:""}
+        ${p.estimated_hiring_window ? `<div class="flex gap-2"><dt class="text-forest/50 w-28 shrink-0">Hiring window</dt><dd class="font-medium text-forest">${escapeHtml(p.estimated_hiring_window)}</dd></div>`:""}
+      </dl>
+      ${p.why_it_matters_for_recruiters ? `
+      <div class="bg-mint/15 border-l-4 border-mint p-3 rounded-r mb-3">
+        <div class="text-xs uppercase tracking-wide text-forest font-semibold mb-1">Why it matters</div>
+        <p class="text-sm text-forest">${escapeHtml(p.why_it_matters_for_recruiters)}</p>
+      </div>` : ""}
+      <div class="flex items-center justify-between gap-2 flex-wrap">
+        ${p.source_url ? `<a href="${escapeHtml(p.source_url)}" target="_blank" rel="noopener" class="text-xs text-forest/70 hover:text-forest underline underline-offset-2">${escapeHtml(sourceHost)} ↗</a>` : "<span></span>"}
+        ${contactToggle(id)}
+      </div>
     </article>`;
   }).join("");
 }
@@ -457,6 +565,12 @@ function renderArchiveContent(brief) {
       <ul class="space-y-2 text-sm">
         ${(brief.hiring_signals||[]).map(s => `<li><span class="font-medium text-forest">${escapeHtml(s.company||"")}</span> — <span class="text-forest/70">${escapeHtml(s.why_hot||"")}</span></li>`).join("")}
       </ul>
+
+      ${(brief.pipeline && brief.pipeline.length) ? `
+      <h3 class="text-xs uppercase tracking-wide text-forest/50 font-semibold mt-6 mb-2">Pipeline (90-day lead)</h3>
+      <ul class="space-y-2 text-sm">
+        ${brief.pipeline.map(p => `<li><span class="font-medium text-forest">${escapeHtml(p.project_name||"")}</span> <span class="text-forest/60">— ${escapeHtml(p.signal_type||p.stage||"")} · ${escapeHtml(p.likely_main_contractor||p.developer||"")} · ${escapeHtml(p.location||"")}</span></li>`).join("")}
+      </ul>` : ""}
     </div>
   `;
 }
@@ -523,7 +637,8 @@ async function init() {
   const hasContent = brief && (
     (brief.top_3_today && brief.top_3_today.length) ||
     (brief.hot_projects && brief.hot_projects.length) ||
-    (brief.hiring_signals && brief.hiring_signals.length)
+    (brief.hiring_signals && brief.hiring_signals.length) ||
+    (brief.pipeline && brief.pipeline.length)
   );
 
   if (!hasContent) {
@@ -544,6 +659,7 @@ async function init() {
     renderHiringSignals(brief.hiring_signals);
   }
 
+  renderPipeline(brief && brief.pipeline);
   renderWatchlist(brief && brief.watchlist_status);
   renderArchiveList(STATE.history);
 }
@@ -561,6 +677,7 @@ document.addEventListener("click", (e) => {
       renderTop3(STATE.brief.top_3_today);
       renderHotProjects(STATE.brief.hot_projects);
       renderHiringSignals(STATE.brief.hiring_signals);
+      renderPipeline(STATE.brief.pipeline);
     }
     return;
   }

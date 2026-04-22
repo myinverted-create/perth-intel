@@ -9,6 +9,9 @@ for Western Australia using **xAI Grok** with live web search.
 - Per-viewer "Mark contacted" state via browser localStorage
 - Full archive of every brief, browseable in the UI
 - Watchlist of named WA commercial builders that Grok specifically tracks
+- **Pipeline tab** — pre-hiring signals (DA approvals, tender awards, ASX announcements)
+  with a 90-day lead time, sourced from a curated set of high-signal Australian property
+  outlets so you reach contractors weeks before competitors
 
 ## Cost
 
@@ -96,7 +99,16 @@ Edit `data/watchlist.json` and push the change. The next run will use the new li
 
 ### Tuning the prompt
 
-The intelligence prompt lives in `prompts/daily_brief.md`. Edit and push. The next run picks it up automatically.
+There are **two prompts**, both in `prompts/`:
+
+- `prompts/daily_brief.md` — drives the main brief: Top 3, Hot Projects, Hiring Signals, Watchlist Status. Sources must be ≤30 days old for hiring items, ≤90 days for projects.
+- `prompts/pipeline.md` — drives the Pipeline tab: pre-hiring signals (DA approvals, tender awards, anchor leases, ASX announcements). Limited to a curated allow-list of Australian property/business sources so Grok stops chasing low-quality blog reposts. Sources must be ≤90 days old.
+
+Edit either file and push — the next run picks up the change automatically.
+
+### Tuning the Pipeline source list
+
+The list of allowed domains for the Pipeline call lives at the top of `scripts/fetch_brief.py` as `PIPELINE_DOMAINS`. Default: Business News WA, The Urban Developer, AFR, ASX announcements, wa.gov.au. Add or remove sources to taste — fewer high-signal sources beats many noisy ones.
 
 ---
 
@@ -105,17 +117,15 @@ The intelligence prompt lives in `prompts/daily_brief.md`. Edit and push. The ne
 **The action runs but the dashboard shows "No brief yet"**
 → Check the Actions log. Most common cause: `XAI_API_KEY` secret not set, or the model name is wrong. xAI occasionally renames models — you can override via repo **Settings → Secrets and variables → Actions → Variables → New variable** named `XAI_MODEL` (e.g. `grok-2-latest`).
 
-**Dashboard shows "⚠ No live search" / "Live web search unavailable"**
-→ xAI changed their Live Search schema. The script tries three modes in order:
+**Dashboard shows "⚠ No live search" / grounding badge red**
+→ The script uses the official `xai-sdk` Python package which handles xAI's API churn for us. It always asks Grok to use the `web_search` and `x_search` Agent Tools. Two reasons the badge can go red:
 
-1. `search_parameters` block (current xAI Live Search standard)
-2. `tools=[{"type":"live_search"}]` (agent-tools form)
-3. No live search (training data only — flagged in dashboard)
+1. **Grok decided not to call any tools.** The system prompt instructs the model to ground every fact via search, but the model can override that. If you see `tool_usage={}` and `citations=0` in the Actions log, the model just answered from training data. Re-run the workflow — usually it'll behave on the next pull. If it persists, sharpen `prompts/daily_brief.md` to make tool use even more emphatic, or switch to a more recent reasoning model via `XAI_MODEL` (e.g. `grok-4.20-reasoning`).
+2. **The SDK errored before getting a response.** Check the Actions log — the SDK surfaces gRPC errors with the underlying HTTP status. Most common: invalid `XAI_API_KEY` or quota exceeded. Fix at <https://console.x.ai/>.
 
-If all three fail, check the Actions log for the exact 422 error from xAI, then override with one of these repo Variables (Settings → Secrets and variables → Actions → Variables):
+To upgrade or pin the SDK version, edit `.github/workflows/daily-brief.yml` and change `pip install xai-sdk` to e.g. `pip install xai-sdk==1.11.0`.
 
-- `XAI_SEARCH_PARAMETERS_JSON` — full JSON for the `search_parameters` block, e.g. `{"mode":"on","sources":[{"type":"web"}]}`
-- `XAI_TOOLS_JSON` — full JSON for the `tools` array, e.g. `[{"type":"live_search"}]`
+To extend the tools (e.g. add code execution, pin search to specific domains), edit `scripts/fetch_brief.py` — the `tools=[...]` list in `call_grok` is the place. See <https://github.com/xai-org/xai-sdk-python/tree/main/examples> for tool options.
 
 **The Action says "Permission denied" when committing**
 → Repo **Settings → Actions → General → Workflow permissions** → set to **Read and write permissions** → Save. Re-run the workflow.
@@ -139,7 +149,8 @@ wa-recruit-intel/
 ├── scripts/
 │   └── fetch_brief.py              ← calls Grok, writes JSON
 ├── prompts/
-│   └── daily_brief.md              ← the Grok prompt template
+│   ├── daily_brief.md              ← Grok prompt for main brief
+│   └── pipeline.md                 ← Grok prompt for Pipeline tab (pre-hiring signals)
 └── data/
     ├── latest.json                 ← today's brief
     ├── watchlist.json              ← YOUR watchlist of builders ← edit this
