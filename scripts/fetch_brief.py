@@ -173,7 +173,7 @@ def call_grok() -> dict:
     if not XAI_API_KEY:
         raise SystemExit("XAI_API_KEY env var is not set. Add it as a GitHub Actions secret.")
 
-    client = Client(api_key=XAI_API_KEY, timeout=180)
+    client = Client(api_key=XAI_API_KEY, timeout=600)
 
     print("  → Daily brief call...", flush=True)
     daily_prompt = _render_prompt(PROMPT_PATH)
