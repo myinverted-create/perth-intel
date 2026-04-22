@@ -14,19 +14,23 @@ WHAT COUNTS AS A PIPELINE SIGNAL (in increasing order of nearness to hiring):
 9. Main contractor named (even before formal mobilisation)
 
 WHAT DOES NOT COUNT (these belong in the main brief, not pipeline):
-- Active construction sites
-- Public hiring announcements
-- Job postings on LinkedIn
+- Active construction sites with workers already mobilised
+- Public hiring announcements with named roles already advertised
+- Job postings on LinkedIn / SEEK
 - Anything where the builder has already publicly committed to staffing up
 
-RECENCY: Use only sources dated within the LAST 90 DAYS from today (YYYY-MM-DD). Older signals are no longer meaningfully ahead of the news cycle.
+RECENCY: Prefer sources from the LAST 90 DAYS. Pipeline signals like rezoning and DA approvals are inherently slow-moving — if a strong DA approval or tender award is 90–150 days old and construction hasn't started yet, INCLUDE it (the hiring window is still ahead).
 
-Use the web_search tool with high-signal Australian property/business sources to find these signals. Focus on:
-- Business News WA
-- Australian Financial Review (property section)
-- The Urban Developer (Perth/WA section)
-- ASX listed-builder/developer announcements
-- WA Government project announcements
+SEARCH AGGRESSIVELY: Use the web_search tool with multiple query variations. Don't stop after one search. Try at least 4–6 different queries such as:
+- "Perth office tower DA approval 2026"
+- "WA commercial tender award"
+- "Perth healthcare project contractor named"
+- "WA data centre development announcement"
+- "[suburb] mixed-use development DA approved"
+- "Perth retail anchor tenant lease"
+- "ASX announcement WA construction project"
+
+If your first 1–2 searches return little, broaden the query — try sector-specific searches (data centre / healthcare / education / industrial) before concluding the pipeline is empty.
 
 Today's watchlist of WA commercial builders — flag pipeline items where any of these is the named builder, expected bidder, or recently won a tender:
 {{WATCHLIST}}
@@ -56,8 +60,7 @@ Return your response as a single JSON object matching EXACTLY this schema. Retur
 }
 
 Constraints:
-- pipeline: between 0 and 12 items. Empty array is acceptable if nothing qualifies.
+- pipeline: target 4–8 items. 12 max. Empty only if you've made at least 4 distinct search attempts and genuinely found nothing.
 - Items must be ordered by how soon they'll convert to hiring — tender_awarded and contractor_named first, land_acquisition and rezoning last.
 - Watchlist matches should be prioritised in ordering (within the same stage tier).
 - Do not duplicate items that would appear in the main brief's hot_projects (those are already in the hiring window).
-- Do not pad with stale items. An empty list is better than a stale list.
