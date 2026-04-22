@@ -1,256 +1,618 @@
 {
   "date": "2026-04-22",
-  "market_notes": "The Western Australia commercial construction market is buzzing with developments in data centres, particularly AI infrastructure, as evidenced by recent government expectations and plans for a massive AI data centre in the Kimberley. This signals potential growth opportunities for recruiters in tech-related construction projects. No major macro disruptions noted, but focus on reliable energy for data centres is critical.",
+  "market_notes": "The WA commercial construction market is facing challenges from soaring building costs and a global fuel crisis, with material prices up by as much as 50%. Despite this, there's robust growth in data centres and healthcare sectors, driven by government investments and tech demands. Labor shortages persist, offering recruiters opportunities to place skilled workers in high-demand roles. Recent approvals for major projects signal a busy period ahead for commercial builders.",
   "top_3_today": [
     {
       "rank": 1,
-      "headline": "Plans for country's biggest AI data centre in Kimberley",
+      "headline": "WA Government announces $1.5B hospital infrastructure fund with new builds starting 2026",
+      "type": "event",
+      "why_it_matters": "This massive investment will drive hiring for healthcare construction projects across WA, creating immediate demand for project managers, engineers, and site staff. Recruiters can capitalize on the need for skilled labor in a sector with guaranteed funding and long-term contracts. With construction ramping up mid-2026, now is the time to connect candidates with builders like Multiplex already involved in similar projects.",
+      "best_first_action": "Reach out to procurement teams at WA Health Department referencing the $1.5B Building Hospitals Fund and offer pre-qualified construction talent for upcoming tenders.",
+      "urgency": "this_week",
+      "signal_date": "2026-04-13",
+      "source_urls": [
+        "https://www.abc.net.au/news/2026-04-13/wa-government-budget-1-5-billion-hospital-spend/106559164"
+      ]
+    },
+    {
+      "rank": 2,
+      "headline": "Plans unveiled for Australia's largest gigawatt-scale AI data centre in Kimberley WA",
       "type": "project",
-      "why_it_matters": "This multi-billion-dollar project could drive significant hiring in commercial construction for data centres, creating opportunities for recruiters to place skilled workers in a high-growth sector. With plans just emerging, early outreach to potential contractors could secure recruitment mandates this week.",
-      "best_first_action": "Reach out to contacts at DevelopmentWA or relevant developers via LinkedIn, referencing the Kimberley AI data centre plans for recruitment partnership discussions.",
+      "why_it_matters": "This multi-billion-dollar project will require significant construction workforce for data centre builds, boosting demand for specialists in industrial and tech infrastructure. It represents a high-value opportunity for recruiters to supply talent to developers and contractors in a growing sector. With early planning stages, proactive outreach can secure placements before peak hiring in late 2026.",
+      "best_first_action": "LinkedIn message to project leads at the developer, highlighting candidates experienced in data centre construction and referencing the recent ABC announcement.",
       "urgency": "this_week",
       "signal_date": "2026-04-20",
       "source_urls": [
         "https://www.abc.net.au/news/2026-04-20/plans-emerge-gigawatt-scale-ai-data-centre-kimberley/106567332"
       ]
+    },
+    {
+      "rank": 3,
+      "headline": "Cook Government fast-tracks key industrial precincts and projects for job creation",
+      "type": "event",
+      "why_it_matters": "The declaration of five priority projects will accelerate industrial and warehouse developments, leading to immediate hiring needs for commercial builders. This government push aims to create jobs, providing recruiters with openings to place workers in expanding sectors like logistics and manufacturing. Timing is critical as fast-tracking means tenders and mobilizations could start within weeks.",
+      "best_first_action": "Email outreach to WA Department of Jobs and Economic Development, offering recruitment support for prioritized industrial projects.",
+      "urgency": "this_week",
+      "signal_date": "2026-04-16",
+      "source_urls": [
+        "https://www.wa.gov.au/government/media-statements/Cook%20Labor%20Government/Cook-Government-to-fast-track-key-industrial-precinct-and-projects-20260416"
+      ]
     }
   ],
   "hot_projects": [
     {
-      "name": "Kimberley AI Data Centre",
-      "description": "A multi-billion-dollar project to establish a large-scale AI training data centre in Western Australia's north.",
+      "name": "Gigawatt-Scale AI Data Centre Kimberley",
+      "description": "A multi-billion-dollar project to establish Australia's largest AI training data centre in the Kimberley region, supporting advanced tech infrastructure.",
       "developer": null,
       "main_contractor": "tender",
-      "approximate_value_aud": "multi-billion",
-      "stage": "tender",
-      "expected_peak_workforce_timing": null,
+      "approximate_value_aud": null,
+      "stage": "DA approval",
+      "expected_peak_workforce_timing": "Q4 2026",
       "location": "Kimberley",
       "sector": "data_centre",
       "signal_date": "2026-04-20",
       "source_urls": [
         "https://www.abc.net.au/news/2026-04-20/plans-emerge-gigawatt-scale-ai-data-centre-kimberley/106567332"
       ]
+    },
+    {
+      "name": "Royal Perth Hospital Six-Storey Block",
+      "description": "Construction of a new six-storey building at Royal Perth Hospital as part of a major health infrastructure upgrade, including emergency department redevelopment.",
+      "developer": "WA Government",
+      "main_contractor": "tender",
+      "approximate_value_aud": null,
+      "stage": "early construction",
+      "expected_peak_workforce_timing": "Q3 2026",
+      "location": "Perth",
+      "sector": "healthcare",
+      "signal_date": "2026-01-14",
+      "source_urls": [
+        "https://www.wa.gov.au/government/media-statements/Cook%20Labor%20Government/Milestone-reached-on-two-major-health-infrastructure-projects-20260114"
+      ]
+    },
+    {
+      "name": "St John of God Subiaco Hospital Redevelopment Stage Three",
+      "description": "Stage three of the hospital redevelopment, continuing from previous stages with engineering and enabling works.",
+      "developer": "St John of God Health Care",
+      "main_contractor": "Multiplex",
+      "approximate_value_aud": null,
+      "stage": "ramp-up",
+      "expected_peak_workforce_timing": "Q2 2026",
+      "location": "Subiaco",
+      "sector": "healthcare",
+      "signal_date": "2026-01-15",
+      "source_urls": [
+        "https://www.linkedin.com/posts/priced_subiaco-hospital-redevelopment-activity-7417489092118016003-QL9Q"
+      ]
+    },
+    {
+      "name": "CDC Maddington Data Centre",
+      "description": "A $415m data centre featuring four warehouses and AI-ready facilities to boost digital infrastructure.",
+      "developer": "CDC Data Centres",
+      "main_contractor": "tender",
+      "approximate_value_aud": "$415M",
+      "stage": "DA approval",
+      "expected_peak_workforce_timing": "Q1 2026",
+      "location": "Maddington",
+      "sector": "data_centre",
+      "signal_date": "2025-09-17",
+      "source_urls": [
+        "https://www.projectory.com.au/article/415m-data-centre-development-approved-in-wa-to-support-digital-infrastructure-and-advanced-tech-capabilities"
+      ]
+    },
+    {
+      "name": "Byford Health Hub",
+      "description": "A major new healthcare facility transforming access to services in the growing Byford area.",
+      "developer": null,
+      "main_contractor": null,
+      "approximate_value_aud": null,
+      "stage": "early construction",
+      "expected_peak_workforce_timing": "Q3 2026",
+      "location": "Byford",
+      "sector": "healthcare",
+      "signal_date": "2026-01-28",
+      "source_urls": [
+        "https://emhs.health.wa.gov.au/News/2026/01/28/Byford-2026"
+      ]
+    },
+    {
+      "name": "$110M Office Project Perth Region",
+      "description": "Proposed office development to house government department HQ and commercial facilities.",
+      "developer": null,
+      "main_contractor": "tender",
+      "approximate_value_aud": "$110M",
+      "stage": "tender",
+      "expected_peak_workforce_timing": "Q4 2026",
+      "location": "Perth Region",
+      "sector": "office",
+      "signal_date": "2025-09-24",
+      "source_urls": [
+        "https://www.projectory.com.au/article/110m-office-project-proposed-in-perth-region-to-house-government-department-hq-and-commercial-facilities-public-exhibition-underway"
+      ]
+    },
+    {
+      "name": "$22M Warehouse Development Perth East",
+      "description": "Warehouse development featuring office spaces, car parking, and landscaping in Perth's east.",
+      "developer": null,
+      "main_contractor": null,
+      "approximate_value_aud": "$22M",
+      "stage": "DA approval",
+      "expected_peak_workforce_timing": "Q2 2026",
+      "location": "Perth East",
+      "sector": "warehouse",
+      "signal_date": "2025-02-12",
+      "source_urls": [
+        "https://www.projectory.com.au/article/22m-warehouse-development-approved-in-perths-east-featuring-office-spaces-car-parking-and-extensive-landscaping"
+      ]
     }
   ],
   "hiring_signals": [
     {
-      "company": "Georgiou Group",
-      "why_hot": "Georgiou is actively seeking an Experienced Excavator Operator for Perth Metro based projects, with multiple job listings indicating ongoing hiring needs in infrastructure and construction roles.",
+      "company": "Multiplex",
+      "why_hot": "Multiplex recently won the Stage Three contract for St John of God Subiaco Hospital redevelopment, driving hiring for project delivery. Visible job posts on platforms like SEEK indicate needs in construction management. Expansion in healthcare projects suggests ongoing recruitment for skilled roles.",
       "likely_pain_points": [
-        "Excavator Operator",
-        "Infrastructure Team Members"
+        "Project Manager",
+        "Site Engineer",
+        "Estimator"
       ],
-      "outreach_hook": "I noticed your recent posting for an Excavator Operator on SEEK – as a specialist in WA commercial construction recruitment, I have pre-vetted candidates ready to deploy.",
+      "outreach_hook": "Congratulations on the Subiaco Hospital win – I have top-tier Project Managers ready to support your team's ramp-up.",
       "signal_strength": "strong",
-      "signal_date": "2026-04-01",
+      "signal_date": "2026-01-15",
       "source_urls": [
-        "https://www.seek.com.au/Georgiou-jobs/in-Western-Australia-WA"
+        "https://www.instagram.com/p/DTjS_OEgaBt"
       ]
     },
     {
-      "company": "Multiplex",
-      "why_hot": "Multiplex has 21 open job opportunities listed, spanning administration, commercial, and design roles, suggesting active expansion or project ramp-up in their operations.",
+      "company": "Lendlease Building (WA)",
+      "why_hot": "Job listings on SEEK and Glassdoor show active hiring for roles like Project Engineer in commercial construction. Recent involvement in WA projects indicates expansion needs. Government fast-track initiatives may increase their workload.",
       "likely_pain_points": [
-        "Commercial Roles",
-        "Design Positions",
-        "HSEQ Specialists"
+        "Project Engineer",
+        "Senior Supervisor",
+        "Construction Manager"
       ],
-      "outreach_hook": "With 21 roles open on your careers page, including in commercial and design, let's discuss how my network can fill these gaps quickly for your WA projects.",
-      "signal_strength": "strong",
+      "outreach_hook": "Noticed your open Project Engineer roles on SEEK – let's discuss candidates with WA commercial experience.",
+      "signal_strength": "moderate",
+      "signal_date": "2026-04-01",
+      "source_urls": [
+        "https://www.adzuna.com.au/perth/building-construction"
+      ]
+    },
+    {
+      "company": "ADCO Constructions",
+      "why_hot": "Active job ads for construction roles in Perth, tied to industrial and commercial projects. Market growth in data centres aligns with their expertise, prompting hiring. Recent tender activities suggest team expansion.",
+      "likely_pain_points": [
+        "Site Manager",
+        "Estimator",
+        "Contracts Administrator"
+      ],
+      "outreach_hook": "With WA's data centre boom, I can help fill your Site Manager gaps quickly.",
+      "signal_strength": "moderate",
       "signal_date": "2026-04-15",
       "source_urls": [
-        "https://www.multiplex.global/careers/job-opportunities"
+        "https://www.seek.com.au/commercial-construction-jobs/in-All-Perth-WA"
+      ]
+    },
+    {
+      "company": "Built",
+      "why_hot": "Hiring signals from job boards for commercial roles amid project wins in office and mixed-use sectors. Expansion in Perth requires additional staff for upcoming builds. Labor shortages in WA amplify their recruitment needs.",
+      "likely_pain_points": [
+        "Construction Supervisor",
+        "Project Coordinator",
+        "Safety Officer"
+      ],
+      "outreach_hook": "Saw your need for Construction Supervisors – I have vetted candidates available immediately.",
+      "signal_strength": "early",
+      "signal_date": "2026-03-20",
+      "source_urls": [
+        "https://www.glassdoor.com.au/Job/perth-construction-jobs-SRCH_IL.0,5_IC2255727_KO6,18.htm"
+      ]
+    },
+    {
+      "company": "Georgiou Group",
+      "why_hot": "Recent project involvements in industrial sectors, with job posts indicating hiring for site-based roles. Government priority projects may lead to increased staffing. Focus on commercial infrastructure drives demand for engineers.",
+      "likely_pain_points": [
+        "Civil Engineer",
+        "Site Manager",
+        "Quantity Surveyor"
+      ],
+      "outreach_hook": "Leveraging the recent industrial fast-tracks, let's connect on your Civil Engineer openings.",
+      "signal_strength": "strong",
+      "signal_date": "2026-04-16",
+      "source_urls": [
+        "https://au.indeed.com/q-construction-l-western-australia-jobs.html"
       ]
     }
   ],
   "watchlist_status": [
     {
       "builder": "Multiplex",
-      "status": "hot",
-      "note": "Actively hiring with 21 open roles across various functions.",
-      "last_signal_date": "2026-04-15",
-      "open_roles_seen": 21
+      "status": "warm",
+      "note": "Recent award nominations and ongoing hospital project wins indicate activity, but no hiring signals in last 45 days.",
+      "last_signal_date": "2026-04-07",
+      "open_roles_seen": 2
     },
     {
       "builder": "Built",
-      "status": "no_signal",
-      "note": "no fresh signal in last 30 days",
-      "last_signal_date": null,
-      "open_roles_seen": 0
+      "status": "warm",
+      "note": "Active job listings for commercial roles, with signals from March 2026.",
+      "last_signal_date": "2026-03-20",
+      "open_roles_seen": 3
     },
     {
       "builder": "Georgiou Group",
       "status": "hot",
-      "note": "Recent job postings for operators and infrastructure roles on Perth projects.",
-      "last_signal_date": "2026-04-01",
-      "open_roles_seen": 10
+      "note": "Involved in fast-tracked industrial projects, with recent hiring posts.",
+      "last_signal_date": "2026-04-16",
+      "open_roles_seen": 4
     },
     {
       "builder": "BGC Construction",
-      "status": "no_signal",
-      "note": "no fresh signal in last 30 days",
+      "status": "quiet",
+      "note": "No fresh signal in last 45 days.",
       "last_signal_date": null,
       "open_roles_seen": 0
     },
     {
       "builder": "Doric Group",
       "status": "no_signal",
-      "note": "no fresh signal in last 30 days",
+      "note": "No fresh signal in last 45 days.",
       "last_signal_date": null,
       "open_roles_seen": 0
     },
     {
       "builder": "EMCO Building",
-      "status": "no_signal",
-      "note": "no fresh signal in last 30 days",
+      "status": "quiet",
+      "note": "No fresh signal in last 45 days.",
       "last_signal_date": null,
       "open_roles_seen": 0
     },
     {
       "builder": "PACT Construction",
-      "status": "no_signal",
-      "note": "no fresh signal in last 30 days",
+      "status": "quiet",
+      "note": "No fresh signal in last 45 days.",
       "last_signal_date": null,
       "open_roles_seen": 0
     },
     {
       "builder": "Broad Construction",
       "status": "no_signal",
-      "note": "no fresh signal in last 30 days",
+      "note": "No fresh signal in last 45 days.",
       "last_signal_date": null,
       "open_roles_seen": 0
     },
     {
       "builder": "Pindan Construction",
-      "status": "no_signal",
-      "note": "no fresh signal in last 30 days",
+      "status": "quiet",
+      "note": "No fresh signal in last 45 days.",
       "last_signal_date": null,
       "open_roles_seen": 0
     },
     {
       "builder": "Perkins Builders",
-      "status": "no_signal",
-      "note": "no fresh signal in last 30 days",
+      "status": "quiet",
+      "note": "No fresh signal in last 45 days.",
       "last_signal_date": null,
       "open_roles_seen": 0
     },
     {
       "builder": "ADCO Constructions",
-      "status": "no_signal",
-      "note": "no fresh signal in last 30 days",
-      "last_signal_date": null,
-      "open_roles_seen": 0
+      "status": "warm",
+      "note": "Active hiring for site roles in commercial projects.",
+      "last_signal_date": "2026-04-15",
+      "open_roles_seen": 2
     },
     {
       "builder": "Hindmarsh Construction",
-      "status": "no_signal",
-      "note": "no fresh signal in last 30 days",
+      "status": "quiet",
+      "note": "No fresh signal in last 45 days.",
       "last_signal_date": null,
       "open_roles_seen": 0
     },
     {
       "builder": "FIRM Construction",
       "status": "no_signal",
-      "note": "no fresh signal in last 30 days",
+      "note": "No fresh signal in last 45 days.",
       "last_signal_date": null,
       "open_roles_seen": 0
     },
     {
       "builder": "Cooper & Oxley",
-      "status": "no_signal",
-      "note": "no fresh signal in last 30 days",
+      "status": "quiet",
+      "note": "No fresh signal in last 45 days.",
       "last_signal_date": null,
       "open_roles_seen": 0
     },
     {
       "builder": "Lendlease Building (WA)",
-      "status": "no_signal",
-      "note": "no fresh signal in last 30 days",
-      "last_signal_date": null,
-      "open_roles_seen": 0
+      "status": "hot",
+      "note": "Multiple open roles seen on job boards, tied to project expansions.",
+      "last_signal_date": "2026-04-01",
+      "open_roles_seen": 5
     },
     {
       "builder": "John Holland (WA building)",
-      "status": "no_signal",
-      "note": "no fresh signal in last 30 days",
+      "status": "quiet",
+      "note": "No fresh signal in last 45 days.",
       "last_signal_date": null,
       "open_roles_seen": 0
     },
     {
       "builder": "Jaxon Construction",
       "status": "no_signal",
-      "note": "no fresh signal in last 30 days",
+      "note": "No fresh signal in last 45 days.",
       "last_signal_date": null,
       "open_roles_seen": 0
     },
     {
       "builder": "Devlyn Construction",
-      "status": "no_signal",
-      "note": "no fresh signal in last 30 days",
+      "status": "quiet",
+      "note": "No fresh signal in last 45 days.",
       "last_signal_date": null,
       "open_roles_seen": 0
     },
     {
       "builder": "PS Structures",
-      "status": "no_signal",
-      "note": "no fresh signal in last 30 days",
+      "status": "quiet",
+      "note": "No fresh signal in last 45 days.",
       "last_signal_date": null,
       "open_roles_seen": 0
     },
     {
       "builder": "Badge Construction",
       "status": "no_signal",
-      "note": "no fresh signal in last 30 days",
+      "note": "No fresh signal in last 45 days.",
       "last_signal_date": null,
       "open_roles_seen": 0
     }
   ],
-  "pipeline": [],
+  "pipeline": [
+    {
+      "project_name": "Sir Charles Gairdner Hospital Enhancement",
+      "stage": "tender_awarded",
+      "signal_type": "Tender award",
+      "signal_date": "2026-03-06",
+      "source_url": "https://www.wa.gov.au/government/media-statements/Cook%20Labor%20Government/Tenders-awarded-to-enhance-care-at-Sir-Charles-Gairdner-Hospital-20260306",
+      "developer": "Cook Labor Government",
+      "likely_main_contractor": "Devlyn Construction",
+      "watchlist_match": "Devlyn Construction",
+      "approximate_value_aud": null,
+      "location": "Perth",
+      "sector": "healthcare",
+      "estimated_construction_start": "Q2 2026",
+      "estimated_hiring_window": "4-8 weeks after award (~Apr-May 2026)",
+      "why_it_matters_for_recruiters": "This tender award indicates mobilization is imminent, with staffing needs for construction teams arising soon; recruiters should engage Devlyn Construction now for roles in the healthcare sector."
+    },
+    {
+      "project_name": "WA Major Hospital Projects",
+      "stage": "contractor_named",
+      "signal_type": "Contractor named",
+      "signal_date": "2026-01-14",
+      "source_url": "https://www.businessnews.com.au/article/Contractors-named-for-two-major-hospital-projects",
+      "developer": null,
+      "likely_main_contractor": "Lendlease Construction, Built",
+      "watchlist_match": "Lendlease Building (WA)",
+      "approximate_value_aud": null,
+      "location": "Perth",
+      "sector": "healthcare",
+      "estimated_construction_start": "Q2 2026",
+      "estimated_hiring_window": "6-12 weeks before start (~Mar-Apr 2026)",
+      "why_it_matters_for_recruiters": "Contractors have been named, signaling upcoming hiring for site and construction roles; approach Lendlease and Built for opportunities in healthcare construction ahead of competitors."
+    },
+    {
+      "project_name": "Swan Data Centre",
+      "stage": "DA_lodged",
+      "signal_type": "DA lodgement",
+      "signal_date": "2026-04-01",
+      "source_url": "https://swanengage.swan.wa.gov.au/da-62026-data-centre",
+      "developer": null,
+      "likely_main_contractor": null,
+      "watchlist_match": null,
+      "approximate_value_aud": null,
+      "location": "City of Swan",
+      "sector": "data_centre",
+      "estimated_construction_start": "Q4 2026",
+      "estimated_hiring_window": "2-6 months before start (~Jun-Oct 2026)",
+      "why_it_matters_for_recruiters": "DA lodgement is an early signal of project progression; monitor for approval and engage potential contractors for data centre specialist roles in advance."
+    },
+    {
+      "project_name": "Mixed Commercial Development DAP/26/03077",
+      "stage": "DA_lodged",
+      "signal_type": "DA lodgement",
+      "signal_date": "2026-03-09",
+      "source_url": "https://www.planning.wa.gov.au/docs/default-source/daps-docs-website/current-applications.pdf?sfvrsn=ebbf7a78_254",
+      "developer": null,
+      "likely_main_contractor": null,
+      "watchlist_match": null,
+      "approximate_value_aud": "$16M",
+      "location": "Metro Outer",
+      "sector": "mixed_use",
+      "estimated_construction_start": null,
+      "estimated_hiring_window": "6-12 months after approval (~2027)",
+      "why_it_matters_for_recruiters": "This DA lodgement points to future mixed-use development; recruiters can track progress and position for hiring needs in commercial construction roles post-approval."
+    },
+    {
+      "project_name": "Station Precincts Improvement Plan",
+      "stage": "rezoning",
+      "signal_type": "Rezoning approval",
+      "signal_date": "2026-03-04",
+      "source_url": "https://perth.wa.gov.au/news-and-updates/all-news/council-meeting-update-24-and-25-february-2026",
+      "developer": "City of Perth",
+      "likely_main_contractor": null,
+      "watchlist_match": null,
+      "approximate_value_aud": null,
+      "location": "Perth",
+      "sector": "mixed_use",
+      "estimated_construction_start": "2027",
+      "estimated_hiring_window": "12 months before start (~2026)",
+      "why_it_matters_for_recruiters": "Rezoning endorsement signals long-term development potential; early networking with developers can secure leads for recruitment in mixed-use projects over the next year."
+    }
+  ],
   "_grok_search_mode": "agent_tools_sdk",
   "_grok_grounded": true,
   "_grok_citations": [
-    "https://uptimeinstitute.com/about-ui/news-media",
-    "https://www.buildingfortomorrow.wa.gov.au/projects",
-    "https://bidenwhitehouse.archives.gov/wp-content/uploads/2021/06/100-day-supply-chain-review-report.pdf?utm_campaign=20210610_Global_Manufacturing_Economic_Update_June_Members&utm_medium=email%E2%80%8B&utm_source=sfmc%E2%80%8B",
-    "https://www.linkedin.com/pulse/australias-construction-activity-holds-firm-data-centres-rader-mozic",
-    "https://au.indeed.com/q-georgiou-group-l-perth-wa-jobs.html",
+    "https://verticalurbanism.org/news-article/construction-set-to-begin-on-perth-office-tower",
+    "https://www.destinationperth.com.au/articles/post/whats-new-and-coming-to-perth-in-2026",
+    "https://x.com/i/status/2046641128850538821",
+    "https://www.yahoo.com/news/articles/six-storey-building-planned-royal-150623888.html",
+    "https://blazebusinessandlegal.com.au/construction-cost-crisis/state-of-australian-construction-industry-report-2026",
+    "https://www.bnbuilders.com/careers",
+    "https://www.linkedin.com/posts/biggeorge-property-plc_logstar-park-feh%C3%A9rv%C3%A1r-kicks-off-2026-with-activity-7429144599853666304-dYPx",
+    "https://www.facebook.com/RogerCookMLA/videos/today-we-announced-the-biggest-hospital-build-in-was-historyit-includes-three-ne/1160091638953710",
+    "https://www.linkedin.com/posts/dan-cordwell-6171751a0_ai-datacenters-datacentres-activity-7361139431677829121-NMiU",
+    "https://www.instagram.com/p/DRv9r5qgZlW",
+    "https://www.mbawa.com/award/building-excellence-awards",
+    "https://www.commercialready.com.au/content-hub/article/australia-faces-data-centre-crunch-as-vacancy-plummets",
+    "https://www.seek.com.au/commercial-construction-jobs/in-All-Perth-WA",
+    "https://cdc.com/resources/news/cdc-announces-landmark-plan-to-drive-ai-and-advanced-technology-deployments-in-western-australia",
+    "https://www.instagram.com/reel/DW3Dqa-zoR_",
+    "https://www.tenders.wa.gov.au/watenders/contract/list.action?CSRFNONCE=BEE778125E0903223C62223134E7D82D&action=contract-view",
+    "https://www.goodman.com/",
+    "https://www.woodsbagot.com/global-studio/news/award/bhp-perth-and-the-international-shortlisted-for-2026-idea-awards",
+    "https://www.instagram.com/p/DVZsGGZjJWd",
+    "https://www.careersinaudit.com/jobs/commercial-manager-construction-procurement-flexible-western-australia/2723773642-2",
+    "https://emhs.health.wa.gov.au/News/2026/01/28/Byford-2026",
+    "https://www.tenderhub.com.au/browse/buyers/perth-zoo",
+    "https://perth.wa.gov.au/building-and-planning/future-perth/major-projects",
+    "https://www.facebook.com/RogerCookMLA/posts/big-news-were-building-a-new-six-storey-block-at-royal-perth-hospital-with-two-f/1372014601182727",
+    "https://www.msn.com/en-au/news/australia/construction-costs-soaring-as-global-fuel-crisis-continues/vi-AA20zqHE?cvid=69d9c45ee86847a092ac1677b0ec76b2&ocid=hpmsn",
+    "https://www.tenders.wa.gov.au/watenders/tender/search/tender-search.action?CSRFNONCE=6B4B8D7BF6B4D3AEC62EA92A32A2643F&action=advanced-tender-search-awarded-tender",
+    "https://search.jobs.wa.gov.au/page.php?AdvertID=404763&pageID=160&windowUID=0",
+    "https://www.ziprecruiter.com/Jobs/Commercial-Construction/-in-Seattle,WA",
+    "https://developmentwa.com.au/projects/industrial-and-commercial/explore/forrestdale-business-park-west",
+    "https://www.linkedin.com/posts/priced_subiaco-hospital-redevelopment-activity-7417489092118016003-QL9Q",
+    "https://www.moore-australia.com.au/news/construction-landscape-2026-risks-opportunities",
+    "https://x.com/i/status/2046661268702904541",
+    "https://www.projectory.com.au/article/415m-data-centre-development-approved-in-wa-to-support-digital-infrastructure-and-advanced-tech-capabilities",
+    "https://www.miragenews.com/western-australian-housing-completions-continue-1551532",
+    "https://www.techforce.com.au/construction-jobs",
+    "https://www.indeed.com/q-commercial-construction-l-seattle,-wa-jobs.html",
+    "https://indev.au/projects",
+    "https://finance.yahoo.com/news/australia-construction-industry-report-2026-153800158.html",
+    "https://www.wa.gov.au/service/business-support/industry-development/contracts-and-tenders",
+    "https://www.instagram.com/p/DTjS_OEgaBt",
+    "https://www.youtube.com/watch?v=4ptE79BCoug",
+    "https://www.glassdoor.com/Job/washington-state-industrial-builder-jobs-SRCH_IL.0,16_IS3020_KO17,35.htm",
+    "https://www.credenceresearch.com/report/australia-and-new-zealand-data-centre-construction-market",
+    "https://thewest.com.au/stories/multiplex-boss-warns-of-coming-wa-construction-storm",
+    "https://www.glassdoor.com.au/Job/perth-construction-jobs-SRCH_IL.0,5_IC2255727_KO6,18.htm",
+    "https://www.instagram.com/p/DWzL_pVEd73",
+    "https://perth.wa.gov.au/council/city-careers/tenders-and-expressions-of-interest/tender-register",
+    "https://www.linkedin.com/posts/rogercookmla_weve-just-announced-the-largest-hospital-activity-7392040734285189120-AEbt",
+    "https://www.linkedin.com/posts/blackburne_a-huge-congratulations-to-the-team-at-multiplex-activity-7402608840120455168-dSzh",
+    "https://www.acaa.net.au/winners/optus-stadium-and-stadium-park-by-multiplex-constructions-pty-limited",
+    "https://x.com/i/status/2042504658170577342",
+    "https://www.reddit.com/r/WesternAustralia/comments/1soqtyg/wa_current_situation_summary_18_april_2026",
+    "https://www.careersinaudit.com/jobs/technical-advisor-civil-construction-western-australia/2722527360-2",
     "https://au.indeed.com/q-construction-l-western-australia-jobs.html",
-    "https://www.zoetis.com/_assets/pdf/corporate/zoetis-2024-annual-report.pdf",
-    "https://business.gov.au/grants-and-programs/major-project-status/current-major-projects",
-    "https://bidenwhitehouse.archives.gov/wp-content/uploads/2024/03/ERP-2024.pdf",
-    "https://portfoliomanager.energystar.gov/pm/dataCollectionWorksheet",
-    "https://www.wa.gov.au/service/government-financial-management/procurement/pipeline-of-works",
-    "https://www.facebook.com/IndustryGovAu/posts/the-australian-government-has-set-new-expectations-for-building-data-centres-and/1258152403086080",
-    "https://www3.weforum.org/docs/WEF_Annual_Report_2023_2024.pdf",
-    "https://www.acciona.com/content/dam/acciona-global/documentos/cnmv/2025/sustainability-report-2024-acciona.pdf",
-    "https://theconversation.com/australia-has-set-new-expectations-for-ai-data-centres-they-should-serve-the-public-278988",
-    "https://www.new.constructionadvisor.com.au/category/allnews/project-announcements",
-    "https://www.reuters.com/sustainability/land-use-biodiversity/australia-data-centre-boom-is-built-vague-water-plans-2025-09-15",
-    "https://developmentwa.com.au/projects",
-    "https://www.ecfr.gov/current/title-15/subtitle-B/chapter-VII/subchapter-C/part-740",
-    "https://www.gensler.com/projects/all",
-    "https://au.indeed.com/q-regional-construction-l-western-australia-jobs.html",
-    "https://www.seek.com.au/commercial-construction-jobs/in-Bellevue-WA-6056",
-    "https://www.hotel-development.marriott.com/resourcefiles/fdd-document/2023-mhr-fdd-3-31-2023.pdf",
-    "https://www.seek.com.au/commercial-builder-jobs/in-Bellevue-WA-6056/full-time",
-    "https://www.facebook.com/ABC730/videos/the-massive-ai-data-centres-moving-into-the-suburbs-730/971709998852966",
-    "https://www.congress.gov/committee-report/119th-congress/house-report/231/1",
-    "https://www.glassdoor.com.au/Job/perth-georgiou-jobs-SRCH_IL.0,5_IC2255727_KO6,14.htm",
-    "https://cciwa.com/business-pulse/data-centres-could-be-was-next-gold-rush-cciwa-report-finds?srsltid=AfmBOorI1bDN3zKuXS16ERNGbdiEP0GBlrZgj_0dWrDZsuyTZNxrGZ8M",
-    "https://sifyinfinitspaces.com/wp-content/uploads/2025/10/Project-Green-Industry-report_1Lsigned.pdf",
+    "https://www.indeed.com/q-commercial-construction-l-washington-state-jobs.html",
+    "https://www.linkedin.com/posts/city-of-perth_in-2026-the-city-of-perth-will-deliver-three-activity-7430415963314987009-QBLG",
+    "https://www.nextdc.com/hubfs/Downloadable%20PDFs/NXT_Tech_Specs_Perth_Region_240323.pdf",
+    "https://www.instagram.com/p/DTZRFbSDGaY",
+    "https://www.buildingfortomorrow.wa.gov.au/projects/new-women-and-babies-hospital",
+    "https://www.glassdoor.co.in/Job/seattle-wa-commercial-construction-jobs-SRCH_IL.0,10_IC1150505_KO11,34.htm",
+    "https://www.abc.net.au/news/2026-04-13/wa-government-budget-1-5-billion-hospital-spend/106559164",
+    "https://cdn.prod.website-files.com/6187e844375f5c0093587708/69e05713dc6d651a6688fb12_Market%20Insight%20-%20April%202026%20-%20Compressed.pdf",
     "https://www.datacenterdynamics.com/en/news/australias-cdc-plans-200mw-data-center-campus-outside-perth",
-    "https://www.drmartensplc.com/application/files/3617/1817/8736/Dr._Martens_plc_Annual_Report_2024.pdf",
-    "https://www.multiplex.global/careers/job-opportunities",
-    "https://www.seek.com.au/Georgiou-jobs/in-Western-Australia-WA",
-    "https://www.careerone.com.au/construction-professional-jobs/in-western-australia-wa",
-    "https://www.georgiou.com.au/careers",
-    "https://registry.opendata.aws/",
+    "https://www.aurecongroup.com/projects/data-and-telecommunications/nextdc-p2-data-centre-western-australia",
+    "https://www.buildaustralia.com.au/projects/multiplex-tops-out-sage-2-of-nextdcs-new-110m-perth-data-centre",
+    "https://www.multiplex.global/news/multiplex-take-two-wins-at-the-building-awards-2025",
+    "https://gitnux.org/western-australia-construction-industry-statistics",
     "https://www.abc.net.au/news/2026-04-20/plans-emerge-gigawatt-scale-ai-data-centre-kimberley/106567332",
-    "https://www.gatesnotes.com/work/accelerate-energy-innovation/reader/three-tough-truths-about-climate"
+    "https://www.therushcompanies.com/rushcareers",
+    "https://www.wa.gov.au/government/media-statements/Cook%20Labor%20Government/Milestone-reached-on-two-major-health-infrastructure-projects-20260114",
+    "https://www.randstad.com.au/jobs/s-construction",
+    "https://www.tradeforge.com.au/jobs/construction/wa",
+    "https://www.australiantenders.com.au/issuer/1584/tenders/city-of-perth",
+    "https://www.instagram.com/reel/DXYRyXSlolS",
+    "https://www.cushmanwakefield.com/en/australia/insights/multi-level-warehousing-report",
+    "https://w.media/cdc-data-centres-plans-was-largest-ai-and-advanced-technology-campus",
+    "https://architectureau.com/articles/new-10-year-plan-for-perth-city-unveiled",
+    "https://perth.civicweb.net/document/52215/Tender%20Award%20ES-2026-03%20-%20Robinson%20Street,%20Stew.pdf?handle=7552E791E3344E0AAD06315D95A7071C",
+    "https://infrastructurepipeline.org/project/royal-perth-hospital-emergency-department-redevelopment",
+    "https://www.perthairport.com.au/home/corporate/planning-and-projects/master-plan",
+    "https://www.projectory.com.au/article/110m-office-project-proposed-in-perth-region-to-house-government-department-hq-and-commercial-facilities-public-exhibition-underway",
+    "https://www.ziprecruiter.com/Jobs/Commercial-Construction/-in-Richland,WA",
+    "https://www.indeed.com/q-builder-l-washington-state-jobs.html",
+    "https://govmarket.com.au/tender/level-6-conference-rooms-fit-out-3-forrest-place-perth-department-of-planning-lands-and-heritage",
+    "https://thewest.com.au/business/property/multiplex-chief-and-was-legacy-award-winner-chris-palandri-predicts-construction-sector-in-for-another-boom-c-19060447",
+    "https://www.eciexec.com.au/milestones-achieved-on-two-major-wa-health-infrastructure-projects-under-the-state-governments-1-5-billion-building-hospitals-fund",
+    "https://builtink.com/iran-war-australia-industrial-market-2026",
+    "https://www.jobsinconstruction.com/construction-jobs-in-washington",
+    "https://realestateasia.com/commercial-retail/news/seven-major-retail-projects-slated-delivery-in-perth-q4-2026",
+    "https://baxtel.com/data-center/cdc-maddington-perth",
+    "https://www.openpr.com/news/4482117/australia-warehouse-market-2026-worth-usd-8-7-billion-by-2034",
+    "https://www.linkedin.com/pulse/australias-construction-activity-holds-firm-data-centres-rader-mozic",
+    "https://www.projectory.com.au/article/22m-warehouse-development-approved-in-perths-east-featuring-office-spaces-car-parking-and-extensive-landscaping",
+    "https://www.news.com.au/finance/economy/australian-economy/never-seen-anything-like-it-tens-of-thousands-of-homes-at-risk-as-building-costs-soar/news-story/3ac251a09d1d4658a1b8e890fbe697ce",
+    "https://x.com/i/status/2044835998358557055",
+    "https://www.instagram.com/popular/australia-construction-industry-news-april-2026",
+    "https://www.adzuna.com.au/perth/building-construction",
+    "https://www.indecon.com.au/projects",
+    "https://x.com/i/status/2043418256749601029",
+    "https://www.multiplex.global/projects/nextdc-p2-perth-data-centre",
+    "https://www.wa.gov.au/government/media-statements/Cook%20Labor%20Government/Cook-Government-to-fast-track-key-industrial-precinct-and-projects-20260416",
+    "https://www.planning.wa.gov.au/docs/default-source/daps-docs-website/current-applications.pdf?sfvrsn=ebbf7a78_254",
+    "https://www.wa.gov.au/system/files/2025-09/stateinfrastructureprogramme2025v4web.pdf",
+    "https://perth.wa.gov.au/building-and-planning/future-perth/city-living/develop-in-the-city",
+    "https://company-announcements.afr.com/asx/bru/4381ce41-3df5-11f1-a82c-cad0a84b142a.pdf",
+    "https://www.wa.gov.au/government/media-statements/Cook%20Labor%20Government/Perth-Entertainment-and-Sporting-Precinct-preferred-alliance-team-named-20250707",
+    "https://www.cits.wa.gov.au/department/news/news-article/2026/03/30/main-works-are-underway!",
+    "https://perth.wa.gov.au/building-and-planning/future-perth/major-projects",
+    "https://www.tenders.wa.gov.au/watenders/index.do",
+    "https://swdc.wa.gov.au/wp-content/uploads/2026/02/South-West-Construction-Housing-Snapshot-February-2026-.pdf",
+    "https://www.planning.wa.gov.au/significant-development-pathway/significant-development-applications",
+    "https://perth.wa.gov.au/news-and-updates/all-news/council-meeting-update-24-and-25-february-2026",
+    "https://www.cits.wa.gov.au/department/news/news-article/2026/01/23/progress-continues-at-the-perth-cultural-centre",
+    "https://www.wa.gov.au/government/media-statements/McGowan%20Labor%20Government/$70-million-contract-awarded-to-keep-State's-harbours-safe-20221019",
+    "https://www.wa.gov.au/government/media-statements/Cook%20Labor%20Government/14-new-residential-lots-on-sale-in-Broome-North--20260309",
+    "https://company-announcements.afr.com/asx/lin/f71cdfa9-3dcf-11f1-a82c-cad0a84b142a.pdf",
+    "https://southperth.wa.gov.au/about-us/news-and-publications/news-and-public-notices/news-detail/2026/04/16/weekly-approved-works-20---26-april-2026",
+    "https://www.stirling.wa.gov.au/getmedia/59b54ee2-14fa-4d01-8add-b6c7ccbedc6f/Planning-and-Development-Committee-Agenda-3-February-2026.pdf",
+    "https://www.planning.wa.gov.au/docs/default-source/wapc-agendas-and-minutes/28-jan-2026---western-australian-planning-commission---agenda.pdf?sfvrsn=246f10de_4",
+    "http://www.dbca.wa.gov.au/licences-and-permits/riverpark-development-and-planning/decisions-development-applications",
+    "https://www.wa.gov.au/service/business-support/industry-development/contracts-and-tenders",
+    "https://www.wa.gov.au/government/publications/science-and-technology-council-communique-3-march-2026",
+    "https://www.smallbusiness.wa.gov.au/blog/how-win-government-contracts-and-tenders",
+    "https://swanengage.swan.wa.gov.au/da-62026-data-centre",
+    "https://www.tenders.wa.gov.au/watenders/tender/search/tender-search.action?CSRFNONCE=AC39C5B55DD20D49C4A4D05E59A67A18&action=advanced-tender-search-awarded-tender",
+    "https://www.wa.gov.au/government/announcements/tac-update-issue-115-february-2026",
+    "https://perth.wa.gov.au/news-and-updates/all-news/bold-plans-guiding-future-of-perth-city-centre",
+    "https://www.wa.gov.au/government/media-statements/Cook%20Labor%20Government/Builders-secured-to-deliver-more-than-1,100-affordable-and-social-homes-20250822",
+    "https://company-announcements.afr.com/asx/aar/78eec218-3c3e-11f1-a82c-cad0a84b142a.pdf",
+    "https://company-announcements.afr.com/asx/aru/0e7dd5b6-2d47-11f1-b505-92a012874946.pdf",
+    "https://www.wa.gov.au/government/media-statements/Cook%20Labor%20Government/Main-works-tender-awarded-for-new-Laverton-Hospital-development-20250204",
+    "https://www.theurbandeveloper.com/articles/most-active-data-centre-developers-in-2025",
+    "https://company-announcements.afr.com/asx/occ/32e075e0-3c44-11f1-a516-66b9b66caad8.pdf",
+    "https://www.wa.gov.au/government/cuas/technology-infrastructure-and-solutions-cuatis2024",
+    "https://company-announcements.afr.com/asx/bru/848173e0-39ea-11f1-a516-66b9b66caad8.pdf",
+    "https://www.wa.gov.au/government/media-statements/Cook%20Labor%20Government/Strategy-set-to-unlock-Western-Trade-Coast's-job-creating-future-20240820",
+    "https://www.wa.gov.au/organisation/department-of-energy-and-economic-diversification/western-australias-innovation-hubs",
+    "https://www.businessnews.com.au/article/Contractors-named-for-two-major-hospital-projects",
+    "https://www.mainroads.wa.gov.au/technical-commercial/contracting-to-main-roads",
+    "https://company-announcements.afr.com/asx/lsa/bb661a05-3d09-11f1-a82c-cad0a84b142a.pdf",
+    "https://www.planning.wa.gov.au/docs/default-source/daps/agenda---no-122---part-c---city-of-swan7e4b8fea-cc44-489a-a56c-7217939b5912.pdf?sfvrsn=7bb409e1_1",
+    "https://company-announcements.afr.com/asx/amn/a8fd5f46-3d06-11f1-a82c-cad0a84b142a.pdf",
+    "https://www.perthcitylink.wa.gov.au/",
+    "https://perth.wa.gov.au/building-and-planning/future-perth/major-projects/supreme-court-gardens-event-infrastructure-upgrade-project",
+    "https://company-announcements.afr.com/asx/auc/2028c910-3c41-11f1-a516-66b9b66caad8.pdf",
+    "https://swdc.wa.gov.au/stage-set-for-2026-innovative-industries-of-the-future-conference",
+    "https://www.wa.gov.au/government/announcements/builder-appointed-east-perth-project",
+    "https://perth.wa.gov.au/building-and-planning/planning-and-building-applications/building-and-development-applications",
+    "https://www.planning.wa.gov.au/docs/default-source/daps/agenda---no-129---city-of-swanb9764eb5-cf7a-40dd-a9bc-34a413b09838.pdf?sfvrsn=598d95de_1",
+    "https://www.afr.com/politics/federal/sun-and-subsea-cables-could-make-wa-a-data-centre-giant-premier-20251205-p5nl7c",
+    "https://www.theurbandeveloper.com/articles/centuria-wa-perth-fifth-industrial-acquisition",
+    "https://www.wa.gov.au/government/media-statements/Cook-Labor-Government/Contract-awarded-for-Albany-Entertainment-Centre-works-20240326",
+    "https://www.wa.gov.au/service/community-services/find-registered-builder",
+    "https://www.wa.gov.au/system/files/2026-04/coordinator_general_guidelines_2026.pdf",
+    "https://www.wa.gov.au/government/media-statements/Cook%20Labor%20Government/Tenders-awarded-to-enhance-care-at-Sir-Charles-Gairdner-Hospital-20260306",
+    "https://company-announcements.afr.com/asx/gl1/4db60883-3dda-11f1-a82c-cad0a84b142a.pdf",
+    "https://www.wa.gov.au/organisation/department-of-energy-and-economic-diversification/western-australias-strategic-industrial-areas",
+    "https://www.parliament.wa.gov.au/publications/tabledpapers.nsf/displaypaper/4210875a690b2be46b42361f48258da1003d2c99/$file/tp+875+(2026).pdf",
+    "https://www.wa.gov.au/organisation/department-of-energy-and-economic-diversification/tenders"
   ],
   "_grok_tool_usage": {
     "daily_brief": {},
     "pipeline": {}
   },
-  "generated_at": "2026-04-22T16:09:21.918240+08:00"
+  "generated_at": "2026-04-22T16:27:45.107924+08:00"
 }
