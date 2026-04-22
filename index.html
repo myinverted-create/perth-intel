@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>WA Commercial Construction Recruitment Intel</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231A3E30'/%3E%3Ctext x='32' y='44' font-family='system-ui' font-size='36' font-weight='800' fill='%232FEB97' text-anchor='middle'%3EWA%3C/text%3E%3C/svg%3E" />
+  <title>WA Intel</title>
+  <link rel="icon" type="image/gif" href="https://media.tenor.com/Lvh4xScWCUUAAAAM/pomeranian-trippy.gif" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -40,17 +40,58 @@
     /* Hide scrollbars on horizontal nav */
     .no-scrollbar::-webkit-scrollbar { display:none; }
     .no-scrollbar { scrollbar-width:none; }
+    /* Pin star button */
+    .pin-btn { transition: transform .15s ease; }
+    .pin-btn:hover { transform: scale(1.15); }
+    .pin-btn.pinned { color: #eab308; }
+    .pin-btn:not(.pinned) { color: rgba(26,62,48,.25); }
+    /* NEW badge — pulses subtly to catch the eye */
+    .new-badge { animation: newPulse 2s ease-in-out 2; }
+    @keyframes newPulse {
+      0%,100% { box-shadow: 0 0 0 0 rgba(47,235,151,0); }
+      50%     { box-shadow: 0 0 0 4px rgba(47,235,151,.35); }
+    }
+    /* Toast notification */
+    #toast {
+      position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%) translateY(2rem);
+      background: #1A3E30; color: #F0F0E2;
+      padding: .6rem 1.1rem; border-radius: .5rem;
+      font-size: .85rem; font-weight: 500;
+      box-shadow: 0 8px 20px rgba(0,0,0,.25);
+      opacity: 0; pointer-events: none;
+      transition: opacity .2s ease, transform .2s ease;
+      z-index: 1000;
+    }
+    #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    /* Copy icon button */
+    .copy-btn {
+      display: inline-flex; align-items: center; gap: .25rem;
+      font-size: .65rem; text-transform: uppercase; letter-spacing: .05em;
+      padding: .15rem .4rem; border-radius: .25rem;
+      color: rgba(26,62,48,.55); background: rgba(26,62,48,.06);
+      transition: all .15s ease;
+    }
+    .copy-btn:hover { color: #1A3E30; background: rgba(47,235,151,.3); }
+    .copy-btn.copied { color: #1A3E30; background: #2FEB97; }
   </style>
 </head>
 <body class="bg-cream text-forest min-h-screen">
 
 <header class="bg-forest text-cream border-b border-forest2">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-    <div class="min-w-0">
-      <h1 class="text-lg sm:text-xl md:text-2xl font-bold tracking-tight leading-tight">
-        WA Commercial Construction <span class="text-mint">Recruitment Intel</span>
-      </h1>
-      <p class="text-cream/70 text-xs sm:text-sm mt-1">Daily lead-gen brief · Auto-refreshed weekday mornings 6am AWST</p>
+    <div class="flex items-center gap-3 min-w-0">
+      <img
+        src="https://media.tenor.com/Lvh4xScWCUUAAAAM/pomeranian-trippy.gif"
+        alt="WA Intel logo"
+        class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border-2 border-mint shrink-0"
+        loading="eager"
+      />
+      <div class="min-w-0">
+        <h1 class="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight leading-tight">
+          WA <span class="text-mint">Intel</span>
+        </h1>
+        <p class="text-cream/70 text-xs sm:text-sm mt-1">Daily lead-gen brief · Auto-refreshed weekday mornings 6am AWST</p>
+      </div>
     </div>
     <div class="flex flex-wrap items-center gap-2 text-xs sm:text-sm">
       <span id="grounding-badge" class="hidden px-2.5 py-1.5 rounded-md font-medium"></span>
@@ -108,9 +149,12 @@
 
     <!-- Top 3 -->
     <section>
-      <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-4">
+      <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 mb-4">
         <h2 class="text-base sm:text-lg font-semibold text-forest">Top 3 Money Opportunities Today</h2>
-        <span class="text-xs text-forest/50">Ranked by Grok · Action-first</span>
+        <div class="flex items-center gap-2 flex-wrap">
+          <div id="top3-filters" class="flex flex-wrap gap-1.5 text-xs"></div>
+          <span class="text-xs text-forest/50">Ranked by Grok · Action-first</span>
+        </div>
       </div>
       <div id="top3-list" class="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4"></div>
     </section>
@@ -126,9 +170,12 @@
 
     <!-- Hiring Signals -->
     <section>
-      <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-4">
+      <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 mb-4">
         <h2 class="text-base sm:text-lg font-semibold text-forest">Company Hiring Signals</h2>
-        <span class="text-xs text-forest/50">Last 30 days</span>
+        <div class="flex items-center gap-2 flex-wrap">
+          <div id="hiring-signals-filters" class="flex flex-wrap gap-1.5 text-xs"></div>
+          <span class="text-xs text-forest/50">Last 30 days</span>
+        </div>
       </div>
       <div id="hiring-signals-list" class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4"></div>
     </section>
@@ -144,9 +191,12 @@
         recruitment activity. The earlier you reach the named contractor, the bigger the head start.
       </p>
     </div>
-    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 mb-4">
+    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 mb-4">
       <h2 class="text-base sm:text-lg font-semibold text-forest">Pipeline Signals</h2>
-      <span class="text-xs text-forest/50">Curated WA property/business sources · Last 90 days</span>
+      <div class="flex items-center gap-2 flex-wrap">
+        <div id="pipeline-filters" class="flex flex-wrap gap-1.5 text-xs"></div>
+        <span class="text-xs text-forest/50">Curated WA property/business sources · Last 90 days</span>
+      </div>
     </div>
     <div id="pipeline-list" class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4"></div>
   </section>
@@ -175,10 +225,13 @@
 
 <footer class="border-t border-forest/15 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 py-5 sm:py-6 text-xs text-forest/60 flex flex-col md:flex-row md:justify-between gap-2">
-    <span>Private dashboard · Search engines blocked · "Mark contacted" state stored locally in your browser</span>
+    <span>Private dashboard · Search engines blocked · "Mark contacted" / pin state stored locally in your browser</span>
     <span>Built on GitHub Pages · Powered by xAI Grok live search</span>
   </div>
 </footer>
+
+<!-- Toast notification (hidden by default, JS shows on copy) -->
+<div id="toast" role="status" aria-live="polite"></div>
 
 <script>
 /* ===========================================================================
@@ -188,9 +241,12 @@
 
 const STATE = {
   brief: null,
+  priorBrief: null,        // immediately previous archived brief, for NEW-badge diff
+  priorIds: new Set(),     // stable IDs present in priorBrief
   history: [],
   archiveBrief: null,
   sectorFilter: null,
+  pinFilter: { top: false, hot: false, sig: false, pipe: false },  // per-section pinned-only toggle
 };
 
 const SECTOR_COLORS = {
@@ -221,6 +277,80 @@ function toggleContacted(id) {
   const s = getContacted();
   if (s.has(id)) s.delete(id); else s.add(id);
   localStorage.setItem(CONTACTED_KEY, JSON.stringify([...s]));
+}
+
+const PINNED_KEY = "wari_pinned_v1";
+function getPinned() {
+  try { return new Set(JSON.parse(localStorage.getItem(PINNED_KEY) || "[]")); }
+  catch { return new Set(); }
+}
+function togglePinned(id) {
+  const s = getPinned();
+  if (s.has(id)) s.delete(id); else s.add(id);
+  localStorage.setItem(PINNED_KEY, JSON.stringify([...s]));
+}
+
+/* ----------------- Stable ID generation ---------------------------------- */
+/* Slugify a free-text title into a stable ID fragment. Same title → same ID
+   across days, so contacted/pinned state survives daily refreshes. */
+function slugify(s) {
+  return (s || "")
+    .toString().toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 80);
+}
+function itemId(kind, primaryText) {
+  return `${kind}__${slugify(primaryText)}`;
+}
+
+/* ----------------- NEW badge — diff today vs prior brief ----------------- */
+/* Builds a Set of stable IDs found in the previous archived brief, so the
+   renderers can flag any item that doesn't appear there as "NEW". */
+function buildPriorIds(prior) {
+  const ids = new Set();
+  if (!prior) return ids;
+  (prior.top_3_today || []).forEach(t => ids.add(itemId("top", t.headline)));
+  (prior.hot_projects || []).forEach(p => ids.add(itemId("proj", p.name)));
+  (prior.hiring_signals || []).forEach(s => ids.add(itemId("sig", s.company)));
+  (prior.pipeline || []).forEach(p => ids.add(itemId("pipe", p.project_name)));
+  return ids;
+}
+function newBadge(id) {
+  if (!STATE.priorIds.size) return ""; // first ever run, no diff possible
+  if (STATE.priorIds.has(id)) return "";
+  return `<span class="new-badge text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-mint text-forest" title="Wasn't in yesterday's brief">NEW</span>`;
+}
+
+/* ----------------- Pin button + Copy-to-clipboard helpers ---------------- */
+function pinBtn(id) {
+  const on = getPinned().has(id);
+  return `<button data-pin-id="${escapeHtml(id)}" class="pin-btn ${on ? "pinned" : ""}" title="${on ? "Unpin" : "Pin to track"}" aria-label="${on ? "Unpin" : "Pin"}">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="${on ? "currentColor" : "none"}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+  </button>`;
+}
+function copyBtn(text, label) {
+  if (!text) return "";
+  // Encode the text safely for the data-attr
+  const encoded = btoa(unescape(encodeURIComponent(text)));
+  return `<button data-copy="${encoded}" class="copy-btn" title="Copy to clipboard" aria-label="Copy ${escapeHtml(label || "text")}">
+    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+    <span>Copy</span>
+  </button>`;
+}
+function showToast(msg) {
+  const el = document.getElementById("toast");
+  el.textContent = msg;
+  el.classList.add("show");
+  clearTimeout(showToast._t);
+  showToast._t = setTimeout(() => el.classList.remove("show"), 1800);
+}
+
+/* ----------------- "Pinned only" filter chip per section ---------------- */
+function pinFilterChip(section, pinnedCount) {
+  const active = STATE.pinFilter[section];
+  if (!pinnedCount && !active) return "";
+  return `<button data-pin-filter="${section}" class="pin-filter-chip tap text-xs px-2.5 py-1 rounded-full border font-medium ${active ? "bg-amber-400 border-amber-500 text-forest" : "bg-white border-forest/20 text-forest/70 hover:bg-amber-50 hover:border-amber-300"}" title="${active ? "Show all" : "Show pinned only"}">★ Pinned${pinnedCount ? ` (${pinnedCount})` : ""}</button>`;
 }
 
 /* ----------------- Repo link ---------------------------------------------- */
@@ -361,23 +491,38 @@ function contactToggle(id) {
 
 function renderTop3(items) {
   const root = document.getElementById("top3-list");
-  if (!items || !items.length) { root.innerHTML = `<div class="text-forest/40 text-sm col-span-full">No top picks today.</div>`; return; }
-  root.innerHTML = items.map((it,i) => {
-    const id = `top-${i}-${(it.headline||"").slice(0,40)}`;
+  const filtBar = document.getElementById("top3-filters");
+  if (!items || !items.length) {
+    root.innerHTML = `<div class="text-forest/40 text-sm col-span-full">No top picks today.</div>`;
+    if (filtBar) filtBar.innerHTML = "";
+    return;
+  }
+  const pinned = getPinned();
+  const allWithIds = items.map((it,i) => ({ it, i, id: itemId("top", it.headline) }));
+  const pinnedCount = allWithIds.filter(x => pinned.has(x.id)).length;
+  if (filtBar) filtBar.innerHTML = pinFilterChip("top", pinnedCount);
+  const visible = STATE.pinFilter.top ? allWithIds.filter(x => pinned.has(x.id)) : allWithIds;
+  if (!visible.length) { root.innerHTML = `<div class="text-forest/40 text-sm col-span-full">No pinned top picks. Click ★ on a card to pin it.</div>`; return; }
+  root.innerHTML = visible.map(({it, i, id}) => {
     const contacted = getContacted().has(id);
     return `
     <article class="bg-white border-2 border-mint rounded-xl p-4 sm:p-5 shadow-sm hover:shadow-md transition ${contacted ? "contacted" : ""}">
       <div class="flex items-start justify-between mb-3 gap-2">
         <span class="bg-mint text-forest font-bold rounded-full w-8 h-8 flex items-center justify-center text-base shrink-0">${it.rank ?? i+1}</span>
         <div class="flex items-center gap-1.5 flex-wrap justify-end">
+          ${newBadge(id)}
           ${signalDateBadge(it.signal_date)}
           ${urgencyChip(it.urgency)}
+          ${pinBtn(id)}
         </div>
       </div>
       <h3 class="font-semibold text-forest leading-snug mb-2 contacted-strike">${escapeHtml(it.headline || "")}</h3>
       <p class="text-sm text-forest/70 mb-3 contacted-strike">${escapeHtml(it.why_it_matters || "")}</p>
       <div class="border-t border-forest/10 pt-3 mt-3">
-        <div class="text-xs uppercase tracking-wide text-forest/50 font-semibold mb-1">Best first action</div>
+        <div class="flex items-center justify-between mb-1 gap-2">
+          <span class="text-xs uppercase tracking-wide text-forest/50 font-semibold">Best first action</span>
+          ${copyBtn(it.best_first_action, "best first action")}
+        </div>
         <p class="text-sm text-forest">${escapeHtml(it.best_first_action || "")}</p>
       </div>
       ${sourceLinks(it.source_urls)}
@@ -391,16 +536,23 @@ function renderHotProjects(items) {
   const filtBar = document.getElementById("hot-projects-filters");
   if (!items || !items.length) { root.innerHTML = `<div class="text-forest/40 text-sm col-span-full">No hot projects today.</div>`; filtBar.innerHTML=""; return; }
 
-  // Sector filter chips
+  const pinned = getPinned();
+  const allWithIds = items.map(p => ({ p, id: itemId("proj", p.name) }));
+  const pinnedCount = allWithIds.filter(x => pinned.has(x.id)).length;
+
+  // Sector filter chips + pinned-only chip
   const sectors = [...new Set(items.map(p => p.sector).filter(Boolean))].sort();
-  filtBar.innerHTML = ["all", ...sectors].map(s => {
+  const sectorChips = ["all", ...sectors].map(s => {
     const active = (s === "all" && !STATE.sectorFilter) || s === STATE.sectorFilter;
     return `<button data-sector="${s}" class="sector-chip tap px-3 py-1.5 rounded-full border text-xs ${active ? "bg-forest text-cream border-forest" : "bg-white text-forest/70 border-forest/20 hover:bg-mint/10 hover:border-mint"}">${s.replace("_"," ")}</button>`;
   }).join("");
+  filtBar.innerHTML = sectorChips + pinFilterChip("hot", pinnedCount);
 
-  const filtered = STATE.sectorFilter ? items.filter(p => p.sector === STATE.sectorFilter) : items;
-  root.innerHTML = filtered.map((p,i) => {
-    const id = `proj-${(p.name||"").slice(0,60)}`;
+  let filtered = STATE.sectorFilter ? allWithIds.filter(x => x.p.sector === STATE.sectorFilter) : allWithIds;
+  if (STATE.pinFilter.hot) filtered = filtered.filter(x => pinned.has(x.id));
+  if (!filtered.length) { root.innerHTML = `<div class="text-forest/40 text-sm col-span-full">${STATE.pinFilter.hot ? "No pinned hot projects. Click ★ on a card to pin it." : "No hot projects match this filter."}</div>`; return; }
+
+  root.innerHTML = filtered.map(({p, id}) => {
     const contacted = getContacted().has(id);
     const stageCls = STAGE_CLASS[p.stage] || "stage-pill bg-forest/10 text-forest";
     const sectorCls = SECTOR_COLORS[p.sector] || "bg-forest/10 text-forest";
@@ -408,9 +560,15 @@ function renderHotProjects(items) {
     <article class="bg-white border border-forest/15 rounded-xl p-4 sm:p-5 hover:border-mint hover:shadow-sm transition ${contacted ? "contacted" : ""}">
       <div class="flex items-start justify-between gap-2 mb-2">
         <h3 class="font-semibold text-forest leading-snug contacted-strike text-sm sm:text-base">${escapeHtml(p.name || "Unnamed project")}</h3>
-        <span class="${stageCls}">${escapeHtml(p.stage || "")}</span>
+        <div class="flex items-center gap-1.5 shrink-0">
+          <span class="${stageCls}">${escapeHtml(p.stage || "")}</span>
+          ${pinBtn(id)}
+        </div>
       </div>
-      <div class="mb-2">${signalDateBadge(p.signal_date)}</div>
+      <div class="flex items-center gap-1.5 flex-wrap mb-2">
+        ${newBadge(id)}
+        ${signalDateBadge(p.signal_date)}
+      </div>
       <p class="text-sm text-forest/70 mb-3 contacted-strike">${escapeHtml(p.description || "")}</p>
       <dl class="text-xs space-y-1.5 text-forest">
         ${p.main_contractor ? `<div class="flex gap-2"><dt class="text-forest/50 w-20 sm:w-24 shrink-0">Builder</dt><dd class="font-medium">${escapeHtml(p.main_contractor)}</dd></div>`:""}
@@ -430,18 +588,35 @@ function renderHotProjects(items) {
 
 function renderHiringSignals(items) {
   const root = document.getElementById("hiring-signals-list");
-  if (!items || !items.length) { root.innerHTML = `<div class="text-forest/40 text-sm col-span-full">No hiring signals detected.</div>`; return; }
-  root.innerHTML = items.map((s,i) => {
-    const id = `sig-${(s.company||"").slice(0,60)}`;
+  const filtBar = document.getElementById("hiring-signals-filters");
+  if (!items || !items.length) {
+    root.innerHTML = `<div class="text-forest/40 text-sm col-span-full">No hiring signals detected.</div>`;
+    if (filtBar) filtBar.innerHTML = "";
+    return;
+  }
+  const pinned = getPinned();
+  const allWithIds = items.map(s => ({ s, id: itemId("sig", s.company) }));
+  const pinnedCount = allWithIds.filter(x => pinned.has(x.id)).length;
+  if (filtBar) filtBar.innerHTML = pinFilterChip("sig", pinnedCount);
+  const visible = STATE.pinFilter.sig ? allWithIds.filter(x => pinned.has(x.id)) : allWithIds;
+  if (!visible.length) { root.innerHTML = `<div class="text-forest/40 text-sm col-span-full">No pinned hiring signals. Click ★ on a card to pin it.</div>`; return; }
+
+  root.innerHTML = visible.map(({s, id}) => {
     const contacted = getContacted().has(id);
     const dotClass = "signal-" + (s.signal_strength || "early");
     return `
     <article class="bg-white border border-forest/15 rounded-xl p-4 sm:p-5 ${contacted ? "contacted" : ""}">
       <div class="flex items-start justify-between gap-2 mb-2">
         <h3 class="font-semibold text-forest contacted-strike text-sm sm:text-base">${escapeHtml(s.company || "")}</h3>
-        <span class="flex items-center gap-1.5 text-xs text-forest/60 shrink-0"><span class="w-2 h-2 rounded-full ${dotClass}"></span>${escapeHtml((s.signal_strength||"early"))}</span>
+        <div class="flex items-center gap-2 shrink-0">
+          <span class="flex items-center gap-1.5 text-xs text-forest/60"><span class="w-2 h-2 rounded-full ${dotClass}"></span>${escapeHtml((s.signal_strength||"early"))}</span>
+          ${pinBtn(id)}
+        </div>
       </div>
-      <div class="mb-2">${signalDateBadge(s.signal_date)}</div>
+      <div class="flex items-center gap-1.5 flex-wrap mb-2">
+        ${newBadge(id)}
+        ${signalDateBadge(s.signal_date)}
+      </div>
       <p class="text-sm text-forest/70 mb-3 contacted-strike">${escapeHtml(s.why_hot || "")}</p>
       ${(s.likely_pain_points && s.likely_pain_points.length) ? `
       <div class="mb-3">
@@ -450,7 +625,10 @@ function renderHiringSignals(items) {
       </div>` : ""}
       ${s.outreach_hook ? `
       <div class="bg-mint/15 border-l-4 border-mint p-3 rounded-r">
-        <div class="text-xs uppercase tracking-wide text-forest font-semibold mb-1">Outreach hook</div>
+        <div class="flex items-center justify-between mb-1 gap-2">
+          <span class="text-xs uppercase tracking-wide text-forest font-semibold">Outreach hook</span>
+          ${copyBtn(s.outreach_hook, "outreach hook")}
+        </div>
         <p class="text-sm text-forest italic">"${escapeHtml(s.outreach_hook)}"</p>
       </div>` : ""}
       ${sourceLinks(s.source_urls)}
@@ -461,17 +639,25 @@ function renderHiringSignals(items) {
 
 function renderPipeline(items) {
   const root = document.getElementById("pipeline-list");
+  const filtBar = document.getElementById("pipeline-filters");
   const tabCount = document.getElementById("pipeline-tab-count");
   if (!items || !items.length) {
     root.innerHTML = `<div class="text-forest/40 text-sm col-span-full">No fresh pipeline signals in the last 90 days.</div>`;
     tabCount.classList.add("hidden");
+    if (filtBar) filtBar.innerHTML = "";
     return;
   }
   tabCount.textContent = items.length;
   tabCount.classList.remove("hidden");
 
-  root.innerHTML = items.map((p,i) => {
-    const id = `pipe-${(p.project_name||"").slice(0,60)}-${i}`;
+  const pinned = getPinned();
+  const allWithIds = items.map(p => ({ p, id: itemId("pipe", p.project_name) }));
+  const pinnedCount = allWithIds.filter(x => pinned.has(x.id)).length;
+  if (filtBar) filtBar.innerHTML = pinFilterChip("pipe", pinnedCount);
+  const visible = STATE.pinFilter.pipe ? allWithIds.filter(x => pinned.has(x.id)) : allWithIds;
+  if (!visible.length) { root.innerHTML = `<div class="text-forest/40 text-sm col-span-full">No pinned pipeline items. Click ★ on a card to pin it.</div>`; return; }
+
+  root.innerHTML = visible.map(({p, id}) => {
     const contacted = getContacted().has(id);
     const stageCls = PIPELINE_STAGE_CLASS[p.stage] || "bg-forest/10 text-forest";
     const sectorCls = SECTOR_COLORS[p.sector] || "bg-forest/10 text-forest";
@@ -486,9 +672,13 @@ function renderPipeline(items) {
     <article class="bg-white border border-forest/15 rounded-xl p-4 sm:p-5 hover:border-mint hover:shadow-sm transition ${contacted ? "contacted" : ""}">
       <div class="flex items-start justify-between gap-2 mb-2 flex-wrap">
         <h3 class="font-semibold text-forest leading-snug contacted-strike text-sm sm:text-base flex-1 min-w-0">${escapeHtml(p.project_name || "Unnamed")}</h3>
-        <span class="stage-pill ${stageCls}">${escapeHtml((p.signal_type || p.stage || "").replace(/_/g," "))}</span>
+        <div class="flex items-center gap-1.5 shrink-0">
+          <span class="stage-pill ${stageCls}">${escapeHtml((p.signal_type || p.stage || "").replace(/_/g," "))}</span>
+          ${pinBtn(id)}
+        </div>
       </div>
       <div class="flex items-center gap-1.5 flex-wrap mb-3">
+        ${newBadge(id)}
         ${signalDateBadge(p.signal_date)}
         ${watchlistFlag}
         ${p.sector ? `<span class="text-[10px] uppercase font-semibold tracking-wider px-2 py-0.5 rounded ${sectorCls}">${escapeHtml(p.sector.replace("_"," "))}</span>` : ""}
@@ -503,7 +693,10 @@ function renderPipeline(items) {
       </dl>
       ${p.why_it_matters_for_recruiters ? `
       <div class="bg-mint/15 border-l-4 border-mint p-3 rounded-r mb-3">
-        <div class="text-xs uppercase tracking-wide text-forest font-semibold mb-1">Why it matters</div>
+        <div class="flex items-center justify-between mb-1 gap-2">
+          <span class="text-xs uppercase tracking-wide text-forest font-semibold">Why it matters</span>
+          ${copyBtn(p.why_it_matters_for_recruiters, "why it matters")}
+        </div>
         <p class="text-sm text-forest">${escapeHtml(p.why_it_matters_for_recruiters)}</p>
       </div>` : ""}
       <div class="flex items-center justify-between gap-2 flex-wrap">
@@ -633,6 +826,17 @@ async function init() {
   STATE.brief = brief;
   STATE.history = history.dates || [];
 
+  // Load the most recent archived brief (yesterday-ish) so we can flag NEW items.
+  // The history array is newest-first; index 0 may be today's brief, so look one further.
+  const todayIso = brief && brief.date;
+  const priorDate = STATE.history.find(d => d !== todayIso);
+  if (priorDate) {
+    try {
+      STATE.priorBrief = await loadJSON(`data/history/${priorDate}.json`);
+      STATE.priorIds = buildPriorIds(STATE.priorBrief);
+    } catch { /* ignore — first run, no archive yet */ }
+  }
+
   const empty = document.getElementById("empty-state");
   const hasContent = brief && (
     (brief.top_3_today && brief.top_3_today.length) ||
@@ -665,6 +869,14 @@ async function init() {
 }
 
 /* ----------------- Event delegation -------------------------------------- */
+function rerenderAll() {
+  if (!STATE.brief) return;
+  renderTop3(STATE.brief.top_3_today);
+  renderHotProjects(STATE.brief.hot_projects);
+  renderHiringSignals(STATE.brief.hiring_signals);
+  renderPipeline(STATE.brief.pipeline);
+}
+
 document.addEventListener("click", (e) => {
   const tab = e.target.closest(".tab-btn");
   if (tab) { showTab(tab.dataset.tab); return; }
@@ -672,13 +884,41 @@ document.addEventListener("click", (e) => {
   const cb = e.target.closest(".contact-btn");
   if (cb) {
     toggleContacted(cb.dataset.contactId);
-    // Re-render the parent card section (cheap full re-render)
-    if (STATE.brief) {
-      renderTop3(STATE.brief.top_3_today);
-      renderHotProjects(STATE.brief.hot_projects);
-      renderHiringSignals(STATE.brief.hiring_signals);
-      renderPipeline(STATE.brief.pipeline);
-    }
+    rerenderAll();
+    return;
+  }
+
+  const pin = e.target.closest(".pin-btn");
+  if (pin) {
+    togglePinned(pin.dataset.pinId);
+    rerenderAll();
+    return;
+  }
+
+  const pinFilter = e.target.closest(".pin-filter-chip");
+  if (pinFilter) {
+    const section = pinFilter.dataset.pinFilter;
+    STATE.pinFilter[section] = !STATE.pinFilter[section];
+    rerenderAll();
+    return;
+  }
+
+  const copy = e.target.closest(".copy-btn");
+  if (copy) {
+    try {
+      const text = decodeURIComponent(escape(atob(copy.dataset.copy || "")));
+      navigator.clipboard.writeText(text).then(() => {
+        copy.classList.add("copied");
+        const span = copy.querySelector("span");
+        const orig = span ? span.textContent : null;
+        if (span) span.textContent = "Copied!";
+        showToast("Copied to clipboard");
+        setTimeout(() => {
+          copy.classList.remove("copied");
+          if (span && orig) span.textContent = orig;
+        }, 1400);
+      }).catch(() => showToast("Copy failed — try selecting manually"));
+    } catch { showToast("Copy failed"); }
     return;
   }
 
