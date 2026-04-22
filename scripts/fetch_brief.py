@@ -71,53 +71,55 @@ def call_grok(prompt: str) -> dict:
         "temperature": 0.2,
     }
 
-    # xAI's Live Search is the documented way to give Grok web/news/x access.
-    # It is enabled via a top-level `search_parameters` block, NOT via the
-    # `tools` field. The previous tools=[{"type":"web_search"},...] form was
-    # rejected by the API ("expected `function` or `live_search`").
+    # xAI moved from "Live Search" (search_parameters block, deprecated/410 Gone
+    # as of 2026-01-12) to the "Agent Tools" API. The Agent Tools API exposes
+    # search as built-in server-side tools — `web_search` and `x_search` are
+    # separate tools, replacing the unified `live_search`.
     #
-    # Strategy:
-    #   1. Preferred: search_parameters with web + news + x sources, mode=on.
-    #   2. Fallback: tools=[{"type":"live_search"}] in case the account/model
-    #      uses the agent-tools form instead.
-    #   3. Last resort: no live search (will be flagged in the brief so the
-    #      dashboard can warn the user the data isn't grounded).
+    # Strategy (try newest → oldest):
+    #   1. Agent Tools (current): tools=[{"type":"web_search"}, {"type":"x_search"}]
+    #   2. Legacy live_search with sources nested INSIDE the tool (transitional
+    #      shape some accounts/models still use):
+    #         tools=[{"type":"live_search","sources":[...]}]
+    #   3. No live search (last resort). Flagged in the brief so the dashboard
+    #      can warn the viewer the data isn't grounded.
     #
-    # Override either via env vars if xAI changes the schema again.
-    sp_override = os.environ.get("XAI_SEARCH_PARAMETERS_JSON")
-    if sp_override:
-        search_parameters = json.loads(sp_override)
-    else:
-        search_parameters = {
-            "mode": "on",
-            "return_citations": True,
-            "max_search_results": 20,
-            "sources": [
-                {"type": "web"},
-                {"type": "news"},
-                {"type": "x"},
-            ],
-        }
-
+    # The retired `search_parameters` block is no longer attempted (returns
+    # 410 Gone — wastes a round trip).
+    #
+    # Override the tools array via XAI_TOOLS_JSON if xAI changes shape again.
     tools_override = os.environ.get("XAI_TOOLS_JSON")
     if tools_override:
-        live_tools = json.loads(tools_override)
+        primary_tools = json.loads(tools_override)
+        legacy_tools = None
     else:
-        live_tools = [{"type": "live_search"}]
+        primary_tools = [
+            {"type": "web_search"},
+            {"type": "x_search"},
+        ]
+        legacy_tools = [
+            {
+                "type": "live_search",
+                "sources": [
+                    {"type": "web"},
+                    {"type": "news"},
+                    {"type": "x"},
+                ],
+            }
+        ]
 
     attempts = [
-        ("search_parameters", search_parameters, None),
-        ("live_search_tool", None, live_tools),
-        ("no_live_search", None, None),
+        ("agent_tools", primary_tools),
     ]
+    if legacy_tools is not None:
+        attempts.append(("live_search_tool", legacy_tools))
+    attempts.append(("no_live_search", None))
 
     body = None
     last_err = None
     used_label = None
-    for label, sp, tools in attempts:
+    for label, tools in attempts:
         payload = dict(base_payload)
-        if sp is not None:
-            payload["search_parameters"] = sp
         if tools is not None:
             payload["tools"] = tools
         try:
